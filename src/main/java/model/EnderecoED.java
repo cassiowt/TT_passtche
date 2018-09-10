@@ -2,64 +2,68 @@ package model;
 
 public class EnderecoED {
 
-	private String rua;
+    private String rua;
 
-	private int numero;
+    private int numero;
 
-	private String complemento;
+    private String complemento;
 
-	private String cep;
+    private String cep;
 
-	private TipoLogradouroED tipoLogradouro;
+    private TipoLogradouroED tipoLogradouro;
 
-	private BairroED bairro;
+    private BairroED bairro;
 
 
-	public void setRua(String rua) {
-		this.rua = rua;	}
+    public void setRua(String rua) {
+        this.rua = rua;
+    }
 
-	public String getRua() {
-		return this.rua;
-	}
+    public String getRua() {
+        return this.rua;
+    }
 
-	public void setNumero(int numero) {
-		this.numero = numero;
+    public void setNumero(int numero) {
+        this.numero = numero;
 
-	}
+    }
 
-	public int getNumero() {
-		return this.numero;
-	}
+    public int getNumero() {
 
-	public void setComplemento(String complemento) {
-		this.complemento = complemento;
-	}
+        return this.numero;
+    }
 
-	public String getComplemento() {
-		return this.complemento;
-	}
+    public void setComplemento(String complemento) {
 
-	public void setCep(String cep) {
-		this.cep = cep;
-	}
+        this.complemento = complemento;
+    }
 
-	public String getCep() {
-		return this.cep;
-	}
+    public String getComplemento() {
 
-	public TipoLogradouroED getTipoLogradouro() {
-		return this.tipoLogradouro;
-	}
+        return this.complemento;
+    }
 
-	public BairroED getBairro() {
-		return this.bairro;
-	}
+    public void setCep(String cep) {
+        this.cep = cep;
+    }
 
-	public void setTipoLogradouro(TipoLogradouroED tipoLogradouro) {
-		this.tipoLogradouro = tipoLogradouro;
-	}
+    public String getCep() {
+        return this.cep;
+    }
 
-	public void setBairro(BairroED bairro) {
-		this.bairro = bairro;
-	}
+    public TipoLogradouroED getTipoLogradouro() {
+        return this.tipoLogradouro;
+    }
+
+    public BairroED getBairro() {
+        return this.bairro;
+    }
+
+    public void setTipoLogradouro(TipoLogradouroED tipoLogradouro) {
+        this.tipoLogradouro = tipoLogradouro;
+    }
+
+    public void setBairro(BairroED bairro) {
+        this.bairro = bairro;
+    }
 }
