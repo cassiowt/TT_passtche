@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4d43b98d-90fa-4ba1-8c9e-5adef6ff7551" name="Default" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PassTche.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/EnderecoED.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/EnderecoED.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/PaisED.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/PaisED.java" afterDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+>>>>>>> 385531897a8c16c8e7bd040fce8f5926c0c3ee99
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -36,6 +41,7 @@
     </session>
   </component>
   <component name="FileEditorManager">
+<<<<<<< HEAD
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/model/BairroED.java">
@@ -54,11 +60,26 @@
               <folding>
                 <element signature="e#735#736#0" expanded="true" />
                 <element signature="e#768#769#0" expanded="true" />
+=======
+    <leaf>
+      <file leaf-file-name="EnderecoED.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/model/EnderecoED.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="645">
+              <caret line="57" column="68" selection-start-line="57" selection-start-column="68" selection-end-line="57" selection-end-column="68" />
+              <folding>
+                <element signature="e#735#736#0" expanded="true" />
+                <element signature="e#768#769#0" expanded="true" />
+                <element signature="e#935#936#0" expanded="true" />
+                <element signature="e#978#979#0" expanded="true" />
+                <element signature="e#1005#1006#0" expanded="true" />
+>>>>>>> 385531897a8c16c8e7bd040fce8f5926c0c3ee99
               </folding>
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/model/TipoLogradouroED.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -95,6 +116,8 @@
           </provider>
         </entry>
       </file>
+=======
+>>>>>>> 385531897a8c16c8e7bd040fce8f5926c0c3ee99
     </leaf>
   </component>
   <component name="Git.Settings">
@@ -109,6 +132,7 @@
         <option value="$PROJECT_DIR$/src/main/java/model/TipoLogradouroED.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/PaisED.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/EnderecoED.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -202,6 +226,32 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="PassTche" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PassTche" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PassTche" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PassTche" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PassTche" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PassTche" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PassTche" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PassTche" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -262,12 +312,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1536585046108</updated>
-      <workItem from="1536585048973" duration="1868000" />
+      <workItem from="1536585048973" duration="2814000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1868000" />
+    <option name="totallyTimeSpent" value="2814000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -327,6 +377,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/model/EstadoED.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -335,6 +386,9 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/model/BairroED.java">
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/TipoLogradouroED.java">
+>>>>>>> 385531897a8c16c8e7bd040fce8f5926c0c3ee99
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" selection-start-line="9" selection-end-line="9" />
@@ -363,6 +417,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/EnderecoED.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="57" column="68" selection-start-line="57" selection-start-column="68" selection-end-line="57" selection-end-column="68" />
+          <folding>
+            <element signature="e#735#736#0" expanded="true" />
+            <element signature="e#768#769#0" expanded="true" />
+            <element signature="e#935#936#0" expanded="true" />
+            <element signature="e#978#979#0" expanded="true" />
+            <element signature="e#1005#1006#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
