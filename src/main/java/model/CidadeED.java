@@ -10,8 +10,12 @@ public class CidadeED {
 
 	public CidadeED(String nome, EstadoED estadoED) {
 		this.nome = nome;
+<<<<<<< HEAD
+		this.estadoED = estadoED;}
+=======
 		this.estadoED = estadoED;
 	}
+>>>>>>> d2237ab163b179e3b688333528e16622751ef49e
 
 	public String getNome() {
 		return nome;
