@@ -10,6 +10,7 @@ public class aplicativo {
     static BairroED   bairro;
     static EnderecoED endereco;
 
+
     public static void main(String[] args) {
 
         // Criado os objetos

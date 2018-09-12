@@ -14,6 +14,8 @@ public class EnderecoED {
 
     private BairroED bairro;
 
+    private boolean valido;
+
 
     public void setRua(String rua) {
         this.rua = rua;
@@ -63,6 +65,14 @@ public class EnderecoED {
 
     public void setBairro(BairroED bairro) {
         this.bairro = bairro;
+    }
+
+    public boolean isValido() {
+        return valido;
+    }
+
+    public void setValido(boolean valido) {
+        this.valido = valido;
     }
 }
 
