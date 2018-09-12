@@ -3,14 +3,10 @@ package model;
 public class CidadeED {
 
 	private String nome;
-
 	private EstadoED estadoED;
 
-
-	public  CidadeED (){
-
+	public CidadeED() {
 	}
-
 
 	public CidadeED(String nome, EstadoED estadoED) {
 		this.nome = nome;
