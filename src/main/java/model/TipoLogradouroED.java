@@ -2,7 +2,7 @@ package model;
 
 public enum TipoLogradouroED {
 
-	AVENIDA(1), RUA(2), TRAVESSA(3);
+	AVENIDA(1), RUA(2), TRAVESSA(3), ROTA(4);
 
 	private final int valor;
 

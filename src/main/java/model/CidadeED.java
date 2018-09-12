@@ -6,6 +6,14 @@ public class CidadeED {
 
 	private EstadoED estadoED;
 
+	public CidadeED() {
+
+	}
+
+	public CidadeED(String nome, EstadoED estadoED) {
+		this.nome = nome;
+		this.estadoED = estadoED;
+	}
 
 	public String getNome() {
 		return nome;
