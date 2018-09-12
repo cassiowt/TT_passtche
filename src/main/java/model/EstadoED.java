@@ -8,6 +8,7 @@ public class EstadoED {
 
 	private PaisED paisED;
 
+<<<<<<< HEAD
 
 	public EstadoED(){
 	}
@@ -19,6 +20,8 @@ public class EstadoED {
 	}
 
 
+=======
+>>>>>>> d2237ab163b179e3b688333528e16622751ef49e
 	public String getNome() {
 		return this.nome;
 	}
