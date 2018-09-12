@@ -5,12 +5,18 @@
     <bookmark url="file://$PROJECT_DIR$/src/main/java/app5/aplicativo.java" line="63" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="370e2fe5-65fc-47ab-bc39-e3ab0f709b44" name="Default" comment="">
       <change afterPath="$PROJECT_DIR$/src/main/java/app5/aplicativo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/BairroED.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/BairroED.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/CidadeED.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/CidadeED.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/EstadoED.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/EstadoED.java" afterDir="false" />
+=======
+    <list default="true" id="370e2fe5-65fc-47ab-bc39-e3ab0f709b44" name="Default" comment="Alteração nas classes e criação de apps">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/CidadeED.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/CidadeED.java" afterDir="false" />
+>>>>>>> origin/master
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,6 +26,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FUSProjectUsageTrigger">
+<<<<<<< HEAD
     <session id="-1459476073">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
@@ -27,28 +34,53 @@
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.21" value="1" />
           <entry key="project.opened" value="2" />
+=======
+    <session id="103969192">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.opened" value="1" />
+>>>>>>> origin/master
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+<<<<<<< HEAD
           <entry key="java" value="5" />
+=======
+          <entry key="java" value="12" />
+>>>>>>> origin/master
           <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+<<<<<<< HEAD
           <entry key="JAVA" value="5" />
+=======
+          <entry key="JAVA" value="12" />
+>>>>>>> origin/master
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
+<<<<<<< HEAD
           <entry key="java" value="1428" />
+=======
+          <entry key="java" value="1442" />
+          <entry key="txt" value="56" />
+>>>>>>> origin/master
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
+<<<<<<< HEAD
           <entry key="JAVA" value="1428" />
+=======
+          <entry key="JAVA" value="1442" />
+          <entry key="PLAIN_TEXT" value="56" />
+>>>>>>> origin/master
         </counts>
       </usages-collector>
     </session>
@@ -58,8 +90,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/model/EnderecoED.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="-325">
               <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+=======
+            <state relative-caret-position="680">
+              <caret line="65" selection-start-line="65" selection-end-line="65" />
+>>>>>>> origin/master
               <folding>
                 <element signature="e#291#292#0" expanded="true" />
                 <element signature="e#321#322#0" expanded="true" />
@@ -87,24 +124,43 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/src/main/java/app5/aplicativo.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
               <caret line="55" column="4" selection-start-line="55" selection-start-column="4" selection-end-line="55" selection-end-column="4" />
+=======
+        <entry file="file://$PROJECT_DIR$/src/main/java/app3/aplicativo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+              <folding>
+                <element signature="method#inserirDados2#0;class#aplicativo#0" />
+                <element signature="method#imprimirEndereco#0;class#aplicativo#0" />
+              </folding>
+>>>>>>> origin/master
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/src/main/java/model/EstadoED.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
               <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+=======
+        <entry file="file://$PROJECT_DIR$/src/main/java/model/BairroED.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="14" lean-forward="true" selection-start-column="14" selection-end-column="14" />
+>>>>>>> origin/master
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/src/main/java/model/BairroED.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
@@ -117,15 +173,50 @@
                 <element signature="e#465#466#0" expanded="true" />
                 <element signature="e#505#506#0" expanded="true" />
               </folding>
+=======
+        <entry file="file://$PROJECT_DIR$/src/main/java/model/CidadeED.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
+>>>>>>> origin/master
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/src/main/java/model/CidadeED.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
               <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+=======
+        <entry file="file://$PROJECT_DIR$/src/main/java/model/EstadoED.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/model/PaisED.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+              <folding>
+                <element signature="e#90#91#0" expanded="true" />
+                <element signature="e#113#114#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/model/TipoLogradouroED.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="8" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="8" />
+>>>>>>> origin/master
             </state>
           </provider>
         </entry>
@@ -150,10 +241,19 @@
         <option value="$PROJECT_DIR$/src/main/java/app/app2.java" />
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
         <option value="$PROJECT_DIR$/.gitignore" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/main/java/model/EstadoED.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/BairroED.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/CidadeED.java" />
         <option value="$PROJECT_DIR$/src/main/java/app5/aplicativo.java" />
+=======
+        <option value="$PROJECT_DIR$/src/main/java/model/PaisED.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/BairroED.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/EstadoED.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/TipoLogradouroED.java" />
+        <option value="$PROJECT_DIR$/src/main/java/app3/aplicativo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/CidadeED.java" />
+>>>>>>> origin/master
       </list>
     </option>
   </component>
@@ -186,6 +286,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+<<<<<<< HEAD
+=======
+      <pane id="PackagesPane" />
+>>>>>>> origin/master
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -222,7 +326,11 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
               <item name="app5" type="462c0819:PsiDirectoryNode" />
+=======
+              <item name="app3" type="462c0819:PsiDirectoryNode" />
+>>>>>>> origin/master
             </path>
             <path>
               <item name="TT_passtche" type="b2602c69:ProjectViewProjectNode" />
@@ -237,7 +345,10 @@
         </subPane>
       </pane>
       <pane id="AndroidView" />
+<<<<<<< HEAD
       <pane id="PackagesPane" />
+=======
+>>>>>>> origin/master
       <pane id="Scope" />
     </panes>
   </component>
@@ -246,8 +357,13 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="$PROJECT_DIR$/.idea/workspace.xml" />
     <property name="aspect.path.notification.shown" value="true" />
+<<<<<<< HEAD
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1536764156130" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+=======
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1536764019085" />
+    <property name="extract.method.default.visibility" value="private" />
+>>>>>>> origin/master
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -383,12 +499,20 @@
       </method>
     </configuration>
     <configuration name="aplicativo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+<<<<<<< HEAD
       <option name="MAIN_CLASS_NAME" value="app5.aplicativo" />
+=======
+      <option name="MAIN_CLASS_NAME" value="app3.aplicativo" />
+>>>>>>> origin/master
       <module name="PassTche" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
+<<<<<<< HEAD
           <option name="PATTERN" value="app5.*" />
+=======
+          <option name="PATTERN" value="app3.*" />
+>>>>>>> origin/master
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -463,6 +587,14 @@
       <updated>1536702584288</updated>
       <workItem from="1536702586281" duration="3519000" />
     </task>
+    <task id="LOCAL-00001" summary="Alteração nas classes e criação de apps">
+      <created>1536763783636</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1536763783636</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -472,8 +604,12 @@
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
+<<<<<<< HEAD
       <window_info id="UI Designer" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16117479" />
+=======
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+>>>>>>> origin/master
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Capture Tool" order="3" />
@@ -481,12 +617,20 @@
       <window_info id="Image Layers" order="5" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Run" order="2" weight="0.32839838" />
+=======
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32839838" />
+>>>>>>> origin/master
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Messages" order="7" visible="true" weight="0.32839838" />
+=======
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.32839838" />
+>>>>>>> origin/master
       <window_info anchor="bottom" id="FaTPlugin" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Docker" order="10" />
@@ -495,8 +639,12 @@
       <window_info anchor="bottom" id="FTP" order="13" />
       <window_info anchor="bottom" id="RNConsole" order="14" />
       <window_info anchor="bottom" id="Database Changes" order="15" />
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Version Control" order="16" weight="0.32974428" />
       <window_info anchor="right" id="Palette" />
+=======
+      <window_info anchor="bottom" id="Version Control" order="16" />
+>>>>>>> origin/master
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -515,6 +663,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Alteração nas classes e criação de apps" />
+    <option name="LAST_COMMIT_MESSAGE" value="Alteração nas classes e criação de apps" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/app/app.java" />
@@ -536,6 +688,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="30">
           <caret line="2" selection-start-line="2" selection-end-line="2" />
         </state>
@@ -559,10 +712,39 @@
             <element signature="e#415#416#0" expanded="true" />
             <element signature="e#465#466#0" expanded="true" />
             <element signature="e#505#506#0" expanded="true" />
+=======
+        <state relative-caret-position="-3689">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/EstadoED.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/TipoLogradouroED.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="8" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/PaisED.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+          <folding>
+            <element signature="e#90#91#0" expanded="true" />
+            <element signature="e#113#114#0" expanded="true" />
+>>>>>>> origin/master
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/model/EstadoED.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -603,6 +785,59 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="55" column="4" selection-start-line="55" selection-start-column="4" selection-end-line="55" selection-end-column="4" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/EnderecoED.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="65" selection-start-line="65" selection-end-line="65" />
+          <folding>
+            <element signature="e#291#292#0" expanded="true" />
+            <element signature="e#321#322#0" expanded="true" />
+            <element signature="e#351#352#0" expanded="true" />
+            <element signature="e#382#383#0" expanded="true" />
+            <element signature="e#423#424#0" expanded="true" />
+            <element signature="e#459#460#0" expanded="true" />
+            <element signature="e#489#490#0" expanded="true" />
+            <element signature="e#523#524#0" expanded="true" />
+            <element signature="e#711#712#0" expanded="true" />
+            <element signature="e#741#742#0" expanded="true" />
+            <element signature="e#771#772#0" expanded="true" />
+            <element signature="e#802#803#0" expanded="true" />
+            <element signature="e#853#854#0" expanded="true" />
+            <element signature="e#895#896#0" expanded="true" />
+            <element signature="e#930#931#0" expanded="true" />
+            <element signature="e#964#965#0" expanded="true" />
+            <element signature="e#1034#1035#0" expanded="true" />
+            <element signature="e#1086#1087#0" expanded="true" />
+            <element signature="e#1132#1133#0" expanded="true" />
+            <element signature="e#1168#1169#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/BairroED.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="14" lean-forward="true" selection-start-column="14" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/CidadeED.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/app3/aplicativo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <element signature="method#inserirDados2#0;class#aplicativo#0" />
+            <element signature="method#imprimirEndereco#0;class#aplicativo#0" />
+          </folding>
+>>>>>>> origin/master
         </state>
       </provider>
     </entry>
