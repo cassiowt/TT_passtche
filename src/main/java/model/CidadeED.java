@@ -13,7 +13,6 @@ public class CidadeED {
 		this.estadoED = estadoED;
 	}
 
-
 	public String getNome() {
 		return nome;
 	}
