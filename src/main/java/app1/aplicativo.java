@@ -65,7 +65,7 @@ public class aplicativo {
 
         System.out.println("Endereco do Cliente");
         System.out.println("-------------------------------------------------------------------------");
-        System.out.println(endereco.getTipoLogradouro().getDescricao() + " " + endereco.getRua() + ", " + endereco.getNumero());
+        System.out.println(endereco.getTipoLogradouro() + " " + endereco.getRua() + ", " + endereco.getNumero());
         System.out.println("Complemento: " + endereco.getComplemento());
         System.out.println("CEP: " + endereco.getCep());
         System.out.println("Bairro: " + endereco.getBairro().getNome());
