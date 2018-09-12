@@ -8,7 +8,9 @@ public class EstadoED {
 
 	private PaisED paisED;
 
-	public EstadoED() {
+
+	public EstadoED(){
+
 	}
 
 	public EstadoED(String nome, String sigla, PaisED paisED) {
@@ -16,6 +18,7 @@ public class EstadoED {
 		this.sigla = sigla;
 		this.paisED = paisED;
 	}
+
 
 	public String getNome() {
 		return this.nome;

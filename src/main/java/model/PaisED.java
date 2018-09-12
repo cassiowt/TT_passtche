@@ -4,7 +4,8 @@ public class PaisED {
 
 	private String nome;
 
-	public PaisED() {
+	public PaisED (){
+
 	}
 
 	public PaisED(String nome) {

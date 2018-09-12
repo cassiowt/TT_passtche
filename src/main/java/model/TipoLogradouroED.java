@@ -2,23 +2,15 @@ package model;
 
 public enum TipoLogradouroED {
 
-	ROTA(4, "Rota"), AVENIDA(1, "Av."), RUA(2, "Rua"), TRAVESSA(3, "Travessa");
+	ROTA(4), AVENIDA(1), RUA(2), TRAVESSA(3);
 
 	private final int valor;
 
-	private final String descricao;
-
-
-	TipoLogradouroED(int valorOpcao, String valorDescricao){
+	TipoLogradouroED(int valorOpcao){
 		this.valor = valorOpcao;
-		this.descricao = valorDescricao;
 	}
-
-	public int getValor() {
+	public int getValor(){
 		return valor;
 	}
 
-	public String getDescricao() {
-		return descricao;
-	}
 }

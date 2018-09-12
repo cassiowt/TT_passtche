@@ -6,13 +6,16 @@ public class BairroED {
 
     private CidadeED cidadeED;
 
-    public BairroED() {
+    public BairroED (){
+
     }
+
 
     public BairroED(String nome, CidadeED cidadeED) {
         this.nome = nome;
         this.cidadeED = cidadeED;
     }
+
 
     public String getNome() {
         return nome;
