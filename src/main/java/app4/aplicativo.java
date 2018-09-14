@@ -2,6 +2,9 @@ package app4;
 
 import model.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class aplicativo {
 
     static PaisED pais;
@@ -19,9 +22,11 @@ public class aplicativo {
         bairro = new BairroED();
         endereco = new EnderecoED();
 
-        inserirDados();
+        //inserirDados();
 
-        imprimirEndereco(endereco);
+        //imprimirEndereco(endereco);
+
+        litaEndereco ();
     }
 
     private static void inserirDados() {
@@ -54,5 +59,16 @@ public class aplicativo {
         System.out.println("Cidade: " + endereco.getBairro().getCidadeED().getNome());
         System.out.println("UF: " + endereco.getBairro().getCidadeED().getEstadoED().getSigla());
         System.out.println("País: " + endereco.getBairro().getCidadeED().getEstadoED().getPaisED().getNome());
+    }
+
+    private static void litaEndereco ()
+    {
+        List<EnderecoED> endereco = new ArrayList<EnderecoED>();
+
+        endereco.add(new EnderecoED("Boa Vista"));
+        endereco.add(new EnderecoED("Partenon"));
+        endereco.add(new EnderecoED("Centro"));
+
+        endereco.forEach(i -> System.out.println(i.getBairro()));
     }
 }
