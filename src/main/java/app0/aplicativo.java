@@ -25,7 +25,7 @@ public class aplicativo {
 
            imprimirEndereco(endereco);
            */
-            lista();
+            listaEstado();
 
     }
 
@@ -76,7 +76,7 @@ public class aplicativo {
 
     }
 
-    private static void lista(){
+    private static void listaPais(){
 
         List<PaisED> paises = new ArrayList<PaisED>();
 
@@ -90,6 +90,26 @@ public class aplicativo {
         for (int i = 0; i <  paises.size(); i++) {
             System.out.println(paises.get(i).getNome());
         }
+
+    }
+
+    private static  void listaEstado(){
+
+        List<EstadoED> estados = new ArrayList<EstadoED>();
+
+        PaisED brasil = new PaisED("Brasil");
+
+        estados.add(new EstadoED("Rio Grande do Sul", "RS", brasil));
+        estados.add(new EstadoED("Rio Grande do Norte", "RN", brasil));
+        estados.add(new EstadoED("Santa Catarina", "SC", brasil));
+        estados.add(new EstadoED("Amazonas", "AM", brasil));
+
+        estados.forEach(estadoED ->
+
+                System.out.println(estadoED.getNome() + " PAIS: " + estadoED.getPaisED().getNome())
+
+        );
+
 
     }
 
