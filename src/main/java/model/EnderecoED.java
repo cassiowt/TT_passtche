@@ -14,6 +14,25 @@ public class EnderecoED {
 
     private BairroED bairro;
 
+    private boolean valido;
+
+
+    public EnderecoED() {
+    }
+
+    public EnderecoED(String rua, int numero, String complemento, String cep, TipoLogradouroED tipoLogradouro, BairroED bairro, boolean valido) {
+        this.rua = rua;
+        this.numero = numero;
+        this.complemento = complemento;
+        this.cep = cep;
+        this.tipoLogradouro = tipoLogradouro;
+        this.bairro = bairro;
+        this.valido = valido;
+    }
+
+    public EnderecoED(String rua) {
+        this.rua = rua;
+    }
 
     public void setRua(String rua) {
         this.rua = rua;
@@ -63,6 +82,14 @@ public class EnderecoED {
 
     public void setBairro(BairroED bairro) {
         this.bairro = bairro;
+    }
+
+    public boolean isValido() {
+        return valido;
+    }
+
+    public void setValido(boolean valido) {
+        this.valido = valido;
     }
 }
 

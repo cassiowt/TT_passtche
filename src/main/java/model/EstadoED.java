@@ -8,6 +8,16 @@ public class EstadoED {
 
 	private PaisED paisED;
 
+	public EstadoED(){
+
+	}
+
+	public EstadoED(String nome, String sigla, PaisED paisED) {
+		this.nome = nome;
+		this.sigla = sigla;
+		this.paisED = paisED;
+	}
+
 	public String getNome() {
 		return this.nome;
 	}
