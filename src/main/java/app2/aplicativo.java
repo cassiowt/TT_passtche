@@ -1,6 +1,8 @@
 package app2;
 
 import model.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class aplicativo {
 
@@ -12,17 +14,20 @@ public class aplicativo {
 
     public static void main(String[] args) {
 
-        // Criado os objetos
+//        // Criado os objetos
+//
+//         pais = new PaisED("Argentina");
+//         estado = new EstadoED("La Paloama" , "LP" , pais);
+//         cidade = new CidadeED("cidade: cidad" , estado);
+//         bairro = new BairroED("nome: kkk" , cidade);
+//         endereco = new EnderecoED();
+//
+//        //inserirDados();
+//        //inserirDados2();
+//        //imprimirEndereco(endereco);
 
-         pais = new PaisED("Argentina");
-         estado = new EstadoED("La Paloama" , "LP" , pais);
-         cidade = new CidadeED("cidade: cidad" , estado);
-         bairro = new BairroED("nome: kkk" , cidade);
-         endereco = new EnderecoED();
+        listaBairro();
 
-        //inserirDados();
-        inserirDados2();
-        imprimirEndereco(endereco);
     }
 
     private static void inserirDados2() {
@@ -69,5 +74,21 @@ public class aplicativo {
         System.out.println("Cidade: " + endereco.getBairro().getCidadeED().getNome());
         System.out.println("UF: " + endereco.getBairro().getCidadeED().getEstadoED().getSigla());
         System.out.println("Pais: " + endereco.getBairro().getCidadeED().getEstadoED().getPaisED().getNome());
+    }
+
+    private static void listaBairro(){
+
+        List<BairroED> bairros = new ArrayList<BairroED>();
+
+        PaisED brasil = new PaisED("Brasil");
+        EstadoED rs = new EstadoED("rio grande do sul" , "RS" , brasil);
+        CidadeED poa = new CidadeED("porto alegre" , rs);
+
+        bairros.add(new BairroED("Moinhos de vento" , poa ));
+        bairros.add(new BairroED("Bomfim" , poa ));
+
+        bairros.forEach(i->
+                System.out.println(i.getNome()));
+
     }
 }
