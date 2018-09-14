@@ -2,6 +2,9 @@ package app0;
 
 import model.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class aplicativo {
 
     static PaisED     pais;
@@ -12,7 +15,7 @@ public class aplicativo {
 
 
     public static void main(String[] args) {
-
+/*
         // Criado os objetos
            pais     = new PaisED("Argentina");
            estado   = new EstadoED("La Paloma","LP",pais);
@@ -23,6 +26,9 @@ public class aplicativo {
            insirirDados2();
 
            imprimirEndereco(endereco);
+           */
+            lista();
+
     }
 
     private static void insirirDados2() {
@@ -36,7 +42,6 @@ public class aplicativo {
         endereco.setBairro(bairro);
         endereco.setValido(true);
     }
-
 
     private static void insirirDados() {
         // Setar dados para os objetos
@@ -57,8 +62,6 @@ public class aplicativo {
         endereco.setValido(true);
     }
 
-
-
     private static void imprimirEndereco(EnderecoED endereco) {
 
         System.out.println("Endereço do Cliente");
@@ -74,4 +77,26 @@ public class aplicativo {
 
 
     }
+
+    private static void lista(){
+
+        List<PaisED> paises = new ArrayList<PaisED>();
+
+        paises.add(new PaisED("Brasil"));
+        paises.add(new PaisED("Argentina"));
+        paises.add(new PaisED("Canada"));
+        paises.add(new PaisED("França"));
+
+        System.out.println(paises.size());
+
+        for (int i = 0; i <  paises.size(); i++) {
+            System.out.println(paises.get(i).getNome());
+        }
+
+        paises.forEach(i->
+                System.out.println(i.getNome())
+        );
+
+    }
+
 }
