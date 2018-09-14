@@ -87,8 +87,10 @@ public class aplicativo {
          EstadoED rs = new EstadoED("Rio Grande do Sul","RS",brasil);
 
          cidades.add(new CidadeED("Porto Alegre",rs));
-         cidades.add(new CidadeED("Caxias do Sul",rs));
+         cidades.add(new CidadeED("Santos", new EstadoED("São Paulo","SP",brasil)));
+         cidades.add(new CidadeED("New York", new EstadoED("New York","NY", new PaisED("EUA"))));
          cidades.add(new CidadeED("Pelotas",rs));
+         cidades.add(new CidadeED("Rio Grande",rs));
 
          cidades.forEach(i->
                  System.out.println("Cidade: " + i.getNome() + "; Estado: " + i.getEstadoED().getNome() +"; Sigla: " + i.getEstadoED().getSigla() +"; País: " + i.getEstadoED().getPaisED().getNome()));
