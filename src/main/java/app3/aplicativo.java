@@ -2,6 +2,9 @@ package app3;
 
 import model.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class aplicativo {
 
     static PaisED pais;
@@ -13,7 +16,7 @@ public class aplicativo {
 
     public static void main(String[] args) {
 
-        // Criados os objetos
+        // Criados os objetos e
 
         pais = new PaisED("Argentina");
         estado = new EstadoED("La Paloma ", "LP", pais);
@@ -29,6 +32,8 @@ public class aplicativo {
 
 
         imprimirEndereco(endereco);
+
+        listaCidades();
 
 
     }
@@ -74,5 +79,25 @@ public class aplicativo {
         System.out.println("Estado: " + endereco.getBairro().getCidadeED().getEstadoED().getSigla());
         System.out.println("Pais: " + endereco.getBairro().getCidadeED().getEstadoED().getPaisED().getNome());
     }
+
+    private static void listaCidades(){
+         List<CidadeED> cidades = new ArrayList<CidadeED>();
+
+         PaisED brasil = new PaisED("Brasil");
+         EstadoED rs = new EstadoED("Rio Grande do Sul","RS",brasil);
+
+         cidades.add(new CidadeED("Porto Alegre",rs));
+         cidades.add(new CidadeED("Santos", new EstadoED("São Paulo","SP",brasil)));
+         cidades.add(new CidadeED("New York", new EstadoED("New York","NY", new PaisED("EUA"))));
+         cidades.add(new CidadeED("Pelotas",rs));
+         cidades.add(new CidadeED("Rio Grande",rs));
+
+         cidades.forEach(i->
+                 System.out.println("Cidade: " + i.getNome() + "; Estado: " + i.getEstadoED().getNome() +"; Sigla: " + i.getEstadoED().getSigla() +"; País: " + i.getEstadoED().getPaisED().getNome()));
+
+    }
+
+
+
 }
 
