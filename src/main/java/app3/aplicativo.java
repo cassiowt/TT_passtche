@@ -16,7 +16,7 @@ public class aplicativo {
 
     public static void main(String[] args) {
 
-        // Criados os objetos
+        // Criados os objetos e
 
         pais = new PaisED("Argentina");
         estado = new EstadoED("La Paloma ", "LP", pais);
