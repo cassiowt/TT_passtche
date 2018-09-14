@@ -1,7 +1,5 @@
 package app0;
-
 import model.*;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -92,10 +90,6 @@ public class aplicativo {
         for (int i = 0; i <  paises.size(); i++) {
             System.out.println(paises.get(i).getNome());
         }
-
-        paises.forEach(i->
-                System.out.println(i.getNome())
-        );
 
     }
 
