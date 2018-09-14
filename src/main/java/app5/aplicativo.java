@@ -21,6 +21,7 @@ public class aplicativo {
         cidade = new CidadeED();
         bairro = new BairroED();
         endereco = new EnderecoED();
+
         lista();
 
         //inserirDados();
