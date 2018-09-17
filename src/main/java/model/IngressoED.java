@@ -1,5 +1,7 @@
 package model;
 
+import java.util.Date;
+
 public class IngressoED {
 
 	private double valor;

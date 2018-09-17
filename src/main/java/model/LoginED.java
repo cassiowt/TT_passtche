@@ -1,5 +1,7 @@
 package model;
 
+import java.util.Date;
+
 public class LoginED {
 
 	private Date dataLogon;
