@@ -1,6 +1,8 @@
-package mo
+package model
 
-public class FornecedorED extends  {
+import java.util.Date;
+
+public class FornecedorED extends PessoaED {
 
 	private String cnpj;
 
@@ -13,7 +15,8 @@ public class FornecedorED extends  {
 	public FornecedorED() {
 	}
 
-	public FornecedorED(String cnpj, String nomeEmpresa, int percentualComissao, String contaBsncaria) {
+	public FornecedorED(String nome, Date dataNascimento, String email, Tipo_PessoaED tipo_PessoaED, EnderecoED enderecoED, TelefoneED telefoneED, String cnpj, String nomeEmpresa, int percentualComissao, String contaBsncaria) {
+		super(nome, dataNascimento, email, tipo_PessoaED, enderecoED, telefoneED);
 		this.cnpj = cnpj;
 		this.nomeEmpresa = nomeEmpresa;
 		this.percentualComissao = percentualComissao;

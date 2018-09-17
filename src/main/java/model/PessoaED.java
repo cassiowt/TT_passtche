@@ -1,5 +1,7 @@
 package model;
 
+import java.util.Date;
+
 public class PessoaED {
 
 	private String nome;
@@ -13,6 +15,9 @@ public class PessoaED {
 	private EnderecoED enderecoED;
 
 	private TelefoneED telefoneED;
+
+	public PessoaED() {
+	}
 
 	public PessoaED(String nome, Date dataNascimento, String email, Tipo_PessoaED tipo_PessoaED, EnderecoED enderecoED, TelefoneED telefoneED) {
 		this.nome = nome;
