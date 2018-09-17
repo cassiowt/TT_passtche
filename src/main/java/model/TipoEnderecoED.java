@@ -1,11 +1,21 @@
 package model;
 
-public class TipoEnderecoED {
+public enum TipoEnderecoED {
 
-	private String RESIDENCIAL;
+	RESIDENCIAL(1, "Residencial"), COMERCIAL(2, "Comercial"), OUTROS(3, "Outros");
 
-	private String COMERCIAL;
+	private final int valor;
+	private final String descricao;
 
-	private String OUTROS;
+	TipoEnderecoED(int valorOpcao, String valorDescricao){
+		this.valor = valorOpcao;
+		this.descricao = valorDescricao; }
 
-}
+	public int getValor(){
+		return valor;
+	}
+
+	public String getDescricao(){
+		return descricao;
+	}
+	}
