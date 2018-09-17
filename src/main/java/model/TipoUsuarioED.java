@@ -2,12 +2,23 @@ package model;
 
 public class TipoUsuarioED {
 
-	private String ADMIN;
+	ADMIN(4, "Administrador"), VISITANTE(1, "Visitante"), CLIENTE(2, "Cliante"), FORNECEDOR(3, "Fornecedor");
 
-	private String VISITANTE;
 
-	private String CLIENTE;
+	private final int valor;
+	private final String descricao;
 
-	private String FORNECEDOR;
+
+	TipoUsuarioED(int valorOpcao, String valorDescricao){
+		this.valor = valorOpcao;
+		this.descricao = valorDescricao;
+	}
+	public int getValor(){
+		return valor;
+	}
+
+	public String getDescricao(){
+		return descricao;
+	}
 
 }
