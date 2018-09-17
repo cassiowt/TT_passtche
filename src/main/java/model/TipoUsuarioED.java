@@ -1,6 +1,6 @@
 package model;
 
-public class TipoUsuarioED {
+public enum  TipoUsuarioED {
 
 	ADMIN(4, "Administrador"), VISITANTE(1, "Visitante"), CLIENTE(2, "Cliante"), FORNECEDOR(3, "Fornecedor");
 

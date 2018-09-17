@@ -1,4 +1,4 @@
-package model
+package model;
 
 import java.util.Date;
 
@@ -21,10 +21,6 @@ public class FornecedorED extends PessoaED {
 		this.nomeEmpresa = nomeEmpresa;
 		this.percentualComissao = percentualComissao;
 		this.contaBsncaria = contaBsncaria;
-	}
-
-	public static void main(String[] args) {
-		System.out.println("teste");
 	}
 
 	public String getCnpj() {
