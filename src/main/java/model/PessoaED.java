@@ -1,8 +1,15 @@
 package model;
 
+import javax.persistence.*;
 import java.util.Date;
 
+@Entity (name = "PESSOA")
 public class PessoaED {
+
+	@Id
+	@Column(name = "ID_PESSOA")
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private long id;
 
 	private String nome;
 
@@ -30,6 +37,10 @@ public class PessoaED {
 
 	public String getNome() {
 		return nome;
+	}
+
+	public long getId() {
+		return id;
 	}
 
 	public void setNome(String nome) {
