@@ -1,13 +1,20 @@
 package model;
 
-public class TipoEventoED {
+public enum TipoEventoED {
 
-	private String FUTEBOL;
+	FUTEBOL(1),CINEMA(2), TEATRO(3),SHOW(4);
 
-	private String CINEMA;
+    private int valor;
 
-	private String TEATRO;
+	TipoEventoED(int valorOpcao) {
+		this.valor = valorOpcao;
+	}
 
-	private String SHOW;
+	public int getValor() {
+		return valor;
+	}
 
+	public void setValor(int valor) {
+		this.valor = valor;
+	}
 }

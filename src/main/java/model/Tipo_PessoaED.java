@@ -1,13 +1,22 @@
 package model;
 
-public class Tipo_PessoaED {
+public enum  Tipo_PessoaED {
 
-	private String CONTATO;
+	 CONTATO, RESPONSAVEL, CONSUMIDOR, VENDEDOR;
 
-	private String RESPONSAVEL;
-
-	private String CONSUMIDOR;
-
-	private String VENDEDOR;
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
