@@ -1,36 +1,56 @@
 package model;
 
+import javax.persistence.*;
+
 import java.util.Date;
 
+@Entity
+@Table (name = "EVENTOS")
 public class EventoED {
 
+	@Id
+	@GeneratedValue
+	@Column (name = "ID_EVENTO")
+	private long id;
+
+	@Column (name = "NOME", length = 50)
 	private String nome;
 
+	@Column (name = "DATA")
 	private Date data;
 
-	private int local;
+	//@Column (name = "LOCAL")
+	//private int local;
 
+	@Column (name = "CODIGO")
 	private String codigo;
 
+	@Column (name = "PRECO")
 	private double preco;
 
+	@Column (name = "QTD_LUGAR")
 	private int lugares;
 
+	@Column (name = "DESCRICAO", length = 250)
 	private String descricao;
 
+	@Column (name = "DATA_EVENTO")
 	private Date dataEvento;
 
+	@OneToOne
+	@JoinColumn (name = "LOCAL", referencedColumnName = "ID_LOCAL")
 	private LocalEventoED localEventoED;
 
+	@OneToOne
+	@JoinColumn (name = "TIPO", referencedColumnName = "ID_TIPO_EVENTO")
 	private TipoEventoED tipoEventoED;
 
-	public EventoED() {
-	}
+	public EventoED() { }
 
 	public EventoED(String nome, Date data, int local, String codigo, double preco, int lugares, String descricao, Date dataEvento, LocalEventoED localEventoED, TipoEventoED tipoEventoED) {
 		this.nome = nome;
 		this.data = data;
-		this.local = local;
+		//this.local = local;
 		this.codigo = codigo;
 		this.preco = preco;
 		this.lugares = lugares;
@@ -56,13 +76,11 @@ public class EventoED {
 		this.data = data;
 	}
 
-	public int getLocal() {
-		return local;
-	}
+	//public int getLocal() {
+	//	return local;}
 
-	public void setLocal(int local) {
-		this.local = local;
-	}
+	//public void setLocal(int local) {
+	//	this.local = local;}
 
 	public String getCodigo() {
 		return codigo;

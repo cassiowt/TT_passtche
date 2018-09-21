@@ -1,9 +1,18 @@
 package model;
 
+import javax.persistence.*;
+
+@Entity
+@Table (name = "PAISES")
 public class PaisED {
 
-	private String nome;
+	@Id
+	@GeneratedValue
+	@Column (name = "ID_PAIS")
+	private long id;
 
+	@Column (name = "NOME")
+	private String nome;
 
 	public PaisED (){}
 

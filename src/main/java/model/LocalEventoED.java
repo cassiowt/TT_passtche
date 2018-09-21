@@ -1,27 +1,41 @@
 package model;
 
+
+import javax.persistence.*;
+
+@Entity
+@Table (name = "LOCAL_EVENTOS")
 public class LocalEventoED {
 
+    @Id
+    @GeneratedValue
+    @Column (name = "ID_LOCAL_EVENTO")
+    private long id;
+
+    @Column (name = "NOME")
 	private String nome;
 
+    @Column (name = "ESTACIONAMENTO")
 	private boolean estacionamento;
 
+    @Column (name = "URL_MAPA")
 	private String urlMapa;
 
+    @Column (name = "ACESSIBILIDADE")
 	private boolean acessibilidade;
 
+    @OneToMany
+    @JoinColumn (name = "IMAGEM", referencedColumnName = "ID_IMAGEM")
 	private ImagemED[] imagemED;
 
-    public LocalEventoED() {
-    }
+    public LocalEventoED() { }
 
     public LocalEventoED(String nome, boolean estacionamento, String urlMapa, boolean acessibilidade, ImagemED[] imagemED) {
         this.nome = nome;
         this.estacionamento = estacionamento;
         this.urlMapa = urlMapa;
         this.acessibilidade = acessibilidade;
-        this.imagemED = imagemED;
-    }
+        this.imagemED = imagemED; }
 
     public String getNome() {
         return nome;
