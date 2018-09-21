@@ -1,9 +1,13 @@
 package model;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Date;
+import java.util.List;
 
 @Entity (name = "PESSOA")
+@Inheritance(strategy=InheritanceType.JOINED)
 public class PessoaED {
 
 	@Id
@@ -11,28 +15,34 @@ public class PessoaED {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 
+	@Column (name = "NOME")
 	private String nome;
-
+	@Column (name = "NASCIMENTO")
 	private Date dataNascimento;
-
+	@Column (name = "EMAIL")
 	private String email;
 
+	@Column (name = "TIPO_PESSOA")
+	@Enumerated(EnumType.STRING)
 	private Tipo_PessoaED tipo_PessoaED;
 
+	@OneToOne
 	private EnderecoED enderecoED;
 
-	private TelefoneED telefoneED;
+	@OneToMany (cascade={CascadeType.ALL})
+	@JoinColumn(name= "ID_PESSOA")
+	private Collection <TelefoneED> telefones = new ArrayList<TelefoneED>();
 
 	public PessoaED() {
 	}
 
-	public PessoaED(String nome, Date dataNascimento, String email, Tipo_PessoaED tipo_PessoaED, EnderecoED enderecoED, TelefoneED telefoneED) {
+	public PessoaED(String nome, Date dataNascimento, String email, Tipo_PessoaED tipo_PessoaED, EnderecoED enderecoED) {
 		this.nome = nome;
 		this.dataNascimento = dataNascimento;
 		this.email = email;
 		this.tipo_PessoaED = tipo_PessoaED;
 		this.enderecoED = enderecoED;
-		this.telefoneED = telefoneED;
+
 	}
 
 	public String getNome() {
@@ -79,11 +89,5 @@ public class PessoaED {
 		this.enderecoED = enderecoED;
 	}
 
-	public TelefoneED getTelefoneED() {
-		return telefoneED;
 	}
 
-	public void setTelefoneED(TelefoneED telefoneED) {
-		this.telefoneED = telefoneED;
-	}
-}

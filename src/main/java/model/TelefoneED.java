@@ -1,13 +1,22 @@
 package model;
 
+
+import javax.persistence.*;
+
+@Entity(name = "TELEFONES")
 public class TelefoneED {
 
+	@Id
+	@Column(name = "ID_TELEFONE")
 	private String numero;
-
+	@Column (name = "DDD")
 	private String ddd;
+
 
 	private PessoaED pessoaED;
 
+	@Enumerated(EnumType.STRING)
+	@Column(name = "TIPO_TELEFONE")
 	private TipoTelefoneED tipoTelefoneED;
 
 	public TelefoneED() {
