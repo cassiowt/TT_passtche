@@ -22,16 +22,22 @@ public class UsuarioED {
 	@Column(name = "TIPO_USUARIO")
 	private TipoUsuarioED tipoUsuarioED;
 
+	@JoinColumn(name = "ID_PESSOA",
+				referencedColumnName = "ID_PESSOA",
+				foreignKey = @ForeignKey(name = "FK_PESSOA_ID_PESSOA"))
 	@OneToOne
 	private PessoaED pessoaED;
 
 	@Temporal(TemporalType.TIMESTAMP)
+	@Column(name = "DATA_CRIACAO")
 	private Date dataCriacao;
-	
+
 	@Temporal(TemporalType.TIMESTAMP)
+	@Column(name = "DATA_ALTERACAO")
 	private Date dataAlteracao;
 
 	public UsuarioED() {
+		this.dataCriacao = new Date();
 	}
 
 	public UsuarioED(String email, String senha, TipoUsuarioED tipoUsuarioED, PessoaED pessoaED) {
@@ -39,6 +45,7 @@ public class UsuarioED {
 		this.senha = senha;
 		this.tipoUsuarioED = tipoUsuarioED;
 		this.pessoaED = pessoaED;
+		this.dataCriacao = new Date();
 	}
 
 	public String getEmail() {

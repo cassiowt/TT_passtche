@@ -4,21 +4,24 @@ import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
-import java.util.List;
 
-@Entity (name = "PESSOA")
+
+@Entity (name = "PESSOAS")
 @Inheritance(strategy=InheritanceType.JOINED)
 public class PessoaED {
 
 	@Id
 	@Column(name = "ID_PESSOA")
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 
 	@Column (name = "NOME")
 	private String nome;
+
 	@Column (name = "NASCIMENTO")
-	private Date dataNascimento;
+	@Temporal(TemporalType.TIMESTAMP)
+    private Date dataNascimento;
+
 	@Column (name = "EMAIL")
 	private String email;
 
@@ -26,11 +29,15 @@ public class PessoaED {
 	@Enumerated(EnumType.STRING)
 	private Tipo_PessoaED tipo_PessoaED;
 
+    @JoinColumn(name = "ID_ENDERECO",
+            referencedColumnName = "ID_ENDERECO",
+            foreignKey = @ForeignKey(name = "FK_ENDERECO_ID_ENDERECO"))
 	@OneToOne
-	private EnderecoED enderecoED;
+    private EnderecoED enderecoED;
 
 	@OneToMany (cascade={CascadeType.ALL})
-	@JoinColumn(name= "ID_PESSOA")
+	@JoinColumn(name= "ID_PESSOA",
+                foreignKey = @ForeignKey(name = "FK_PESSOA_ID_PESSOA"))
 	private Collection <TelefoneED> telefones = new ArrayList<TelefoneED>();
 
 	public PessoaED() {

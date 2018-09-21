@@ -2,7 +2,8 @@ package model;
 
 import javax.persistence.*;
 
-@Entity (name = "ENDERECOS")
+@Entity
+@Table(name = "ENDERECOS")
 public class EnderecoED {
 
     @Id
@@ -22,12 +23,14 @@ public class EnderecoED {
     @Column (name = "CEP")
     private String cep;
 
-    @OneToOne
-    @JoinColumn (name = "TIPO_LOGRADOURO", referencedColumnName = "ID_TIPO_LOGRADOURO")
+    @Enumerated(EnumType.STRING)
+    @Column(name = "TIPO_LOGRADOURO")
     private TipoLogradouroED tipoLogradouro;
 
     @OneToOne
-    @JoinColumn (name = "BAIRRO", referencedColumnName = "ID_BAIRRO")
+    @JoinColumn (name = "ID_BAIRRO",
+                referencedColumnName = "ID_BAIRRO",
+                foreignKey = @ForeignKey(name = "FK_BAIRRO_ID_BAIRRO"))
     private BairroED bairro;
 
     private boolean valido;
@@ -48,6 +51,10 @@ public class EnderecoED {
 
     public EnderecoED(String rua) {
         this.rua = rua;
+    }
+
+    public long getId() {
+        return id;
     }
 
     public void setRua(String rua) {

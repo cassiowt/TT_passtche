@@ -7,7 +7,7 @@ import javax.persistence.*;
 public class PaisED {
 
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column (name = "ID_PAIS")
 	private long id;
 

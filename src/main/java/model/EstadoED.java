@@ -7,7 +7,7 @@ import javax.persistence.*;
 public class EstadoED {
 
 	@Id
-	@GeneratedValue
+	@GeneratedValue (strategy = GenerationType.IDENTITY)
 	@Column (name = "ID_ESTADO")
 	private long id;
 
@@ -18,7 +18,9 @@ public class EstadoED {
 	private String sigla;
 
 	@OneToOne
-	@JoinColumn (name = "PAIS", referencedColumnName = "ID_PAIS")
+	@JoinColumn (name = "PAIS",
+			referencedColumnName = "ID_PAIS",
+			foreignKey = @ForeignKey(name = "FK_PAIS_ID_PAIS"))
 	private PaisED paisED;
 
 	public EstadoED(){

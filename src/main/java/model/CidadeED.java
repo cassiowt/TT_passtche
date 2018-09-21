@@ -7,7 +7,7 @@ import javax.persistence.*;
 public class CidadeED {
 
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column (name = "ID_CIDADE")
 	private long id;
 
@@ -15,7 +15,9 @@ public class CidadeED {
 	private String nome;
 
 	@OneToOne
-	@JoinColumn (name = "ESTADO", referencedColumnName = "ID_ESTADO")
+	@JoinColumn (name = "ESTADO",
+				referencedColumnName = "ID_ESTADO",
+				foreignKey = @ForeignKey(name = "FK_ESTADO_ID_ESTADO"))
 	private EstadoED estadoED;
 
 	public CidadeED() {

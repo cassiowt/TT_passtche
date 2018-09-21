@@ -3,17 +3,20 @@ package model;
 
 import javax.persistence.*;
 
-@Entity(name = "TELEFONES")
+@Entity
+@Table(name = "TELEFONES")
 public class TelefoneED {
 
 	@Id
-	@Column(name = "ID_TELEFONE")
+    @Column(name = "ID_TELEFONE")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
+
+	@Column(name = "NUMERO")
 	private String numero;
+
 	@Column (name = "DDD")
 	private String ddd;
-
-
-	private PessoaED pessoaED;
 
 	@Enumerated(EnumType.STRING)
 	@Column(name = "TIPO_TELEFONE")
@@ -22,14 +25,17 @@ public class TelefoneED {
 	public TelefoneED() {
 	}
 
-	public TelefoneED(String numero, String ddd, PessoaED pessoaED, TipoTelefoneED tipoTelefoneED) {
+	public TelefoneED(String numero, String ddd, TipoTelefoneED tipoTelefoneED) {
 		this.numero = numero;
 		this.ddd = ddd;
-		this.pessoaED = pessoaED;
 		this.tipoTelefoneED = tipoTelefoneED;
 	}
 
-	public String getNumero() {
+    public long getId() {
+        return id;
+    }
+
+    public String getNumero() {
 		return numero;
 	}
 
@@ -43,14 +49,6 @@ public class TelefoneED {
 
 	public void setDdd(String ddd) {
 		this.ddd = ddd;
-	}
-
-	public PessoaED getPessoaED() {
-		return pessoaED;
-	}
-
-	public void setPessoaED(PessoaED pessoaED) {
-		this.pessoaED = pessoaED;
 	}
 
 	public TipoTelefoneED getTipoTelefoneED() {
