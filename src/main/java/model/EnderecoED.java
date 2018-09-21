@@ -1,17 +1,33 @@
 package model;
 
+import javax.persistence.*;
+
+@Entity (name = "ENDERECOS")
 public class EnderecoED {
 
+    @Id
+    @GeneratedValue
+    @Column (name = "ID_ENDERECO")
+    private long id;
+
+    @Column (name = "RUA")
     private String rua;
 
+    @Column (name = "NUMERO")
     private int numero;
 
+    @Column (name = "COMPLEMENTO")
     private String complemento;
 
+    @Column (name = "CEP")
     private String cep;
 
+    @OneToOne
+    @JoinColumn (name = "TIPO_LOGRADOURO", referencedColumnName = "ID_TIPO_LOGRADOURO")
     private TipoLogradouroED tipoLogradouro;
 
+    @OneToOne
+    @JoinColumn (name = "BAIRRO", referencedColumnName = "ID_BAIRRO")
     private BairroED bairro;
 
     private boolean valido;
