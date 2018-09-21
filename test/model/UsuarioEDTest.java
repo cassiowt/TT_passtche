@@ -11,6 +11,10 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Date;
+
 import static org.junit.Assert.*;
 
 public class UsuarioEDTest {
@@ -36,7 +40,13 @@ public class UsuarioEDTest {
     public void createUserSession() {
         Session session = null;
         Transaction transaction = null;
-        UsuarioED usuario = new UsuarioED("usuario@site.com.br", "1234", TipoUsuarioED.ADMIN, null);
+        TelefoneED tel = new TelefoneED("992728","51",TipoTelefoneED.CELULAR);
+        ClienteED cliente = new ClienteED("Pedro",new Date(),"usuario@site.com.br",Tipo_PessoaED.CONSUMIDOR, "616","Caçar", "123");
+            Collection<TelefoneED> telefones = new ArrayList<TelefoneED>();
+            telefones.add(tel);
+            cliente.setTelefones(telefones);
+        UsuarioED usuario = new UsuarioED("usuario@site.com.br", "1234", TipoUsuarioED.ADMIN, cliente);
+
         try {
             session = HibernateUtil.getSession();
             transaction = session.beginTransaction();

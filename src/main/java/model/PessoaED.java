@@ -1,14 +1,19 @@
 package model;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Date;
 
-@Entity (name = "PESSOA")
-public class PessoaED {
+
+@Entity
+@Table(name = "PESSOAS")
+@Inheritance(strategy = InheritanceType.JOINED)
+public abstract class PessoaED {
 
 	@Id
 	@Column(name = "ID_PESSOA")
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 
 	private String nome;
@@ -18,21 +23,24 @@ public class PessoaED {
 	private String email;
 
 	private Tipo_PessoaED tipo_PessoaED;
+/*
+	@OneToOne
+	private EnderecoED enderecoED;*/
 
-	private EnderecoED enderecoED;
-
-	private TelefoneED telefoneED;
+	@OneToMany(cascade = CascadeType.PERSIST)
+	@JoinColumn(name = "ID_PESSOA")
+	private Collection<TelefoneED> telefones = new ArrayList<TelefoneED>();
 
 	public PessoaED() {
 	}
 
-	public PessoaED(String nome, Date dataNascimento, String email, Tipo_PessoaED tipo_PessoaED, EnderecoED enderecoED, TelefoneED telefoneED) {
+	public PessoaED(String nome, Date dataNascimento, String email, Tipo_PessoaED tipo_PessoaED) {
 		this.nome = nome;
 		this.dataNascimento = dataNascimento;
 		this.email = email;
 		this.tipo_PessoaED = tipo_PessoaED;
-		this.enderecoED = enderecoED;
-		this.telefoneED = telefoneED;
+		/*this.enderecoED = enderecoED;*/
+
 	}
 
 	public String getNome() {
@@ -70,20 +78,21 @@ public class PessoaED {
 	public void setTipo_PessoaED(Tipo_PessoaED tipo_PessoaED) {
 		this.tipo_PessoaED = tipo_PessoaED;
 	}
-
+/*
 	public EnderecoED getEnderecoED() {
 		return enderecoED;
 	}
 
 	public void setEnderecoED(EnderecoED enderecoED) {
 		this.enderecoED = enderecoED;
+	}*/
+
+
+	public Collection<TelefoneED> getTelefones() {
+		return telefones;
 	}
 
-	public TelefoneED getTelefoneED() {
-		return telefoneED;
-	}
-
-	public void setTelefoneED(TelefoneED telefoneED) {
-		this.telefoneED = telefoneED;
+	public void setTelefones(Collection<TelefoneED> telefones) {
+		this.telefones = telefones;
 	}
 }

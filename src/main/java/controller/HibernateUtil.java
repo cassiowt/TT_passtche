@@ -1,6 +1,8 @@
 package controller;
 
+import model.ClienteED;
 import model.PessoaED;
+import model.TelefoneED;
 import model.UsuarioED;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
@@ -28,6 +30,8 @@ public class HibernateUtil {
         configuration.configure("hibernate.cfg.xml");
         configuration.addAnnotatedClass(UsuarioED.class);
         configuration.addAnnotatedClass(PessoaED.class);
+        configuration.addAnnotatedClass(TelefoneED.class);
+        configuration.addAnnotatedClass(ClienteED.class);
         ServiceRegistry srvcReg = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties()).build();
         sessionFactory = configuration.buildSessionFactory(srvcReg);
     }

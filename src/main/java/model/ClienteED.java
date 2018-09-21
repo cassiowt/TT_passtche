@@ -1,9 +1,15 @@
 package model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 import java.util.Date;
 
+@Entity
+@Table(name="CLIENTES")
 public class ClienteED extends PessoaED {
 
+	@Column(name = "CPF", length = 11)
 	private String cpf;
 
 	private String hobby;
@@ -15,8 +21,8 @@ public class ClienteED extends PessoaED {
 	}
 
 
-	public ClienteED(String nome, Date dataNascimento, String email, Tipo_PessoaED tipo_PessoaED, EnderecoED enderecoED, TelefoneED telefoneED, String cpf, String hobby, String cartao) {
-		super(nome, dataNascimento, email, tipo_PessoaED, enderecoED, telefoneED);
+	public ClienteED(String nome, Date dataNascimento, String email, Tipo_PessoaED tipo_PessoaED, String cpf, String hobby, String cartao) {
+		super(nome, dataNascimento, email, tipo_PessoaED);
 		this.cpf = cpf;
 		this.hobby = hobby;
 		this.cartao = cartao;

@@ -1,22 +1,28 @@
 package model;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "TELEFONES")
 public class TelefoneED {
+
+    @Id
+    @Column(name = "TELEFONE_ID")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
 
 	private String numero;
 
 	private String ddd;
-
-	private PessoaED pessoaED;
 
 	private TipoTelefoneED tipoTelefoneED;
 
 	public TelefoneED() {
 	}
 
-	public TelefoneED(String numero, String ddd, PessoaED pessoaED, TipoTelefoneED tipoTelefoneED) {
+	public TelefoneED(String numero, String ddd, TipoTelefoneED tipoTelefoneED) {
 		this.numero = numero;
 		this.ddd = ddd;
-		this.pessoaED = pessoaED;
 		this.tipoTelefoneED = tipoTelefoneED;
 	}
 
@@ -34,14 +40,6 @@ public class TelefoneED {
 
 	public void setDdd(String ddd) {
 		this.ddd = ddd;
-	}
-
-	public PessoaED getPessoaED() {
-		return pessoaED;
-	}
-
-	public void setPessoaED(PessoaED pessoaED) {
-		this.pessoaED = pessoaED;
 	}
 
 	public TipoTelefoneED getTipoTelefoneED() {

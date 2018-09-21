@@ -9,7 +9,7 @@ public class UsuarioED {
 
 	@Id
 	@Column(name = "ID_USUARIO")
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 
 	@Column(name = "EMAIL")
@@ -22,7 +22,10 @@ public class UsuarioED {
 	@Column(name = "TIPO_USUARIO")
 	private TipoUsuarioED tipoUsuarioED;
 
-	@OneToOne
+	@JoinColumn(name = "pessoa",
+				referencedColumnName = "ID_PESSOA",
+				foreignKey = @ForeignKey(name="FK_PESSOA_ID_PESSOA"))
+	@OneToOne (cascade = CascadeType.PERSIST)
 	private PessoaED pessoaED;
 
 	@Temporal(TemporalType.TIMESTAMP)
@@ -32,6 +35,8 @@ public class UsuarioED {
 	private Date dataAlteracao;
 
 	public UsuarioED() {
+		this.dataAlteracao = new Date();
+		this.dataCriacao = new Date();
 	}
 
 	public UsuarioED(String email, String senha, TipoUsuarioED tipoUsuarioED, PessoaED pessoaED) {
@@ -39,6 +44,8 @@ public class UsuarioED {
 		this.senha = senha;
 		this.tipoUsuarioED = tipoUsuarioED;
 		this.pessoaED = pessoaED;
+		this.dataAlteracao = new Date();
+		this.dataCriacao = new Date();
 	}
 
 	public String getEmail() {

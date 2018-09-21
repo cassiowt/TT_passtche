@@ -1,7 +1,11 @@
 package model;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
 import java.util.Date;
 
+@Entity
+@Table(name="FORNECEDORES")
 public class FornecedorED extends PessoaED {
 
 	private String cnpj;
@@ -16,7 +20,7 @@ public class FornecedorED extends PessoaED {
 	}
 
 	public FornecedorED(String nome, Date dataNascimento, String email, Tipo_PessoaED tipo_PessoaED, EnderecoED enderecoED, TelefoneED telefoneED, String cnpj, String nomeEmpresa, int percentualComissao, String contaBsncaria) {
-		super(nome, dataNascimento, email, tipo_PessoaED, enderecoED, telefoneED);
+		super(nome, dataNascimento, email, tipo_PessoaED);
 		this.cnpj = cnpj;
 		this.nomeEmpresa = nomeEmpresa;
 		this.percentualComissao = percentualComissao;
