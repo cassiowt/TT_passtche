@@ -1,14 +1,15 @@
 package model;
 
-
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.Collection;
 
 @Entity
 @Table (name = "LOCAL_EVENTOS")
 public class LocalEventoED {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column (name = "ID_LOCAL_EVENTO")
     private long id;
 
@@ -26,16 +27,16 @@ public class LocalEventoED {
 
     @OneToMany
     @JoinColumn (name = "IMAGEM", referencedColumnName = "ID_IMAGEM")
-	private ImagemED[] imagemED;
+	private Collection<ImagemED> imagems = new ArrayList<ImagemED>();
 
     public LocalEventoED() { }
 
-    public LocalEventoED(String nome, boolean estacionamento, String urlMapa, boolean acessibilidade, ImagemED[] imagemED) {
+    public LocalEventoED(String nome, boolean estacionamento, String urlMapa, boolean acessibilidade) {
         this.nome = nome;
         this.estacionamento = estacionamento;
         this.urlMapa = urlMapa;
         this.acessibilidade = acessibilidade;
-        this.imagemED = imagemED; }
+ }
 
     public String getNome() {
         return nome;
@@ -69,11 +70,11 @@ public class LocalEventoED {
         this.acessibilidade = acessibilidade;
     }
 
-    public ImagemED[] getImagemED() {
-        return imagemED;
+    public Collection<ImagemED> getImagems() {
+        return imagems;
     }
 
-    public void setImagemED(ImagemED[] imagemED) {
-        this.imagemED = imagemED;
+    public void setImagems(Collection<ImagemED> imagems) {
+        this.imagems = imagems;
     }
 }

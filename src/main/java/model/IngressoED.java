@@ -9,22 +9,32 @@ public class IngressoED {
 
 	@Id
 	@Column(name = "ID_INGRESSO")
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
+
 	@Column(name = "VALOR")
 	private double valor;
+
+	@OneToOne
 	@Column(name = "EVENTO")
 	private EventoED evento;
+
 	@Column(name = "DATA_INICIO")
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date dataInicioVenda;
+
 	@Column(name = "DATA_FIM")
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date dataFimVenda;
+
 	@Column(name = "TOTAL")
 	private int total;
+
 	@Column(name = "SALDO")
 	private int saldo;
+
+	@Enumerated(EnumType.STRING)
+	private TipoIngresso tipoIngresso;
 
 
 	public IngressoED() {

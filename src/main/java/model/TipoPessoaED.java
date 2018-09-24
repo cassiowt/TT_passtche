@@ -1,6 +1,6 @@
 package model;
 
-public enum  Tipo_PessoaED {
+public enum TipoPessoaED {
 
 	 CONTATO, RESPONSAVEL, CONSUMIDOR, VENDEDOR;
 

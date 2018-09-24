@@ -1,18 +1,14 @@
 package model;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Date;
 
 @Entity (name = "VENDAS")
-
 public class VendaED {
-
 
 	@Id
 	@Column(name = "ID_VENDA")
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 
 	@Column (name = "DATA_VENDA")
@@ -21,21 +17,20 @@ public class VendaED {
 
 	@Column (name = "QUANTIDADE")
 	private int quantidadeVenda;
+
 	@Column (name = "VALOR_TOTAL_VENDA")
 	private double valorTotalVenda;
 
-	@ManyToOne (cascade={CascadeType.ALL})
+	@OneToOne
+	@JoinColumn(name= "ID_INGRESSO")
+	private IngressoED ingresso;
+
+	@OneToOne
+	@JoinColumn(name= "ID_PRODUTO")
+	private ProdutoED produto;
+
+	@OneToOne
 	@JoinColumn(name= "ID_PESSOA")
-	private Collection<VendaED> vendas = new ArrayList<VendaED>();
-
-	@OneToMany(cascade={CascadeType.ALL})
-	@JoinColumn(name= "ID_VENDA")
-	private Collection <IngressoED> ingressos = new ArrayList<IngressoED>();
-
-	@OneToMany(cascade={CascadeType.ALL})
-	@JoinColumn(name= "ID_VENDA")
-	private Collection <ProdutoED> produtos = new ArrayList<ProdutoED>();
-
 	private ClienteED cliente;
 
 	public VendaED() {
@@ -46,7 +41,6 @@ public class VendaED {
         this.quantidadeVenda = quantidadeVenda;
         this.valorTotalVenda = valorTotalVenda;
         this.cliente = cliente;
-
     }
 
     public Date getDataVenda() {

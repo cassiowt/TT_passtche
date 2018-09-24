@@ -8,12 +8,13 @@ public class LoginED {
 
 	@Id
 	@Column(name = "ID_LOGIN")
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 
 	@Column (name = "DATA_LOGIN")
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date dataLogon;
+
 	@Temporal(TemporalType.TIMESTAMP)
 	@Column (name = "DATA_LOGOUT")
 	private Date dataLogout;

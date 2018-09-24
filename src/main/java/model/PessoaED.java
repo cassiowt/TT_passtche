@@ -28,7 +28,7 @@ public abstract class PessoaED {
 
 	@Column (name = "TIPO_PESSOA")
 	@Enumerated(EnumType.STRING)
-	private Tipo_PessoaED tipo_PessoaED;
+	private TipoPessoaED tipo_PessoaED;
 
 	@OneToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "ID_ENDERECO",
@@ -44,7 +44,7 @@ public abstract class PessoaED {
 	public PessoaED() {
 	}
 
-	public PessoaED(String nome, Date dataNascimento, String email, Tipo_PessoaED tipo_PessoaED, EnderecoED enderecoED, Collection <TelefoneED> telefones) {
+	public PessoaED(String nome, Date dataNascimento, String email, TipoPessoaED tipo_PessoaED, EnderecoED enderecoED, Collection <TelefoneED> telefones) {
 		this.nome = nome;
 		this.dataNascimento = dataNascimento;
 		this.email = email;
@@ -53,7 +53,7 @@ public abstract class PessoaED {
 		this.telefones = telefones;
 	}
 
-	public PessoaED(String nome, Date dataNascimento, String email, Tipo_PessoaED tipo_PessoaED) {
+	public PessoaED(String nome, Date dataNascimento, String email, TipoPessoaED tipo_PessoaED) {
 		this.nome = nome;
 		this.dataNascimento = dataNascimento;
 		this.email = email;
@@ -89,11 +89,11 @@ public abstract class PessoaED {
 		this.email = email;
 	}
 
-	public Tipo_PessoaED getTipo_PessoaED() {
+	public TipoPessoaED getTipo_PessoaED() {
 		return tipo_PessoaED;
 	}
 
-	public void setTipo_PessoaED(Tipo_PessoaED tipo_PessoaED) {
+	public void setTipo_PessoaED(TipoPessoaED tipo_PessoaED) {
 		this.tipo_PessoaED = tipo_PessoaED;
 	}
 

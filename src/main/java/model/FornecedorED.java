@@ -22,7 +22,7 @@ public class FornecedorED extends PessoaED {
 	public FornecedorED() {
 	}
 
-	public FornecedorED(String nome, Date dataNascimento, String email, Tipo_PessoaED tipo_PessoaED, EnderecoED enderecoED, Collection<TelefoneED> telefones, String cnpj, String nomeEmpresa, int percentualComissao, String contaBsncaria) {
+	public FornecedorED(String nome, Date dataNascimento, String email, TipoPessoaED tipo_PessoaED, EnderecoED enderecoED, Collection<TelefoneED> telefones, String cnpj, String nomeEmpresa, int percentualComissao, String contaBsncaria) {
 		super(nome, dataNascimento, email, tipo_PessoaED, enderecoED, telefones);
 
 		this.cnpj = cnpj;

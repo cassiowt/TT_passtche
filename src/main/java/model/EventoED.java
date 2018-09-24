@@ -9,15 +9,12 @@ import java.util.Date;
 public class EventoED {
 
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column (name = "ID_EVENTO")
 	private long id;
 
 	@Column (name = "NOME", length = 50)
 	private String nome;
-
-	@Column (name = "DATA")
-	private Date data;
 
 	@Column (name = "CODIGO")
 	private String codigo;
@@ -25,28 +22,27 @@ public class EventoED {
 	@Column (name = "PRECO")
 	private double preco;
 
-	@Column (name = "QTD_LUGAR")
+	@Column (name = "QUANTIDADE_LUGAR")
 	private int lugares;
 
 	@Column (name = "DESCRICAO", length = 250)
 	private String descricao;
 
+	@Temporal(TemporalType.TIMESTAMP)
 	@Column (name = "DATA_EVENTO")
 	private Date dataEvento;
 
 	@OneToOne
-	@JoinColumn (name = "LOCAL", referencedColumnName = "ID_LOCAL")
+	@JoinColumn (name = "ID_LOCAL", referencedColumnName = "ID_LOCAL")
 	private LocalEventoED localEventoED;
 
-	@OneToOne
-	@JoinColumn (name = "TIPO", referencedColumnName = "ID_TIPO_EVENTO")
+	@Enumerated(EnumType.STRING)
 	private TipoEventoED tipoEventoED;
 
 	public EventoED() { }
 
-	public EventoED(String nome, Date data, String codigo, double preco, int lugares, String descricao, Date dataEvento, LocalEventoED localEventoED, TipoEventoED tipoEventoED) {
+	public EventoED(String nome, String codigo, double preco, int lugares, String descricao, Date dataEvento, LocalEventoED localEventoED, TipoEventoED tipoEventoED) {
 		this.nome = nome;
-		this.data = data;
 		this.codigo = codigo;
 		this.preco = preco;
 		this.lugares = lugares;
@@ -62,14 +58,6 @@ public class EventoED {
 
 	public void setNome(String nome) {
 		this.nome = nome;
-	}
-
-	public Date getData() {
-		return data;
-	}
-
-	public void setData(Date data) {
-		this.data = data;
 	}
 
 	public String getCodigo() {

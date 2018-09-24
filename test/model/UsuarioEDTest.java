@@ -7,15 +7,11 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
-
-import static org.junit.Assert.*;
 
 public class UsuarioEDTest {
 
@@ -41,7 +37,7 @@ public class UsuarioEDTest {
         Session session = null;
         Transaction transaction = null;
         TelefoneED tel = new TelefoneED("992728","51",TipoTelefoneED.CELULAR);
-        ClienteED cliente = new ClienteED("Pedro",new Date(),"usuario@site.com.br",Tipo_PessoaED.CONSUMIDOR, "616","Caçar", "123");
+        ClienteED cliente = new ClienteED("Pedro",new Date(),"usuario@site.com.br",TipoPessoaED.CONSUMIDOR, "616","Caçar", "123");
             Collection<TelefoneED> telefones = new ArrayList<TelefoneED>();
             telefones.add(tel);
             cliente.setTelefones(telefones);

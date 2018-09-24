@@ -1,15 +1,32 @@
 package model;
 
-public class ProdutoED {
+import javax.persistence.*;
 
+@Entity
+@Table(name = "PRODUTOS")
+public class ProdutoED {
+	@Id
+	@Column(name = "ID_PRODUTO")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private long id;
+
+	@OneToOne
+	@Column(name = "EVENTO")
+	private EventoED evento;
+
+	@Column(name = "NOME")
 	private String nome;
 
+	@Column(name = "DESCRICAO")
 	private String descricao;
 
+	@Column(name = "VALOR")
 	private double valor;
 
+	@Column(name = "TOTAL")
 	private int total;
 
+	@Column(name = "SALDO")
 	private int saldo;
 
 	public ProdutoED(String nome, String descricao, double valor, int total, int saldo) {
@@ -50,4 +67,12 @@ public class ProdutoED {
 
 	public void setSaldo(int saldo) {
 		this.saldo = saldo; }
+
+	public EventoED getEvento() {
+		return evento;
+	}
+
+	public void setEvento(EventoED evento) {
+		this.evento = evento;
+	}
 }
