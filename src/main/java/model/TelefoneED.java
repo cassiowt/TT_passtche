@@ -6,14 +6,20 @@ import javax.persistence.*;
 @Table(name = "TELEFONES")
 public class TelefoneED {
 
-    @Id
-    @Column(name = "TELEFONE_ID")
+	@Id
+    @Column(name = "ID_TELEFONE")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
+	@Column(name = "NUMERO")
 	private String numero;
 
+	@Column (name = "DDD")
 	private String ddd;
+
+
+	@Enumerated(EnumType.STRING)
+	@Column(name = "TIPO_TELEFONE")
 
 	private TipoTelefoneED tipoTelefoneED;
 
@@ -26,7 +32,11 @@ public class TelefoneED {
 		this.tipoTelefoneED = tipoTelefoneED;
 	}
 
-	public String getNumero() {
+    public long getId() {
+        return id;
+    }
+
+    public String getNumero() {
 		return numero;
 	}
 

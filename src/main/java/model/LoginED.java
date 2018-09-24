@@ -1,13 +1,24 @@
 package model;
 
+import javax.persistence.*;
 import java.util.Date;
 
+@Entity (name = "LOGINS")
 public class LoginED {
 
-	private Date dataLogon;
+	@Id
+	@Column(name = "ID_LOGIN")
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private long id;
 
+	@Column (name = "DATA_LOGIN")
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date dataLogon;
+	@Temporal(TemporalType.TIMESTAMP)
+	@Column (name = "DATA_LOGOUT")
 	private Date dataLogout;
 
+	@OneToOne
 	private UsuarioED usuarioED;
 
 	public LoginED() {

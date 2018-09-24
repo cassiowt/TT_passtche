@@ -50,6 +50,8 @@ public class UsuarioEDTest {
         try {
             session = HibernateUtil.getSession();
             transaction = session.beginTransaction();
+            session.save(tel);
+            session.save(cliente);
             session.save(usuario);
             System.out.println("Inserido Usuario: "+usuario.getEmail());
             transaction.commit();

@@ -22,16 +22,18 @@ public class UsuarioED {
 	@Column(name = "TIPO_USUARIO")
 	private TipoUsuarioED tipoUsuarioED;
 
-	@JoinColumn(name = "pessoa",
+	@JoinColumn(name = "ID_PESSOA",
 				referencedColumnName = "ID_PESSOA",
 				foreignKey = @ForeignKey(name="FK_PESSOA_ID_PESSOA"))
-	@OneToOne (cascade = CascadeType.PERSIST)
+	@OneToOne
 	private PessoaED pessoaED;
 
 	@Temporal(TemporalType.TIMESTAMP)
+	@Column(name = "DATA_CRIACAO")
 	private Date dataCriacao;
-	
+
 	@Temporal(TemporalType.TIMESTAMP)
+	@Column(name = "DATA_ALTERACAO")
 	private Date dataAlteracao;
 
 	public UsuarioED() {

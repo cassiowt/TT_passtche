@@ -1,13 +1,26 @@
 package model;
 
+import javax.persistence.*;
+
+@Entity
+@Table (name = "BAIRROS")
 public class BairroED {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column (name = "ID_BAIRRO")
+    private long id;
+
+    @Column (name = "NOME" )
     private String nome;
 
+    @OneToOne
+    @JoinColumn (name = "CIDADE",
+                referencedColumnName = "ID_CIDADE",
+                foreignKey = @ForeignKey(name = "FK_CIDADE_ID_CIDADE"))
     private CidadeED cidadeED;
 
-    public BairroED() {
-    }
+    public BairroED() { }
 
     public BairroED(String nome, CidadeED cidadeED) {
         this.nome = nome;

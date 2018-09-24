@@ -1,26 +1,30 @@
 package model;
 
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import java.util.Collection;
 import java.util.Date;
 
 @Entity
 @Table(name="FORNECEDORES")
 public class FornecedorED extends PessoaED {
-
+	@Column(name = "CNPJ", length = 30)
 	private String cnpj;
-
+	@Column(name = "NOME_EMPRESA", length = 100)
 	private String nomeEmpresa;
-
+	@Column(name = "PERCENTUAL_COMISSAO", length = 2)
 	private int percentualComissao;
-
+	@Column(name = "CONTA", length = 11)
 	private String contaBsncaria;
 
 	public FornecedorED() {
 	}
 
-	public FornecedorED(String nome, Date dataNascimento, String email, Tipo_PessoaED tipo_PessoaED, EnderecoED enderecoED, TelefoneED telefoneED, String cnpj, String nomeEmpresa, int percentualComissao, String contaBsncaria) {
-		super(nome, dataNascimento, email, tipo_PessoaED);
+	public FornecedorED(String nome, Date dataNascimento, String email, Tipo_PessoaED tipo_PessoaED, EnderecoED enderecoED, Collection<TelefoneED> telefones, String cnpj, String nomeEmpresa, int percentualComissao, String contaBsncaria) {
+		super(nome, dataNascimento, email, tipo_PessoaED, enderecoED, telefones);
+
 		this.cnpj = cnpj;
 		this.nomeEmpresa = nomeEmpresa;
 		this.percentualComissao = percentualComissao;

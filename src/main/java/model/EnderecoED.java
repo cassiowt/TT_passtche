@@ -1,17 +1,36 @@
 package model;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "ENDERECOS")
 public class EnderecoED {
 
+    @Id
+    @GeneratedValue
+    @Column (name = "ID_ENDERECO")
+    private long id;
+
+    @Column (name = "RUA")
     private String rua;
 
+    @Column (name = "NUMERO")
     private int numero;
 
+    @Column (name = "COMPLEMENTO")
     private String complemento;
 
+    @Column (name = "CEP")
     private String cep;
 
+    @Enumerated(EnumType.STRING)
+    @Column(name = "TIPO_LOGRADOURO")
     private TipoLogradouroED tipoLogradouro;
 
+    @OneToOne
+    @JoinColumn (name = "ID_BAIRRO",
+                referencedColumnName = "ID_BAIRRO",
+                foreignKey = @ForeignKey(name = "FK_BAIRRO_ID_BAIRRO"))
     private BairroED bairro;
 
     private boolean valido;
@@ -32,6 +51,10 @@ public class EnderecoED {
 
     public EnderecoED(String rua) {
         this.rua = rua;
+    }
+
+    public long getId() {
+        return id;
     }
 
     public void setRua(String rua) {
