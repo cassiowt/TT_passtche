@@ -13,12 +13,23 @@ public class Funcao {
         this.ValorC = valorC;
     }
 
+    public int getValorA() {
+        return valorA;
+    }
+
+    public int getValorB() {
+        return ValorB;
+    }
+
+    public int getValorC() {
+        return ValorC;
+    }
+
     @Override
     public String toString() {
-        return "Funcao{" +
-                "valorA=" + valorA +
-                ", ValorB=" + ValorB +
-                ", ValorC=" + ValorC +
-                '}';
+        return "Funcao = " +
+                 valorA + "Xˆ2" +
+                " + " + ValorB + "X" +
+                " + " + ValorC ;
     }
 }

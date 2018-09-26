@@ -11,4 +11,10 @@ public class Baskara {
     public void setFuncao(Funcao funcao) {
         this.funcao = funcao;
     }
+
+    public float caculaDelta() {
+        return (funcao.getValorB()*funcao.getValorB())
+                - 4 * funcao.getValorA()
+                 * funcao.getValorC();
+    }
 }
