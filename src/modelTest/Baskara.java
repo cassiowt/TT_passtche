@@ -26,12 +26,12 @@ public class Baskara {
     }
 
     public float caculaRaizUm() {
-         return (-funcao.getValorB() + this.caculaDelta())/
-                   2*funcao.getValorA();
+         return (float) ((-funcao.getValorB() + Math.sqrt(this.caculaDelta()) ) /
+                            2*funcao.getValorA());
     }
 
     public float caculaRaizDois() {
-         return (-funcao.getValorB() - this.caculaDelta())/
-                   2*funcao.getValorA();
+         return (float) ((-funcao.getValorB() - + Math.sqrt(this.caculaDelta()))/
+                            2*funcao.getValorA());
     }
 }
