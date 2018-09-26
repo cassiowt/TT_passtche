@@ -11,7 +11,8 @@ public class Calcular {
     }
 
     public float areaTriangulo(Triangulo triangulo){
-
+        float r = (triangulo.getB() * triangulo.getAltura())/2;
+        System.out.println(r);
         return (triangulo.getB() * triangulo.getAltura())/2;
     }
 
@@ -19,16 +20,18 @@ public class Calcular {
 
         if( triangulo.getA() == triangulo.getB() &&
             triangulo.getA() == triangulo.getH() &&
-            triangulo.getB() == triangulo.getH())
-        {
+            triangulo.getB() == triangulo.getH()) {
+
             return TipoTriangulo.EQUILATERO;
-        }
-         else if ( triangulo.getA() != triangulo.getB() &&
+
+        } else
+            if ( triangulo.getA() != triangulo.getB() &&
                 triangulo.getA() != triangulo.getH() &&
-                triangulo.getB() != triangulo.getH())
-        {
+                triangulo.getB() != triangulo.getH()) {
+
             return TipoTriangulo.ISOCELES;
         }
-            return TipoTriangulo.RETANGULO;
+
+        return TipoTriangulo.RETANGULO;
     }
 }

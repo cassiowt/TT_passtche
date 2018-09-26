@@ -5,6 +5,15 @@ public class Triangulo {
     private int a, b, h;
     private float altura;
 
+    public Triangulo() {
+    }
+
+    public Triangulo(int a, int b, int h) {
+        this.a = a;
+        this.b = b;
+        this.h = h;
+    }
+
     public int getA() {
         return a;
     }

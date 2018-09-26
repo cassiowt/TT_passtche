@@ -6,15 +6,19 @@ import org.junit.Test;
 
 public class TestCalculo {
     Quadrado quadrado = new Quadrado();
-    Triangulo triangulo = new Triangulo();
+    Triangulo triangulo, equilatero, isoceles, retangulo;
     Calcular cal = new Calcular();
 
     @Before
     public void setUp(){
-        quadrado.setLado(2);
-
+        triangulo  = new Triangulo();
         triangulo.setB(3);
         triangulo.setAltura(5);
+        equilatero = new Triangulo(2,2,2);
+        isoceles   = new Triangulo(5, 8,3);
+        retangulo  = new Triangulo(2,2,5);
+        quadrado.setLado(2);
+
     }
 
     @Test
@@ -51,5 +55,19 @@ public class TestCalculo {
     public void areaTrianguloNok() {
         float area = cal.areaTriangulo(triangulo);
         Assert.assertFalse("Errado", area != 7.5f);
+    }
+
+    @Test
+    public void validaTrinaguloEquilatero(){
+        Assert.assertTrue("Triangulo errado", TipoTriangulo.EQUILATERO.equals(cal.verificaTipoTriangulo(equilatero)));
+    }
+
+    @Test
+    public void validaTrinaguloIsoceles(){
+        Assert.assertTrue("Triangulo errado", TipoTriangulo.ISOCELES.equals(cal.verificaTipoTriangulo(isoceles)));
+    }
+    @Test
+    public void validaTrinaguloRetangulo(){
+        Assert.assertTrue("Triangulo errado", TipoTriangulo.RETANGULO.equals(cal.verificaTipoTriangulo(retangulo)));
     }
 }
