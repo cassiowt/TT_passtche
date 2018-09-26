@@ -4,6 +4,13 @@ public class Baskara {
 
     private Funcao funcao;
 
+    public Baskara() {
+    }
+
+    public Baskara(Funcao funcao) {
+        this.funcao = funcao;
+    }
+
     public Funcao getFuncao() {
         return funcao;
     }
@@ -17,4 +24,6 @@ public class Baskara {
                 - 4 * funcao.getValorA()
                  * funcao.getValorC();
     }
+
+
 }

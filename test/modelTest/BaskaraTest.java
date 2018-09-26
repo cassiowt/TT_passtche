@@ -14,19 +14,23 @@ public class BaskaraTest {
     public void setUp() throws Exception {
         polinomioSegundoGrau = new Funcao(1,2,1);
         System.out.println("Testando a função: " + polinomioSegundoGrau);
-        baskara = new Baskara();
-        baskara.setFuncao(polinomioSegundoGrau);
+        baskara = new Baskara(polinomioSegundoGrau);
     }
 
     @Test
-    public void verificaDeltaZero(){
+    public void testVerificaDeltaZero(){
        float delta = baskara.caculaDelta();
        assertTrue("Erro", delta == 0);
     } @Test
 
 
-    public void verificaDeltaDiferenteZero(){
+    public void testVerificaDeltaDiferenteZero(){
        float delta = baskara.caculaDelta();
        assertFalse("Erro", delta != 0);
+    }
+
+    @Test
+    public void testCalculoRaizUm(){
+
     }
 }
