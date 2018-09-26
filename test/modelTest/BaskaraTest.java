@@ -31,6 +31,15 @@ public class BaskaraTest {
 
     @Test
     public void testCalculoRaizUm(){
+        baskara.caculaDelta();
+        float raizUm = baskara.caculaRaizUm();
+        assertTrue("Erro", raizUm == -1f);
+    }
 
+    @Test
+    public void testCalculoRaizDois(){
+        baskara.caculaDelta();
+        float raizDois = baskara.caculaRaizDois();
+        assertTrue("Erro", raizDois == -1f);
     }
 }
