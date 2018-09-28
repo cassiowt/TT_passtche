@@ -35,8 +35,9 @@ public class VendaTest {
         Session session = null;
         Transaction transaction = null;
 
+        IngressoED ingresso = new IngressoED();
         ProdutoED prod = new ProdutoED("camiseta", "kkk", 30, 30, 300);
-        VendaED venda = new VendaED(new Date(), 30, 300, prod);
+        prod.setEvento(null);
 
         TelefoneED tel = new TelefoneED("992728","51",TipoTelefoneED.CELULAR);
         ClienteED cliente = new ClienteED("Pedro",new Date(),"usuario@site.com.br",TipoPessoaED.CONSUMIDOR, "616","Caçar", "123");
@@ -45,6 +46,9 @@ public class VendaTest {
         cliente.setTelefones(telefones);
         UsuarioED usuario = new UsuarioED("usuario@site.com.br", "1234", TipoUsuarioED.ADMIN, cliente);
 
+        VendaED venda = new VendaED(new Date(), 30, 300, prod);
+        venda.setIngresso(ingresso);
+        venda.setCliente(cliente);
 
 
         try {

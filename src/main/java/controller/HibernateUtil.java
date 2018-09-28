@@ -37,6 +37,7 @@ public class HibernateUtil {
         configuration.addAnnotatedClass(PaisED.class);
         configuration.addAnnotatedClass(VendaED.class);
         configuration.addAnnotatedClass(ProdutoED.class);
+        configuration.addAnnotatedClass(IngressoED.class);
 
         ServiceRegistry srvcReg = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties()).build();
         sessionFactory = configuration.buildSessionFactory(srvcReg);

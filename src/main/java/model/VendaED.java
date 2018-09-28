@@ -86,9 +86,19 @@ public class VendaED {
 		this.cliente = cliente;
 	}
 
+	public IngressoED getIngresso() {
+		return ingresso;
+	}
 
+	public void setIngresso(IngressoED ingresso) {
+		this.ingresso = ingresso;
+	}
 
+	public ProdutoED getProduto() {
+		return produto;
+	}
 
-
-
+	public void setProduto(ProdutoED produto) {
+		this.produto = produto;
+	}
 }
