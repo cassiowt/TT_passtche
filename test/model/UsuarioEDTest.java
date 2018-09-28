@@ -7,15 +7,13 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import javax.persistence.EntityManagerFactory;
-
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
 
 public class UsuarioEDTest {
 
-    private static EntityManagerFactory entityManagerFactory;
+
     private static Session session;
     private UsuarioED usuario;
     private Transaction tx = null;
@@ -36,17 +34,23 @@ public class UsuarioEDTest {
     public void createUserSession() {
         Session session = null;
         Transaction transaction = null;
-        TelefoneED tel = new TelefoneED("992728","51",TipoTelefoneED.CELULAR);
+
+        TelefoneED tel = new TelefoneED("99279828","51",TipoTelefoneED.CELULAR);
+        TelefoneED tel1 = new TelefoneED("37937393","51",TipoTelefoneED.FIXO);
+
         ClienteED cliente = new ClienteED("Pedro",new Date(),"usuario@site.com.br",TipoPessoaED.CONSUMIDOR, "616","Caçar", "123");
             Collection<TelefoneED> telefones = new ArrayList<TelefoneED>();
             telefones.add(tel);
+            telefones.add(tel1);
             cliente.setTelefones(telefones);
+
         UsuarioED usuario = new UsuarioED("usuario@site.com.br", "1234", TipoUsuarioED.ADMIN, cliente);
 
         try {
             session = HibernateUtil.getSession();
             transaction = session.beginTransaction();
             session.save(tel);
+            session.save(tel1);
             session.save(cliente);
             session.save(usuario);
             System.out.println("Inserido Usuario: "+usuario.getEmail());
