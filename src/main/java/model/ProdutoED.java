@@ -11,7 +11,9 @@ public class ProdutoED {
 	private long id;
 
 	@OneToOne
-	@Column(name = "EVENTO")
+	@JoinColumn(name = "EVENTO",
+			referencedColumnName = "ID_EVENTO",
+			foreignKey = @ForeignKey(name = "FK_EVENTO_ID_EVENTO"))
 	private EventoED evento;
 
 	@Column(name = "NOME")
@@ -35,6 +37,8 @@ public class ProdutoED {
 		this.valor = valor;
 		this.total = total;
 		this.saldo = saldo; }
+
+
 
 	public ProdutoED() { }
 

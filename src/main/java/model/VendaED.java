@@ -22,15 +22,21 @@ public class VendaED {
 	private double valorTotalVenda;
 
 	@OneToOne
-	@JoinColumn(name= "ID_INGRESSO")
+	@JoinColumn(name= "ID_INGRESSO",
+				referencedColumnName = "ID_INGRESSO",
+				foreignKey = @ForeignKey(name = "FK_INGRESSO_ID_INGRESSO"))
 	private IngressoED ingresso;
 
 	@OneToOne
-	@JoinColumn(name= "ID_PRODUTO")
+	@JoinColumn (name = "ID_PRODUTO",
+			referencedColumnName = "ID_PRODUTO",
+			foreignKey = @ForeignKey(name = "FK_PRODUTO_ID_PRODUTO"))
 	private ProdutoED produto;
 
 	@OneToOne
-	@JoinColumn(name= "ID_PESSOA")
+	@JoinColumn(name= "ID_PESSOA",
+				referencedColumnName = "ID_PESSOA",
+				foreignKey = @ForeignKey(name = "FK_PESSOA_ID_PESSOA"))
 	private ClienteED cliente;
 
 	public VendaED() {
@@ -43,6 +49,11 @@ public class VendaED {
         this.cliente = cliente;
     }
 
+	public VendaED(Date dataVenda, int quantidadeVenda, double valorTotalVenda, ProdutoED produtoED) {
+		this.dataVenda = dataVenda;
+		this.quantidadeVenda = quantidadeVenda;
+		this.valorTotalVenda = valorTotalVenda;
+	}
     public Date getDataVenda() {
 		return dataVenda;
 	}
