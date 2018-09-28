@@ -6,29 +6,23 @@ import org.hibernate.Transaction;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
 
 public class UsuarioEDTest {
 
-
     private static Session session;
     private UsuarioED usuario;
     private Transaction tx = null;
 
-
-
     @Before
     public void setUp() throws Exception {
-
     }
 
     @After
     public void tearDown() throws Exception {
     }
-
 
     @Test
     public void createUserSession() {
@@ -38,7 +32,7 @@ public class UsuarioEDTest {
         TelefoneED tel = new TelefoneED("99279828","51",TipoTelefoneED.CELULAR);
         TelefoneED tel1 = new TelefoneED("37937393","51",TipoTelefoneED.FIXO);
 
-        ClienteED cliente = new ClienteED("Pedro",new Date(),"usuario@site.com.br",TipoPessoaED.CONSUMIDOR, "616","Caçar", "123");
+        ClienteED cliente = new ClienteED("Waldemor",new Date(),"usuario@site.com.br",TipoPessoaED.CONSUMIDOR, "616","Caçar", "123");
             Collection<TelefoneED> telefones = new ArrayList<TelefoneED>();
             telefones.add(tel);
             telefones.add(tel1);
