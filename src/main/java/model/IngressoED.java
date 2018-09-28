@@ -3,7 +3,6 @@ package model;
 import javax.persistence.*;
 import java.util.Date;
 
-
 @Entity(name = "INGRESSOS")
 public class IngressoED {
 
@@ -16,7 +15,9 @@ public class IngressoED {
 	private double valor;
 
 	@OneToOne
-	@Column(name = "EVENTO")
+	@JoinColumn(name = "ID_EVENTO",
+			referencedColumnName = "ID_EVENTO",
+			foreignKey = @ForeignKey (name = "FK_EVENTO_ID_EVENTO"))
 	private EventoED evento;
 
 	@Column(name = "DATA_INICIO")
