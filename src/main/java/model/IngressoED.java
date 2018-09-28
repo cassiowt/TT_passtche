@@ -41,7 +41,8 @@ public class IngressoED {
 
 	}
 
-	public IngressoED(double valor, EventoED evento, Date dataInicioVenda, Date dataFimVenda, int total, int saldo) {
+	public IngressoED(double valor, EventoED evento, Date dataInicioVenda,
+					  Date dataFimVenda, int total, int saldo) {
 		this.valor = valor;
 		this.evento = evento;
 		this.dataInicioVenda = dataInicioVenda;
@@ -49,6 +50,8 @@ public class IngressoED {
 		this.total = total;
 		this.saldo = saldo;
 	}
+
+
 
 	public double getValor() {
 		return valor;
