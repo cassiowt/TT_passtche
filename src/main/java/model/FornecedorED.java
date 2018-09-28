@@ -31,6 +31,15 @@ public class FornecedorED extends PessoaED {
 		this.contaBsncaria = contaBsncaria;
 	}
 
+
+	public FornecedorED(String nome, Date dataNascimento, String email, TipoPessoaED tipo_PessoaED, String cnpj, String nomeEmpresa, int percentualComissao, String contaBsncaria) {
+		super(nome, dataNascimento, email, tipo_PessoaED);
+
+		this.cnpj = cnpj;
+		this.nomeEmpresa = nomeEmpresa;
+		this.percentualComissao = percentualComissao;
+		this.contaBsncaria = contaBsncaria;
+	}
 	public String getCnpj() {
 		return cnpj;
 	}

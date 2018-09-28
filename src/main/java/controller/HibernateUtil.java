@@ -35,6 +35,17 @@ public class HibernateUtil {
         configuration.addAnnotatedClass(CidadeED.class);
         configuration.addAnnotatedClass(EstadoED.class);
         configuration.addAnnotatedClass(PaisED.class);
+
+        configuration.addAnnotatedClass(VendaED.class);
+
+        configuration.addAnnotatedClass(IngressoED.class);
+        configuration.addAnnotatedClass(ProdutoED.class);
+
+        configuration.addAnnotatedClass(ImagemED.class);
+        configuration.addAnnotatedClass(LocalEventoED.class);
+        configuration.addAnnotatedClass(EventoED.class);
+
+
         ServiceRegistry srvcReg = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties()).build();
         sessionFactory = configuration.buildSessionFactory(srvcReg);
     }

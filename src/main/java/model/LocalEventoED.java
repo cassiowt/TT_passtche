@@ -26,7 +26,7 @@ public class LocalEventoED {
 	private boolean acessibilidade;
 
     @OneToMany
-    @JoinColumn (name = "IMAGEM", referencedColumnName = "ID_IMAGEM")
+    @JoinColumn (name = "ID_LOCAL_EVENTO", referencedColumnName = "ID_LOCAL_EVENTO")
 	private Collection<ImagemED> imagems = new ArrayList<ImagemED>();
 
     public LocalEventoED() { }

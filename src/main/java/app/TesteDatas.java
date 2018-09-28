@@ -22,12 +22,9 @@ public class TesteDatas {
             System.out.println(dataQualquer);
             System.out.println(sdf.format(dataQualquer));
 
-
-
         } catch (ParseException e) {
             System.out.println("Deu um erro na inserção da Data");
             //e.printStackTrace();
         }
     }
-
 }
