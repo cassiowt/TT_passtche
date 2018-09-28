@@ -33,7 +33,9 @@ public class EventoED {
 	private Date dataEvento;
 
 	@OneToOne
-	@JoinColumn (name = "ID_LOCAL", referencedColumnName = "ID_LOCAL")
+	@JoinColumn (name = "ID_LOCAL_EVENTO",
+				referencedColumnName = "ID_LOCAL_EVENTO",
+				foreignKey =  @ForeignKey(name = "FK_LOCAL_ID_LOCAL"))
 	private LocalEventoED localEventoED;
 
 	@Enumerated(EnumType.STRING)
