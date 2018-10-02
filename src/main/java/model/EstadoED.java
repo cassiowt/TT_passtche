@@ -61,4 +61,13 @@ public class EstadoED {
 
 		this.paisED = paisED;
 	}
+
+	@Override
+	public String toString() {
+		return "EstadoED{" +
+				", nome='" + nome + '\'' +
+				", sigla='" + sigla + '\'' +
+				", paisED=" + paisED +
+				'}';
+	}
 }
