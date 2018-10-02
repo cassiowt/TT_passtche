@@ -1,7 +1,7 @@
 package imp;
 
 import java.util.ArrayList;
-import java.util.List;
+
 
 public interface GenericImpDAO<T> {
 
