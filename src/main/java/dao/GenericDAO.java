@@ -71,11 +71,11 @@ public abstract class GenericDAO<T> {
         return obj;
     }
 
-    public List findAll(Class clazz) {
+    public List findAll(Class classe) {
         List objects = null;
         try {
             session     = HibernateUtil.getSession();
-            Query query = session.createQuery("from " + clazz.getName());
+            Query query = session.createQuery("from " + classe.getName());
             objects = query.list();
         } catch(Exception ex) {
             ex.printStackTrace();
