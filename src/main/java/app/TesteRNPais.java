@@ -47,6 +47,4 @@ public class TesteRNPais {
         paisRN.createPais(pais);
     }
 
-
-
 }

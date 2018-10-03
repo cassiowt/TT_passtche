@@ -4,21 +4,22 @@ import model.CidadeED;
 import model.EstadoED;
 import model.PaisED;
 import rn.CidadeRN;
+import rn.EstadoRN;
 import rn.PaisRN;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class TesteRNCidade {
-
+    static EstadoRN estadoRN = new EstadoRN();
     static CidadeRN cidadeRN = new CidadeRN();
 
     public static void main(String[] args) {
         adicionaCidade();
-        buscaCidade();
-        buscaTodasCidades();
-        alteraCidade();
-        deletaCidade();
+       // buscaCidade();
+       // buscaTodasCidades();
+       // alteraCidade();
+       // deletaCidade();
     }
 
 

@@ -23,38 +23,41 @@ public class PaisRN {
     }
 
 
-    public void alterPais(PaisED pais){
+    public void alterPais(PaisED pais) {
         try {
             paisDAO.update(pais);
-         } catch (Exception e){
+        } catch (Exception e) {
             e.getMessage();
         }
     }
 
-    public void deletePais(PaisED pais){
+    public void deletePais(PaisED pais) {
         try {
             paisDAO.delete(pais);
-         } catch (Exception e){
+        } catch (Exception e) {
+
             e.getMessage();
         }
     }
 
-    public PaisED findPais(long id){
+    public PaisED findPais(long id) {
         PaisED pais = new PaisED();
         try {
-              pais  = (PaisED) paisDAO.find(PaisED.class, id );
-        } catch (Exception e){
+            pais = (PaisED) paisDAO.find(PaisED.class, id);
+        } catch (Exception e) {
             e.getMessage();
             e.printStackTrace();
         }
         return pais;
     }
 
+
     public List<PaisED> findAllPais() {
         List<PaisED> paises = new ArrayList<PaisED>();
         try {
             paises = paisDAO.findAll(PaisED.class);
         } catch (Exception e) {
+
             e.getMessage();
             e.printStackTrace();
         }
