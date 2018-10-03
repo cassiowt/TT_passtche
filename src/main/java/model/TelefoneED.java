@@ -59,4 +59,14 @@ public class TelefoneED {
 	public void setTipoTelefoneED(TipoTelefoneED tipoTelefoneED) {
 		this.tipoTelefoneED = tipoTelefoneED;
 	}
+
+	@Override
+	public String toString() {
+		return "TelefoneED{" +
+				"id=" + id +
+				", numero='" + numero + '\'' +
+				", ddd='" + ddd + '\'' +
+				", tipoTelefoneED=" + tipoTelefoneED +
+				'}';
+	}
 }
