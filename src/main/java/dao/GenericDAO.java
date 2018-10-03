@@ -43,11 +43,11 @@ public abstract class GenericDAO<T> {
         }
     }
 
-    public void merge(T entity) {
+    public void update(T entity) {
         try {
             session     = HibernateUtil.getSession();
             transaction = session.beginTransaction();
-            session.merge(entity);
+            session.saveOrUpdate(entity);
             transaction.commit();
         } catch(Exception ex) {
             ex.printStackTrace();

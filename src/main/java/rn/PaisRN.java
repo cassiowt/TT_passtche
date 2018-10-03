@@ -3,6 +3,9 @@ package rn;
 import dao.PaisDAO;
 import model.PaisED;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class PaisRN {
 
     PaisDAO paisDAO = new PaisDAO();
@@ -28,6 +31,17 @@ public class PaisRN {
             e.printStackTrace();
         }
         return paisED;
+    }
+
+    public List<PaisED> findAllPais(){
+        List<PaisED> paises = new ArrayList<PaisED>();
+        try {
+            paises  =  paisDAO.findAll(PaisED.class);
+        } catch (Exception e){
+            e.getMessage();
+            e.printStackTrace();
+        }
+        return paises;
     }
 
 
