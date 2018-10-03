@@ -43,4 +43,13 @@ public class CidadeED {
 	public void setEstadoED(EstadoED estadoED) {
 		this.estadoED = estadoED;
 	}
+
+	@Override
+	public String toString() {
+		return "CidadeED{" +
+				"id=" + id +
+				", nome='" + nome + '\'' +
+				", estadoED=" + estadoED +
+				'}';
+	}
 }

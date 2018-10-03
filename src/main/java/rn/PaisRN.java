@@ -10,17 +10,18 @@ public class PaisRN {
 
     PaisDAO paisDAO = new PaisDAO();
 
-    public long createPais(PaisED pais){
+    public long createPais(PaisED pais) {
         long id = 0;
         try {
-            if(pais.getNome().length() > 5)
-              id =  paisDAO.save(pais);
+            if (pais.getNome().length() > 5)
+                id = paisDAO.save(pais);
             else throw new Exception("Pais invalido");
-        } catch (Exception e){
+        } catch (Exception e) {
             e.getMessage();
         }
         return id;
     }
+
 
     public void alterPais(PaisED pais){
         try {
@@ -49,18 +50,14 @@ public class PaisRN {
         return pais;
     }
 
-    public List<PaisED> findAllPais(){
+    public List<PaisED> findAllPais() {
         List<PaisED> paises = new ArrayList<PaisED>();
         try {
-              paises =  paisDAO.findAll(PaisED.class);
-        } catch (Exception e){
+            paises = paisDAO.findAll(PaisED.class);
+        } catch (Exception e) {
             e.getMessage();
             e.printStackTrace();
         }
         return paises;
     }
-
-
-
-
 }
