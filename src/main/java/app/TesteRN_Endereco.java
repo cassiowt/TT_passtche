@@ -4,6 +4,7 @@ import model.BairroED;
 import model.EnderecoED;
 import model.PaisED;
 import model.TipoLogradouroED;
+import rn.BairroRN;
 import rn.EnderecoRN;
 import rn.PaisRN;
 
@@ -12,11 +13,14 @@ import java.util.List;
 
 public class TesteRN_Endereco {
 
+    static BairroRN bairroRN = new BairroRN();
     static EnderecoRN enderecoRN = new EnderecoRN();
 
     public static void main(String[] args) {
+
+        adicionaEndereco();
         //adicionaPais();
-        //buscaPais();
+
     }
 
     private static void buscaEndereco() {
@@ -25,8 +29,8 @@ public class TesteRN_Endereco {
     }
 
     private static void adicionaEndereco() {
-
-        EnderecoED endereco =  new EnderecoED("California, ", 2525, "casa", "90000", TipoLogradouroED.RUA, new BairroED(), true );
+        BairroED bairro = bairroRN.findBairro(1l);
+        EnderecoED endereco =  new EnderecoED("California, ", 2525, "casa", "90000", TipoLogradouroED.RUA, bairro, true );
         enderecoRN.saveEndereco(endereco);
     }
 }

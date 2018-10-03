@@ -19,6 +19,7 @@ public class EnderecoRN {
 
         } catch (Exception e){
             e.getMessage();
+            e.printStackTrace();
         }
         return id;
     }

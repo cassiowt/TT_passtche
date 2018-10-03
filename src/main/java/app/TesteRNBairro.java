@@ -17,10 +17,10 @@ public class TesteRNBairro {
 
     public static void main(String[] args) {
         adicionaBairro();
-        buscaBairro();
-        buscaTodosBairros();
-        alteraBairro();
-        deletaBairro();
+   //     buscaBairro();
+   //     buscaTodosBairros();
+   //     alteraBairro();
+   //     deletaBairro();
     }
 
 
@@ -50,7 +50,7 @@ public class TesteRNBairro {
     }
 
     private static void adicionaBairro() {
-        CidadeED c = cidadeRN.findCidade(1l);
+        CidadeED c = cidadeRN.findCidade(2l);
 
 
         BairroED b =  new BairroED("Centro", c);

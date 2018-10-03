@@ -18,10 +18,10 @@ public class TesteRNEstado {
 
     public static void main(String[] args) {
         adicionaEstado();
-        buscaEstado();
-        buscaTodosEstados();
-        alteraEstado(2l);
-        deletaEstado(2l);
+     //   buscaEstado();
+      //  buscaTodosEstados();
+      //  alteraEstado(2l);
+      //  deletaEstado(2l);
     }
 
     private  static void deletaEstado(long idEstado){
@@ -46,7 +46,7 @@ public class TesteRNEstado {
     }
 
     private static void adicionaEstado() {
-        PaisED pais = paisRN.findPais(1l);
+        PaisED pais = paisRN.findPais(8l);
         EstadoED estado =  new EstadoED("Rio Grande do Sul","RS", pais);
         estadoRN.createEstado(estado);
     }
