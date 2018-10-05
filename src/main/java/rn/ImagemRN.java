@@ -22,16 +22,16 @@ public class ImagemRN {
         return id;
     }
 
-    public void alterImagem(ImagemED imagens){
+    public void alterImagem(ImagemED imagem){
         try {
-            imagemDAO.update(imagens);
+            imagemDAO.update(imagem);
         } catch (Exception e){
             e.getMessage();
         }
     }
-    public void deleteImagem(ImagemED imagens) {
+    public void deleteImagem(ImagemED imagem) {
         try {
-            imagemDAO.delete(imagens);
+            imagemDAO.delete(imagem);
         } catch (Exception e) {
             e.getMessage();
         }
@@ -49,14 +49,14 @@ public class ImagemRN {
     }
 
     public List<ImagemED> findAllImagens(){
-        List<ImagemED>  imagens		= new ArrayList<ImagemED>();
+        List<ImagemED>  imagem		= new ArrayList<ImagemED>();
         try {
-            imagens  =  imagemDAO.findAll(ImagemED.class);
+            imagem  =  imagemDAO.findAll(ImagemED.class);
         } catch (Exception e){
             e.getMessage();
             e.printStackTrace();
         }
-        return imagens;
+        return imagem;
     }
 
 
