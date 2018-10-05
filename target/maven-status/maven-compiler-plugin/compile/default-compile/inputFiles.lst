@@ -12,6 +12,7 @@
 /Users/cassio.trindade/git/TT_passtche/src/main/java/rn/EnderecoRN.java
 /Users/cassio.trindade/git/TT_passtche/src/main/java/model/TipoEnderecoED.java
 /Users/cassio.trindade/git/TT_passtche/src/main/java/app/TesteRNBairro.java
+/Users/cassio.trindade/git/TT_passtche/src/main/java/app/TesteRNImagem.java
 /Users/cassio.trindade/git/TT_passtche/src/main/java/model/ProdutoED.java
 /Users/cassio.trindade/git/TT_passtche/src/main/java/rn/CidadeRN.java
 /Users/cassio.trindade/git/TT_passtche/src/main/java/model/LocalEventoED.java
@@ -36,6 +37,7 @@
 /Users/cassio.trindade/git/TT_passtche/src/main/java/model/BairroED.java
 /Users/cassio.trindade/git/TT_passtche/src/main/java/model/TipoTelefoneED.java
 /Users/cassio.trindade/git/TT_passtche/src/main/java/model/LoginED.java
+/Users/cassio.trindade/git/TT_passtche/src/main/java/app/TesteRNEndereco.java
 /Users/cassio.trindade/git/TT_passtche/src/main/java/exemploDAO/CidadeDAO.java
 /Users/cassio.trindade/git/TT_passtche/src/main/java/exemploDAO/GenericDAO.java
 /Users/cassio.trindade/git/TT_passtche/src/main/java/exemploDAO/TelefoneDAO.java
@@ -45,7 +47,6 @@
 /Users/cassio.trindade/git/TT_passtche/src/main/java/exemploDAO/ProdutoDAO.java
 /Users/cassio.trindade/git/TT_passtche/src/main/java/dao/EnderecoDAO.java
 /Users/cassio.trindade/git/TT_passtche/src/main/java/dao/ImagemDAO.java
-/Users/cassio.trindade/git/TT_passtche/src/main/java/app/TesteRN_Endereco.java
 /Users/cassio.trindade/git/TT_passtche/src/main/java/model/TipoUsuarioED.java
 /Users/cassio.trindade/git/TT_passtche/src/main/java/model/TipoEventoED.java
 /Users/cassio.trindade/git/TT_passtche/src/main/java/model/TipoIngresso.java

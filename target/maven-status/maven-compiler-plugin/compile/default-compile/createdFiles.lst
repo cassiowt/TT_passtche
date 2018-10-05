@@ -8,7 +8,6 @@ rn/BairroRN.class
 exemploDAO/CidadeDAO$1.class
 model/BairroED.class
 dao/GenericDAO.class
-app/TesteRN_Endereco.class
 model/TipoTelefoneED.class
 model/EstadoED.class
 exemploDAO/CidadeDAO.class
