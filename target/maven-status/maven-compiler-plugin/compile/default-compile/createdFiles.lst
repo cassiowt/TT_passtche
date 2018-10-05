@@ -1,3 +1,4 @@
+app/TesteRNEndereco.class
 app/TesteRNPais.class
 model/TelefoneED.class
 app/TesteRNEstado.class
@@ -9,6 +10,7 @@ exemploDAO/CidadeDAO$1.class
 model/BairroED.class
 dao/GenericDAO.class
 model/TipoTelefoneED.class
+app/TesteRNImagem.class
 model/EstadoED.class
 exemploDAO/CidadeDAO.class
 exemploDAO/TelefoneDAO$1.class

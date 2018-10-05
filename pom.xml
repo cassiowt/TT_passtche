@@ -7,6 +7,7 @@
     <groupId>PassTche</groupId>
     <artifactId>PassTche</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>war</packaging>
     <build>
 
 
@@ -17,6 +18,13 @@
                 <configuration>
                     <source>8</source>
                     <target>8</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.0.0</version>
+                <configuration>
+                    <warSourceDirectory>web</warSourceDirectory>
                 </configuration>
             </plugin>
         </plugins>
