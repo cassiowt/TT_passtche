@@ -11,7 +11,7 @@ import rn.PaisRN;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TesteRN_Endereco {
+public class TesteRNEndereco {
 
     static BairroRN bairroRN = new BairroRN();
     static EnderecoRN enderecoRN = new EnderecoRN();
@@ -30,7 +30,8 @@ public class TesteRN_Endereco {
 
     private static void adicionaEndereco() {
         BairroED bairro = bairroRN.findBairro(1l);
-        EnderecoED endereco =  new EnderecoED("California, ", 2525, "casa", "90000", TipoLogradouroED.RUA, bairro, true );
+        EnderecoED endereco =  new EnderecoED("California, ", 2525,
+                "casa", "90000", TipoLogradouroED.RUA, bairro, true );
         enderecoRN.saveEndereco(endereco);
     }
 }
