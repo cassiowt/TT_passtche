@@ -6,6 +6,8 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core"
       xmlns:p="http://primefaces.org/ui">
+<h:head></h:head>
+<h:body>
 <h:form>
     <h3 style="margin-top: 0">AutoComplete</h3>
     <p>Following inputTextarea send a query for each word that has at least 4 characters to the complete method. Try typing "PrimeFaces".</p>
@@ -18,4 +20,5 @@
     <p:inputTextarea rows="5" cols="30" counter="display" maxlength="10" counterTemplate="{0} characters remaining." autoResize="false" />
     <h:outputText id="display" />
 </h:form>
+</h:body>
 </html>
