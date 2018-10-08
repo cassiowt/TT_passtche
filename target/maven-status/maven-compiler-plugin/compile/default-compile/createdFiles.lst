@@ -9,6 +9,7 @@ rn/BairroRN.class
 exemploDAO/CidadeDAO$1.class
 model/BairroED.class
 dao/GenericDAO.class
+mb/InputTextareaView.class
 model/TipoTelefoneED.class
 app/TesteRNImagem.class
 model/EstadoED.class
