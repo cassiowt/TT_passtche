@@ -1,0 +1,13 @@
+
+.ui-panelgrid.borderless tbody,
+.ui-panelgrid.borderless th
+.ui-panelgrid.borderless td {
+    border-style: none;
+}
+
+.tst{
+    color: red;
+    font-style: italic;
+    font-size: large;
+}
+

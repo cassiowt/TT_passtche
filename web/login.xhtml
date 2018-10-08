@@ -8,33 +8,37 @@
       xmlns:p="http://primefaces.org/ui">
 <h:head></h:head>
 <h:body>
+    <h:outputStylesheet name="css/style.css" />
 
-    <p:panel id="basic" header="   Pass!Tchê"  style="margin-bottom:20px; text-align: center; margin: 0 auto;">
-    <p:growl/>
-        <h:form id="login">
-        <p:panelGrid columns="2" rows="2"  id="matchGrid" cellpadding="5"  style= "margin-bottom:20px; text-align: center; margin: 0 auto; border:none ">
+            <p:panel id="panelLogin" header="Pass!Tchê">
+                <p:growl/>
+                <div class="ui-g ui-fluid">
+                    <div class="ui-g-12 ui-md-4">
+                        <h:form prependId="false" id="login" >
+                         <p:panelGrid columns="2"  id="griLogin" styleClass="borderless">
+                            <h:outputLabel value="E-mail:" />
+                            <p:inputText />
+                            <h:outputLabel value="Password:" />
+                            <p:password  value="#{passwordView.password5}"  label="Password" required="true" />
+                        </p:panelGrid>
+                        <p:separator />
+                            <div align="center">
+                                <p:commandButton update="login" value="Ciente" styleClass="ui-priority-primary" />
+                                <p:commandButton update="login" value="Fornecedor" styleClass="ui-priority-primary" />
+                            </div>
 
-            <h:outputLabel value="E-mail:" />
-            <p:inputText />
+                            <p:link href="http://www.google.com" value="nova senha"/>
+                        <br/>
+                        <p:separator />
+                        <h:outputLabel value="Novo" />
+                            <div align="center">
+                                <p:commandButton update="login" value="Cliente" styleClass="ui-priority-primary"  />
+                                <p:commandButton update="login" value="Fotnecedor"  styleClass="ui-priority-primary" />
+                            </div>
 
-            <h:outputLabel value="Password:" />
-            <p:password  value="#{passwordView.password5}"  label="Password" required="true" />
-
-        </p:panelGrid>
-
-        <p:separator />
-        <p:commandButton update="login" value="Ciente" />
-        <p:commandButton update="login" value="Fornecedor" />
-            <br/>
-            <p:link href="http://www.google.com" value="nova senha"/>
-        <br/>
-        <p:separator />
-        <h:outputLabel value="Novo" />
-            <br/>
-        <p:commandButton update="login" value="Cliente" />
-        <p:commandButton update="login" value="Fotnecedor"  />
-
-        </h:form>
-    </p:panel>
+                        </h:form>
+                    </div>
+                </div>
+            </p:panel>
 </h:body>
 </html>
