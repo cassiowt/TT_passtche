@@ -19,7 +19,7 @@ public class TesteRNEndereco {
     public static void main(String[] args) {
 
         adicionaEndereco();
-        //adicionaPais();
+
 
     }
 
@@ -34,4 +34,7 @@ public class TesteRNEndereco {
                 "casa", "90000", TipoLogradouroED.RUA, bairro, true );
         enderecoRN.saveEndereco(endereco);
     }
+
+
+
 }

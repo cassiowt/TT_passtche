@@ -34,6 +34,7 @@
     </p:dataGrid>
 
     <p:dialog header="Informação do Carro" widgetVar="carDialog" modal="true" showEffect="fade" hideEffect="fade" resizable="false">
+
         <p:outputPanel id="carDetail" style="text-align:center;">
             <p:panelGrid  columns="2" rendered="#{not empty dataGridView.selectedCar}" columnClasses="label,value">
                 <f:facet name="header">
@@ -50,10 +51,13 @@
                 <h:outputText value="#{dataGridView.selectedCar.color}" style="color:#{dataGridView.selectedCar.color}"/>
 
                 <h:outputText value="Preço" />
+
                 <h:outputText value="$#{dataGridView.selectedCar.price}" />
             </p:panelGrid>
         </p:outputPanel>
     </p:dialog>
+
 </h:form>
 </h:body>
 </html>
+

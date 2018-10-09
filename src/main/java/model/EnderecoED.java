@@ -114,6 +114,20 @@ public class EnderecoED {
     public void setValido(boolean valido) {
         this.valido = valido;
     }
+
+    @Override
+    public String toString() {
+        return "EnderecoED{" +
+                "id=" + id +
+                ", rua='" + rua + '\'' +
+                ", numero=" + numero +
+                ", complemento='" + complemento + '\'' +
+                ", cep='" + cep + '\'' +
+                ", tipoLogradouro=" + tipoLogradouro +
+                ", bairro=" + bairro +
+                ", valido=" + valido +
+                '}';
+    }
 }
 
 
