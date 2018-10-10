@@ -49,6 +49,17 @@ public class UsuarioRN {
         return Usuario;
     }
 
+    public UsuarioED findUsuarioByEmaul(String email) {
+        UsuarioED Usuario = new UsuarioED();
+        try {
+            Usuario = (UsuarioED) usuarioDAO.findUsuarioByEmail(email);
+        } catch (Exception e) {
+            e.getMessage();
+            e.printStackTrace();
+        }
+        return Usuario;
+    }
+
     public List<UsuarioED> findAllUsuario() {
         List<UsuarioED> Usuarioes = new ArrayList<UsuarioED>();
         try {

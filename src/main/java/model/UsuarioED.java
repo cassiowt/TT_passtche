@@ -101,4 +101,17 @@ public class UsuarioED {
 	public void setDataAlteracao(Date dataAlteracao) {
 		this.dataAlteracao = dataAlteracao;
 	}
+
+	@Override
+	public String toString() {
+		return "UsuarioED{" +
+				"id=" + id +
+				", email='" + email + '\'' +
+				", senha='" + senha + '\'' +
+				", tipoUsuarioED=" + tipoUsuarioED +
+				", pessoaED=" + pessoaED +
+				", dataCriacao=" + dataCriacao +
+				", dataAlteracao=" + dataAlteracao +
+				'}';
+	}
 }

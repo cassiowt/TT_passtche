@@ -23,7 +23,7 @@ public class LoginED {
 	private UsuarioED usuarioED;
 
 	public LoginED() {
-
+		usuarioED = new UsuarioED();
 	}
 
 	public LoginED(Date dataLogon, Date dataLogout, UsuarioED usuarioED) {
@@ -54,5 +54,15 @@ public class LoginED {
 
 	public void setUsuarioED(UsuarioED usuarioED) {
 		this.usuarioED = usuarioED;
+	}
+
+	@Override
+	public String toString() {
+		return "LoginED{" +
+				"id=" + id +
+				", dataLogon=" + dataLogon +
+				", dataLogout=" + dataLogout +
+				", usuarioED=" + usuarioED +
+				'}';
 	}
 }

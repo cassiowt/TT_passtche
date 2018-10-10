@@ -10,8 +10,8 @@ import java.util.List;
 
 public abstract class GenericDAO<T> {
 
-    private static Session session;
-    private Transaction transaction = null;
+    protected static Session session;
+    protected Transaction transaction = null;
 
     public long save(T entity) {
         long id = 0;

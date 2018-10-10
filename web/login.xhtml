@@ -20,17 +20,17 @@
                     <p:fieldset legend="Login" style="padding-bottom:10%">
                         <div class="ui-inputgroup input-login">
                             <span class="ui-inputgroup-addon"><i class="fa fa-at"></i></span>
-                            <p:inputText id="loginEmail" placeholder="E-mail" required="true"/>
+                            <p:inputText id="loginEmail" placeholder="E-mail" value="#{loginMB.loginED.usuarioED.email}" required="true"/>
                         </div>
 
                         <div class="ui-inputgroup">
                             <span class="ui-inputgroup-addon"><i class="fa fa-asterisk"></i></span>
-                            <p:password id="password" placeholder="Senha" value="#{passwordView.password5}" label="Password" required="true"/>
+                            <p:password id="password"  placeholder="Senha" value="#{loginMB.loginED.usuarioED.senha}" label="Password" required="true"/>
                         </div>
 
                         <div class="p-grid" style="padding-top: 10%">
                             <div class="p-col">
-                                <p:commandButton update="login" value="Cliente" styleClass="ui-priority-primary" icon="fa fa-users"/>
+                                <p:commandButton update="login" value="Cliente" actionListener="#{loginMB.valida}" styleClass="ui-priority-primary" icon="fa fa-users"/>
                             </div>
                             <div class="p-col">
                                 <p:commandButton update="login" value="Fornecedor" styleClass="ui-priority-primary" icon="fa fa-money"/>
