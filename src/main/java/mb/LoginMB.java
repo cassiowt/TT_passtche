@@ -17,7 +17,7 @@ public class LoginMB {
 
 
     public LoginMB() {
-        loginED   = new LoginED();
+        loginED = new LoginED();
         usuarioED = new UsuarioED();
         usuarioRN = new UsuarioRN();
     }
@@ -30,15 +30,20 @@ public class LoginMB {
         this.loginED = loginED;
     }
 
-    public String valida(){
+    public String valida() {
         System.out.println(loginED);
         UsuarioED usuarioIformado = usuarioRN.findUsuarioByEmaul(loginED.getUsuarioED().getEmail());
-        if ( usuarioIformado.getEmail().equals(loginED.getUsuarioED().getEmail())
+        if (usuarioIformado == null) {
+            System.out.println("Usuario desconhecido");
+            return "erro";
+        }
+        if (usuarioIformado.getEmail().equals(loginED.getUsuarioED().getEmail())
                 && usuarioIformado.getSenha().equals(loginED.getUsuarioED().getSenha())) {
-           System.out.println("Ok");
+
+            System.out.println("Ok");
             return "index";
         }
         System.out.println("erro");
-        return "index";
+        return "erro";
     }
 }

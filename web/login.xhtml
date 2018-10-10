@@ -13,27 +13,30 @@
     <p:graphicImage name="images/passtche-logo.png" style="width: 10%;height: 10%"/>
     <h:form prependId="false" id="login">
         <div class="p-grid">
-            <div class="p-col-3 p-offset-3">
+            <div class="p-col-6 p-offset-3">
                 <div class="box">
-                    <p:growl id="msgs" showDetail="true"/>
+                    <p:growl id="msgs" showDetail="false"/>
 
-                    <p:fieldset legend="Login" style="padding-bottom:10%">
+                    <p:fieldset legend="Login Inicial" style="padding-bottom:10%">
+
                         <div class="ui-inputgroup input-login">
-                            <span class="ui-inputgroup-addon"><i class="fa fa-at"></i></span>
-                            <p:inputText id="loginEmail" placeholder="E-mail" value="#{loginMB.loginED.usuarioED.email}" required="true"/>
+                            <span class="ui-inputgroup-addon"><i class="fa fa-user-circle-o"></i></span>
+                            <p:inputText id="loginEmail" label="E-mail" placeholder="E-mail" value="#{loginMB.loginED.usuarioED.email}"
+                                         required="true" requiredMessage="Digite o seu e-mail para acessar o sistema"/>
                         </div>
 
                         <div class="ui-inputgroup">
                             <span class="ui-inputgroup-addon"><i class="fa fa-asterisk"></i></span>
-                            <p:password id="password"  placeholder="Senha" value="#{loginMB.loginED.usuarioED.senha}" label="Password" required="true"/>
+                            <p:password id="password"  placeholder="Senha" value="#{loginMB.loginED.usuarioED.senha}" label="Password"
+                                        required="true" requiredMessage="Digite o sua senha para acessar o sistema"/>
                         </div>
 
                         <div class="p-grid" style="padding-top: 10%">
                             <div class="p-col">
-                                <p:commandButton update="login" value="Cliente" actionListener="#{loginMB.valida}" styleClass="ui-priority-primary" icon="fa fa-users"/>
+                                <p:commandButton update="login" value="Login" actionListener="#{loginMB.valida}" styleClass="ui-priority-primary" icon="fa fa-users"/>
                             </div>
                             <div class="p-col">
-                                <p:commandButton update="login" value="Fornecedor" styleClass="ui-priority-primary" icon="fa fa-money"/>
+                                <p:commandButton type="reset" value="Cacelar" styleClass="ui-priority-secondary" icon="fa fa-money"/>
                             </div>
                         </div>
                         <div class="p-grid" style="padding-bottom: 5%">
@@ -44,11 +47,9 @@
 
                         <p:separator/>
 
-
                         <div class="p-grid novo">
                             <div class="p-col">
-
-                                <h:outputLabel value="NOVO"/>
+                               <h:outputLabel value="NOVO"/>
                             </div>
                         </div>
 
@@ -61,7 +62,6 @@
                             </div>
                         </div>
                     </p:fieldset>
-
                 </div>
             </div>
         </div>

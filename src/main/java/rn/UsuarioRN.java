@@ -50,6 +50,7 @@ public class UsuarioRN {
     }
 
     public UsuarioED findUsuarioByEmaul(String email) {
+
         UsuarioED Usuario = new UsuarioED();
         try {
             Usuario = (UsuarioED) usuarioDAO.findUsuarioByEmail(email);

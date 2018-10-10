@@ -19,7 +19,8 @@ public class UsuarioDAO extends GenericDAO<UsuarioED> {
                     .addEntity(UsuarioED.class)
                     .setParameter("email", email);
 
-            usuarioED = (UsuarioED) query.getSingleResult();
+           if(query.getFirstResult() > 0);
+                usuarioED = (UsuarioED) query.getSingleResult();
 
         } catch (Exception e) {
             e.printStackTrace();
