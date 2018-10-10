@@ -15,7 +15,7 @@
         <div class="p-grid">
             <div class="p-col-6 p-offset-3">
                 <div class="box">
-                    <p:growl id="msgs" showDetail="false"/>
+                    <p:growl id="msgs" showDetail="true"/>
 
                     <p:fieldset legend="Login Inicial" style="padding-bottom:10%">
 
@@ -33,7 +33,7 @@
 
                         <div class="p-grid" style="padding-top: 10%">
                             <div class="p-col">
-                                <p:commandButton update="login" value="Login" actionListener="#{loginMB.valida}" styleClass="ui-priority-primary" icon="fa fa-users"/>
+                                <p:commandButton update="login" value="Login" action="#{loginMB.valida}" styleClass="ui-priority-primary" icon="fa fa-users"/>
                             </div>
                             <div class="p-col">
                                 <p:commandButton type="reset" value="Cacelar" styleClass="ui-priority-secondary" icon="fa fa-money"/>

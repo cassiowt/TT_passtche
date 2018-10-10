@@ -8,12 +8,9 @@
   <component name="ChangeListManager">
     <list default="true" id="fbf4264f-3e07-4ba5-932e-dbe0e464bcc6" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/UsuarioDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/UsuarioDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/dicasGit.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/dicasGit.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/mb/LoginMB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mb/LoginMB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rn/UsuarioRN.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rn/UsuarioRN.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/erro.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/resources/erro.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/login.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/login.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/resources/css/style.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -41,8 +38,8 @@
       <file leaf-file-name="LoginMB.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/mb/LoginMB.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="35" column="35" lean-forward="true" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="35" />
+            <state relative-caret-position="220">
+              <caret line="55" column="55" selection-start-line="55" selection-start-column="50" selection-end-line="55" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -50,14 +47,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UsuarioDAO.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/dao/UsuarioDAO.java">
+      <file leaf-file-name="login.xhtml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/login.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="21" column="36" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="36" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="421">
+              <caret line="35" column="84" selection-start-line="35" selection-start-column="78" selection-end-line="35" selection-end-column="84" />
             </state>
           </provider>
         </entry>
@@ -108,9 +102,10 @@
         <option value="$PROJECT_DIR$/web/WEB-INF/erro.xhtml" />
         <option value="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" />
         <option value="$PROJECT_DIR$/web/resources/css/style.css" />
-        <option value="$PROJECT_DIR$/web/login.xhtml" />
         <option value="$PROJECT_DIR$/src/main/java/rn/UsuarioRN.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/UsuarioDAO.java" />
+        <option value="$PROJECT_DIR$/docs/dicasGit.md" />
+        <option value="$PROJECT_DIR$/web/login.xhtml" />
         <option value="$PROJECT_DIR$/src/main/java/mb/LoginMB.java" />
       </list>
     </option>
@@ -172,47 +167,6 @@
             <path>
               <item name="PassTche" type="b2602c69:ProjectViewProjectNode" />
               <item name="TT_passtche" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PassTche" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TT_passtche" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PassTche" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TT_passtche" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PassTche" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TT_passtche" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PassTche" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TT_passtche" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PassTche" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TT_passtche" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="mb" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PassTche" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TT_passtche" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PassTche" type="b2602c69:ProjectViewProjectNode" />
@@ -412,16 +366,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1539001309348</updated>
-      <workItem from="1539001311084" duration="31395000" />
+      <workItem from="1539001311084" duration="34544000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22322000" />
+    <option name="totallyTimeSpent" value="25471000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="FTP" />
       <window_info anchor="bottom" id="Event Log" sideWeight="0.50061053" side_tool="true" weight="0.27897435" />
@@ -444,12 +397,12 @@
       <window_info id="Image Layers" />
       <window_info anchor="bottom" id="Java Enterprise" />
       <window_info anchor="right" id="Capture Analysis" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4993895" visible="true" weight="0.5078788" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4993895" weight="0.5078788" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="FaTPlugin" />
       <window_info anchor="bottom" id="Terminal" weight="0.32969698" />
       <window_info anchor="right" id="Jenkins" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2160229" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2160229" />
       <window_info anchor="right" id="Bean Validation" />
       <window_info id="Web" side_tool="true" />
       <window_info anchor="bottom" id="SonarLint" />
@@ -522,13 +475,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/app.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-19">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/app/TesteRNPais.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -727,13 +673,6 @@
             <element signature="e#947#948#0" expanded="true" />
             <element signature="e#970#971#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/login.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="884">
-          <caret line="35" column="110" selection-start-line="35" selection-start-column="110" selection-end-line="35" selection-end-column="110" />
         </state>
       </provider>
     </entry>
@@ -941,23 +880,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mb/LoginMB.java">
+    <entry file="file://$PROJECT_DIR$/docs/dicasGit.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SECOND">
+          <first_editor relative-caret-position="180">
+            <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/UsuarioDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="35" column="35" lean-forward="true" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="35" />
+        <state relative-caret-position="328">
+          <caret line="21" column="36" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/UsuarioDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/mb/LoginMB.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="21" column="36" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="36" />
+        <state relative-caret-position="220">
+          <caret line="55" column="55" selection-start-line="55" selection-start-column="50" selection-end-line="55" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/login.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="35" column="84" selection-start-line="35" selection-start-column="78" selection-end-line="35" selection-end-column="84" />
         </state>
       </provider>
     </entry>

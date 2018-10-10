@@ -4,11 +4,14 @@ import model.LoginED;
 import model.UsuarioED;
 import rn.UsuarioRN;
 
+import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
 import javax.faces.bean.ViewScoped;
+import javax.faces.context.FacesContext;
 
 @ManagedBean
-@ViewScoped
+@SessionScoped
 public class LoginMB {
 
     private LoginED loginED;
@@ -34,16 +37,22 @@ public class LoginMB {
         System.out.println(loginED);
         UsuarioED usuarioIformado = usuarioRN.findUsuarioByEmaul(loginED.getUsuarioED().getEmail());
         if (usuarioIformado == null) {
-            System.out.println("Usuario desconhecido");
+            montaMessage("Error","Usuario desconhecido");
+
             return "erro";
         }
         if (usuarioIformado.getEmail().equals(loginED.getUsuarioED().getEmail())
                 && usuarioIformado.getSenha().equals(loginED.getUsuarioED().getSenha())) {
+            montaMessage("Successfull","Login efetuado com sucesso");
 
-            System.out.println("Ok");
             return "index";
         }
-        System.out.println("erro");
+        montaMessage("Error","Erro ao logar");
         return "erro";
     }
+
+    public void montaMessage(String title, String msg) {
+		FacesContext context = FacesContext.getCurrentInstance();
+		context.addMessage(null, new FacesMessage(title, msg));
+}
 }
