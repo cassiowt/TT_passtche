@@ -10,136 +10,141 @@
 <h:body>
     <h:outputStylesheet name="css/style.css"/>
     <h:outputStylesheet name="css/primeflex.css"/>
-    <p:graphicImage name="images/passtche-logo.png" style="width: 10%;height: 10%"/>
-    <h:form prependId="false" id="cadastroCliente">
-        <div class="p-grid">
-            <div class="p-col-8 p-offset-2">
-                <div class="box">
-                    <p:growl id="msgs" showDetail="false"/>
+    <ui:composition template="templates/common.xhtml">
+        <ui:define name="content">
+            <h:form prependId="false" id="cadastroCliente">
+                <div class="p-grid">
+                    <div class="p-col-8 p-offset-2">
+                        <div class="box">
+                            <p:growl id="msgs" showDetail="false"/>
 
-                    <p:fieldset legend="Cadastro de cliente" style="padding-bottom:10%">
+                            <p:fieldset legend="Cadastro de cliente" style="padding-bottom:10%">
 
-                        <div class="p-grid">
+                                <div class="p-grid">
 
-                            <div class="ui-inputgroup p-col-4 nome-inpunt">
-                                <span class="ui-inputgroup-addon"><i class="fa fa-user-circle-o"></i></span>
-                                <p:inputText id="nome" label="Nome" placeholder="Nome completo"
-                                             value="#{loginMB.loginED.usuarioED.email}"
-                                             required="true" requiredMessage="Digite seu nome para efetuar o cadastro"/>
-                            </div>
+                                    <div class="ui-inputgroup p-col-4 nome-inpunt">
+                                        <span class="ui-inputgroup-addon"><i class="fa fa-user-circle-o"></i></span>
+                                        <p:inputText id="nome" label="Nome" placeholder="Nome completo"
+                                                     value="#{loginMB.loginED.usuarioED.email}"
+                                                     required="true"
+                                                     requiredMessage="Digite seu nome para efetuar o cadastro"/>
+                                    </div>
 
-                            <div class="ui-inputgroup p-col-4">
-                                <span class="ui-inputgroup-addon"><i class="fa fa-user-circle-o"></i></span>
-                                <p:inputText id="Cpf" label="CPF" placeholder="CPF"
-                                             value="#{loginMB.loginED.usuarioED.email}"
-                                             required="true" requiredMessage="Digite seu CPF para efetuar o cadastro"/>
-                            </div>
+                                    <div class="ui-inputgroup p-col-4">
+                                        <span class="ui-inputgroup-addon"><i class="fa fa-user-circle-o"></i></span>
+                                        <p:inputText id="Cpf" label="CPF" placeholder="CPF"
+                                                     value="#{loginMB.loginED.usuarioED.email}"
+                                                     required="true"
+                                                     requiredMessage="Digite seu CPF para efetuar o cadastro"/>
+                                    </div>
 
-                            <div class="ui-inputgroup p-col-4">
-                                <span class="ui-inputgroup-addon"><i>@</i></span>
-                                <p:inputText id="Email" label="E-mail" placeholder="E-email"
-                                             value="#{loginMB.loginED.usuarioED.email}"
-                                             required="true"
-                                             requiredMessage="Digite seu E-mail para efetuar o cadastro"/>
-                            </div>
+                                    <div class="ui-inputgroup p-col-4">
+                                        <span class="ui-inputgroup-addon"><i>@</i></span>
+                                        <p:inputText id="Email" label="E-mail" placeholder="E-email"
+                                                     value="#{loginMB.loginED.usuarioED.email}"
+                                                     required="true"
+                                                     requiredMessage="Digite seu E-mail para efetuar o cadastro"/>
+                                    </div>
 
-                            <div class="ui-inputgroup p-col-4">
-                                <span class="ui-inputgroup-addon"><i>@</i></span>
-                                <p:inputText id="Senha" label="Senha" placeholder="Senha"
-                                             value="#{loginMB.loginED.usuarioED.email}"
-                                             required="true"
-                                             requiredMessage="Digite sua senha para efetuar o cadastro"/>
-                            </div>
+                                    <div class="ui-inputgroup p-col-4">
+                                        <span class="ui-inputgroup-addon"><i>@</i></span>
+                                        <p:inputText id="Senha" label="Senha" placeholder="Senha"
+                                                     value="#{loginMB.loginED.usuarioED.email}"
+                                                     required="true"
+                                                     requiredMessage="Digite sua senha para efetuar o cadastro"/>
+                                    </div>
 
-                        </div>
-
-                        <div class="box-telefone">
-                            <div class="p-grid">
-                                <div class="ui-inputgroup p-col-12">
-                                    <p:selectOneMenu id="console0" value="#{selectOneMenuView.console}">
-                                        <f:selectItem itemLabel="Selecione" itemValue=""/>
-                                        <f:selectItem itemLabel="Fixo" itemValue="FIXO"/>
-                                        <f:selectItem itemLabel="Celular" itemValue="CELULAR"/>
-                                        <f:selectItem itemLabel="Recado" itemValue="RECADO"/>
-                                    </p:selectOneMenu>
-                                    <span class="ui-inputgroup-addon"><i class="fa fa-user-circle-o"></i></span>
-                                    <p:inputText id="Telefone1" label="Telefone 1" placeholder="Telefone"
-                                                 value="#{loginMB.loginED.usuarioED.email}"
-                                                 required="true"
-                                                 requiredMessage="Digite seu E-mail para efetuar o cadastro"/>
                                 </div>
-                            </div>
 
-                            <div class="p-grid">
-                                <div class="ui-inputgroup  p-col-12">
-                                    <p:selectOneMenu id="console2" value="#{selectOneMenuView.console}">
-                                        <f:selectItem itemLabel="Selecione" itemValue=""/>
-                                        <f:selectItem itemLabel="Fixo" itemValue="FIXO"/>
-                                        <f:selectItem itemLabel="Celular" itemValue="CELULAR"/>
-                                        <f:selectItem itemLabel="Recado" itemValue="RECADO"/>
-                                    </p:selectOneMenu>
-                                    <span class="ui-inputgroup-addon"><i class="fa fa-user-circle-o"></i></span>
-                                    <p:inputText id="Telefone2" label="Telefone 1" placeholder="Telefone"
-                                                 value="#{loginMB.loginED.usuarioED.email}"
-                                                 required="true"
-                                                 requiredMessage="Digite seu E-mail para efetuar o cadastro"/>
+                                <div class="box-telefone">
+                                    <div class="p-grid">
+                                        <div class="ui-inputgroup p-col-12">
+                                            <p:selectOneMenu id="console0" value="#{selectOneMenuView.console}">
+                                                <f:selectItem itemLabel="Selecione" itemValue=""/>
+                                                <f:selectItem itemLabel="Fixo" itemValue="FIXO"/>
+                                                <f:selectItem itemLabel="Celular" itemValue="CELULAR"/>
+                                                <f:selectItem itemLabel="Recado" itemValue="RECADO"/>
+                                            </p:selectOneMenu>
+                                            <span class="ui-inputgroup-addon"><i class="fa fa-user-circle-o"></i></span>
+                                            <p:inputText id="Telefone1" label="Telefone 1" placeholder="Telefone"
+                                                         value="#{loginMB.loginED.usuarioED.email}"
+                                                         required="true"
+                                                         requiredMessage="Digite seu E-mail para efetuar o cadastro"/>
+                                        </div>
+                                    </div>
+
+                                    <div class="p-grid">
+                                        <div class="ui-inputgroup  p-col-12">
+                                            <p:selectOneMenu id="console2" value="#{selectOneMenuView.console}">
+                                                <f:selectItem itemLabel="Selecione" itemValue=""/>
+                                                <f:selectItem itemLabel="Fixo" itemValue="FIXO"/>
+                                                <f:selectItem itemLabel="Celular" itemValue="CELULAR"/>
+                                                <f:selectItem itemLabel="Recado" itemValue="RECADO"/>
+                                            </p:selectOneMenu>
+                                            <span class="ui-inputgroup-addon"><i class="fa fa-user-circle-o"></i></span>
+                                            <p:inputText id="Telefone2" label="Telefone 1" placeholder="Telefone"
+                                                         value="#{loginMB.loginED.usuarioED.email}"
+                                                         required="true"
+                                                         requiredMessage="Digite seu E-mail para efetuar o cadastro"/>
+                                        </div>
+                                    </div>
+
+                                    <div class="p-grid">
+                                        <div class="ui-inputgroup  p-col-12">
+                                            <p:selectOneMenu id="console3" value="#{selectOneMenuView.console}">
+                                                <f:selectItem itemLabel="Selecione" itemValue=""/>
+                                                <f:selectItem itemLabel="Fixo" itemValue="FIXO"/>
+                                                <f:selectItem itemLabel="Celular" itemValue="CELULAR"/>
+                                                <f:selectItem itemLabel="Recado" itemValue="RECADO"/>
+                                            </p:selectOneMenu>
+                                            <span class="ui-inputgroup-addon"><i class="fa fa-user-circle-o"></i></span>
+                                            <p:inputText id="Telefone3" label="Telefone 1" placeholder="Telefone"
+                                                         value="#{loginMB.loginED.usuarioED.email}"
+                                                         required="true"
+                                                         requiredMessage="Digite seu E-mail para efetuar o cadastro"/>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-
-                            <div class="p-grid">
-                                <div class="ui-inputgroup  p-col-12">
-                                    <p:selectOneMenu id="console3" value="#{selectOneMenuView.console}">
-                                        <f:selectItem itemLabel="Selecione" itemValue=""/>
-                                        <f:selectItem itemLabel="Fixo" itemValue="FIXO"/>
-                                        <f:selectItem itemLabel="Celular" itemValue="CELULAR"/>
-                                        <f:selectItem itemLabel="Recado" itemValue="RECADO"/>
-                                    </p:selectOneMenu>
-                                    <span class="ui-inputgroup-addon"><i class="fa fa-user-circle-o"></i></span>
-                                    <p:inputText id="Telefone3" label="Telefone 1" placeholder="Telefone"
-                                                 value="#{loginMB.loginED.usuarioED.email}"
-                                                 required="true"
-                                                 requiredMessage="Digite seu E-mail para efetuar o cadastro"/>
+                                <div class="p-grid" style="margin-top: 2%">
+                                    <h:outputLabel for="int" value="Quais são seus interesses?"/>
+                                    <p:selectCheckboxMenu id="int" value="#{checkboxView.selectedCities2}"
+                                                          label="Quais são seus interesses?" multiple="true"
+                                                          filter="true" filterMatchMode="startsWith"
+                                                          panelStyle="width:250px">
+                                        <f:selectItems value="#{checkboxView.cities}"/>
+                                    </p:selectCheckboxMenu>
+                                    <p:dialog header="Selected Items" modal="true" showEffect="fade" hideEffect="fade"
+                                              widgetVar="itemDialog" width="250">
+                                        <p:outputPanel id="displayItems">
+                                            <p:dataList value="#{checkboxView.selectedCities2}" var="city"
+                                                        emptyMessage="No cities selected">
+                                                <f:facet name="header">
+                                                    Multiple
+                                                </f:facet>
+                                                #{city}
+                                            </p:dataList>
+                                        </p:outputPanel>
+                                    </p:dialog>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="p-grid" style="margin-top: 2%">
-                            <h:outputLabel for="int" value="Quais são seus interesses?"/>
-                            <p:selectCheckboxMenu id="int" value="#{checkboxView.selectedCities2}"
-                                                  label="Quais são seus interesses?" multiple="true"
-                                                  filter="true" filterMatchMode="startsWith"
-                                                  panelStyle="width:250px">
-                                <f:selectItems value="#{checkboxView.cities}"/>
-                            </p:selectCheckboxMenu>
-                            <p:dialog header="Selected Items" modal="true" showEffect="fade" hideEffect="fade"
-                                      widgetVar="itemDialog" width="250">
-                                <p:outputPanel id="displayItems">
-                                    <p:dataList value="#{checkboxView.selectedCities2}" var="city"
-                                                emptyMessage="No cities selected">
-                                        <f:facet name="header">
-                                            Multiple
-                                        </f:facet>
-                                        #{city}
-                                    </p:dataList>
-                                </p:outputPanel>
-                            </p:dialog>
-                        </div>
-                        <div class="p-grid" style="margin-top: 5%">
-                            <div class="p-col">
-                                <p:commandButton value="Cadastrar Cliente" styleClass="ui-priority-primary"
-                                                 icon="fa fa-users"/>
-                            </div>
-                            <div class="p-col">
-                                <p:commandButton value="Cancelar" styleClass="ui-priority-secondary"
-                                                 icon="fa fa-money"/>
-                            </div>
+                                <div class="p-grid" style="margin-top: 5%">
+                                    <div class="p-col">
+                                        <p:commandButton value="Cadastrar Cliente" styleClass="ui-priority-primary"
+                                                         icon="fa fa-users"/>
+                                    </div>
+                                    <div class="p-col">
+                                        <p:commandButton value="Cancelar" styleClass="ui-priority-secondary"
+                                                         icon="fa fa-money"/>
+                                    </div>
+                                </div>
+
+                            </p:fieldset>
                         </div>
 
-                    </p:fieldset>
+                    </div>
                 </div>
 
-            </div>
-        </div>
-
-    </h:form>
+            </h:form>
+        </ui:define>
+    </ui:composition>
 </h:body>
 </html>
