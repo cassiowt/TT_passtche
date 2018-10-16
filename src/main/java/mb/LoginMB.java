@@ -7,7 +7,6 @@ import rn.UsuarioRN;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
-import javax.faces.bean.ViewScoped;
 import javax.faces.context.FacesContext;
 
 @ManagedBean
@@ -45,7 +44,7 @@ public class LoginMB {
                 && usuarioIformado.getSenha().equals(loginED.getUsuarioED().getSenha())) {
             montaMessage("Successfull","Login efetuado com sucesso");
 
-            return "index";
+            return "home";
         }
         montaMessage("Error","Erro ao logar");
         return "erro";
