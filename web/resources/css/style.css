@@ -7,9 +7,8 @@
 
 .ui-inputgroup {
     color: #4c3000;
-    padding: 1%;
-}
 
+}
 
 .ui-button {
     width: 95%;
@@ -24,6 +23,13 @@
     border-radius: 4px;
 }
 
+.box-telefone {
+    border: 1px solid #ff6b18;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    border-radius: 4px;
+}
+
 .sample-layout {
     margin: 0;
 }
@@ -32,13 +38,15 @@
     border: 1px solid #ffffff;
 }
 
-
-
 #loginEmail {
     width: 100%;
 }
+
 #password {
     width: 100%;
 }
+#console1 {
+    padding-left: 30%;
 
+}
 
