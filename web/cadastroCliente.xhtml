@@ -59,11 +59,10 @@
                                 <div class="box-telefone">
                                     <div class="p-grid">
                                         <div class="ui-inputgroup p-col-12">
-                                            <p:selectOneMenu id="console0" value="#{selectOneMenuView.console}">
+                                            <p:selectOneMenu id="console0" value="">
                                                 <f:selectItem itemLabel="Selecione" itemValue=""/>
-                                                <f:selectItem itemLabel="Fixo" itemValue="FIXO"/>
-                                                <f:selectItem itemLabel="Celular" itemValue="CELULAR"/>
-                                                <f:selectItem itemLabel="Recado" itemValue="RECADO"/>
+                                                <f:selectItems value="#{tiposMB.tipoTelefoneED}" var="tipo"
+                                                        itemValue="#{tipo}" itemLabel="#{tipo}" />
                                             </p:selectOneMenu>
                                             <span class="ui-inputgroup-addon"><i class="fa fa-user-circle-o"></i></span>
                                             <p:inputText id="Telefone1" label="Telefone 1" placeholder="Telefone"
