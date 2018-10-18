@@ -39,7 +39,7 @@
                                     </div>
 
                                     <div class="ui-inputgroup p-col-4">
-                                        <span class="ui-inputgroup-addon"><i>@</i></span>
+                                        <span class="ui-inputgroup-addon"><i class="fa fa-at"></i></span>
                                         <p:inputText id="Email" label="E-mail" placeholder="E-email"
                                                      value="#{loginMB.loginED.usuarioED.email}"
                                                      required="true"
@@ -47,7 +47,7 @@
                                     </div>
 
                                     <div class="ui-inputgroup p-col-4">
-                                        <span class="ui-inputgroup-addon"><i>@</i></span>
+                                        <span class="ui-inputgroup-addon"><i class="fa fa-eye-slash"></i></span>
                                         <p:inputText id="Senha" label="Senha" placeholder="Senha"
                                                      value="#{loginMB.loginED.usuarioED.email}"
                                                      required="true"
@@ -65,7 +65,7 @@
                                                 <f:selectItem itemLabel="Celular" itemValue="CELULAR"/>
                                                 <f:selectItem itemLabel="Recado" itemValue="RECADO"/>
                                             </p:selectOneMenu>
-                                            <span class="ui-inputgroup-addon"><i class="fa fa-user-circle-o"></i></span>
+                                            <span class="ui-inputgroup-addon"><i class="fa fa-phone"></i></span>
                                             <p:inputText id="Telefone1" label="Telefone 1" placeholder="Telefone"
                                                          value="#{loginMB.loginED.usuarioED.email}"
                                                          required="true"
@@ -81,7 +81,7 @@
                                                 <f:selectItem itemLabel="Celular" itemValue="CELULAR"/>
                                                 <f:selectItem itemLabel="Recado" itemValue="RECADO"/>
                                             </p:selectOneMenu>
-                                            <span class="ui-inputgroup-addon"><i class="fa fa-user-circle-o"></i></span>
+                                            <span class="ui-inputgroup-addon"><i class="fa fa fa-phone"></i></span>
                                             <p:inputText id="Telefone2" label="Telefone 1" placeholder="Telefone"
                                                          value="#{loginMB.loginED.usuarioED.email}"
                                                          required="true"
@@ -97,7 +97,7 @@
                                                 <f:selectItem itemLabel="Celular" itemValue="CELULAR"/>
                                                 <f:selectItem itemLabel="Recado" itemValue="RECADO"/>
                                             </p:selectOneMenu>
-                                            <span class="ui-inputgroup-addon"><i class="fa fa-user-circle-o"></i></span>
+                                            <span class="ui-inputgroup-addon"><i class="fa fa fa-phone"></i></span>
                                             <p:inputText id="Telefone3" label="Telefone 1" placeholder="Telefone"
                                                          value="#{loginMB.loginED.usuarioED.email}"
                                                          required="true"
@@ -106,25 +106,8 @@
                                     </div>
                                 </div>
                                 <div class="p-grid" style="margin-top: 2%">
-                                    <h:outputLabel for="int" value="Quais são seus interesses?"/>
-                                    <p:selectCheckboxMenu id="int" value="#{checkboxView.selectedCities2}"
-                                                          label="Quais são seus interesses?" multiple="true"
-                                                          filter="true" filterMatchMode="startsWith"
-                                                          panelStyle="width:250px">
-                                        <f:selectItems value="#{checkboxView.cities}"/>
-                                    </p:selectCheckboxMenu>
-                                    <p:dialog header="Selected Items" modal="true" showEffect="fade" hideEffect="fade"
-                                              widgetVar="itemDialog" width="250">
-                                        <p:outputPanel id="displayItems">
-                                            <p:dataList value="#{checkboxView.selectedCities2}" var="city"
-                                                        emptyMessage="No cities selected">
-                                                <f:facet name="header">
-                                                    Multiple
-                                                </f:facet>
-                                                #{city}
-                                            </p:dataList>
-                                        </p:outputPanel>
-                                    </p:dialog>
+                                    <h3>Nos conte quais são seus interesses:</h3>
+                                    <p:inputTextarea rows="6" cols="33" />
                                 </div>
                                 <div class="p-grid" style="margin-top: 5%">
                                     <div class="p-col">
