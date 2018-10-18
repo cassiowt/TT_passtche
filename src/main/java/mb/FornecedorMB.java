@@ -10,21 +10,28 @@ import javax.faces.bean.SessionScoped;
 @SessionScoped
 public class FornecedorMB {
 
-    private FornecedorED fornecedorED;
+    private FornecedorED fornecedor;
     private FornecedorRN fornecedorRN;
 
     public FornecedorMB() {
-        fornecedorED= new FornecedorED();
+        fornecedor = new FornecedorED();
     }
 
-    public FornecedorED getFornecedorED() {return fornecedorED;}
+    public FornecedorED getFornecedorED() {
+        return fornecedor;
+    }
 
     public void setFornecedorED(FornecedorED fornecedorED) {
-        this.fornecedorED = fornecedorED;
+        this.fornecedor = fornecedorED;
     }
 
     public FornecedorMB(FornecedorED fornecedorED) {
-        this.fornecedorED = fornecedorED;
+        this.fornecedor = fornecedorED;
     }
-  //  public saveFornecedorED
+
+    public String saveFornecedor() {
+
+        System.out.println(fornecedor);
+        return null;
+    }
 }
