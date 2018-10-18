@@ -57,6 +57,12 @@
                                     </div>
 
 
+                                <div class="ui-inputgroup p-col">
+                                    <span class="ui-inputgroup-addon"><i class="fa fa-money"></i></span>
+                                    <p:outputLabel for="date" value="" />
+                                    <p:inputMask id="date" value="#{maskView.date}" mask="99/99/9999" placeholder="Data de nascimento"/>
+                                </div>
+
                                 <div class="box-telefone">
                                     <div class="p-grid">
                                         <div class="ui-inputgroup p-col-12">
@@ -109,6 +115,11 @@
                                     <h3>Nos conte quais são seus interesses:</h3>
                                     <p:inputTextarea rows="6" cols="33" value="#{clienteMB.cliente.hobby}"/>
                                 </div>
+                                <div class="p-grid">
+                                    <h3>Número do cartão:</h3>
+                                    <p:outputLabel for="cartao" value="" />
+                                    <p:inputMask id="cartao" value="#{maskView.cartao}" mask="9999-9999-9999-9999"/>
+                                </div>
                                 <div class="p-grid" style="margin-top: 1%">
                                     <div class="p-col">
                                         <p:commandButton update="msgs" value="Cadastrar Cliente" styleClass="ui-priority-primary"
@@ -119,6 +130,8 @@
                                                          icon="fa fa-money" action="#{clienteMB.saveCliente}"/>
                                     </div>
                                 </div>
+
+
 
                             </p:fieldset>
                         </div>
