@@ -25,7 +25,7 @@
                                     <div class="ui-inputgroup p-col-4 nome-inpunt">
                                         <span class="ui-inputgroup-addon"><i class="fa fa-user-circle-o"></i></span>
                                         <p:inputText id="nome" label="Nome" placeholder="Nome completo"
-                                                     value="#{loginMB.loginED.usuarioED.email}"
+                                                     value="#{clienteMB.cliente.nome}"
                                                      required="true"
                                                      requiredMessage="Digite seu nome para efetuar o cadastro"/>
                                     </div>
@@ -33,7 +33,7 @@
                                     <div class="ui-inputgroup p-col-4">
                                         <span class="ui-inputgroup-addon"><i class="fa fa-user-circle-o"></i></span>
                                         <p:inputText id="Cpf" label="CPF" placeholder="CPF"
-                                                     value="#{loginMB.loginED.usuarioED.email}"
+                                                     value="#{clienteMB.cliente.cpf}"
                                                      required="true"
                                                      requiredMessage="Digite seu CPF para efetuar o cadastro"/>
                                     </div>
@@ -41,7 +41,7 @@
                                     <div class="ui-inputgroup p-col-4">
                                         <span class="ui-inputgroup-addon"><i class="fa fa-at"></i></span>
                                         <p:inputText id="Email" label="E-mail" placeholder="E-email"
-                                                     value="#{loginMB.loginED.usuarioED.email}"
+                                                     value="#{clienteMB.cliente.email}"
                                                      required="true"
                                                      requiredMessage="Digite seu E-mail para efetuar o cadastro"/>
                                     </div>
@@ -49,7 +49,7 @@
                                     <div class="ui-inputgroup p-col-4">
                                         <span class="ui-inputgroup-addon"><i class="fa fa-eye-slash"></i></span>
                                         <p:inputText id="Senha" label="Senha" placeholder="Senha"
-                                                     value="#{loginMB.loginED.usuarioED.email}"
+                                                     value="#{loginMB.loginED.usuarioED.senha}"
                                                      required="true"
                                                      requiredMessage="Digite sua senha para efetuar o cadastro"/>
                                     </div>
@@ -59,7 +59,7 @@
                                 <div class="box-telefone">
                                     <div class="p-grid">
                                         <div class="ui-inputgroup p-col-12">
-                                            <p:selectOneMenu id="console0" value="">
+                                            <p:selectOneMenu id="console0" value="#{clienteMB.cliente.telefones}">
                                                 <f:selectItem itemLabel="Selecione" itemValue=""/>
                                                 <f:selectItems value="#{tiposMB.tipoTelefoneED}" var="tipo"
                                                         itemValue="#{tipo}" itemLabel="#{tipo}" />
@@ -74,7 +74,7 @@
 
                                     <div class="p-grid">
                                         <div class="ui-inputgroup p-col-12">
-                                            <p:selectOneMenu id="console1" value="">
+                                            <p:selectOneMenu id="console1" value="#{clienteMB.cliente.telefones}">
                                                 <f:selectItem itemLabel="Selecione" itemValue=""/>
                                                 <f:selectItems value="#{tiposMB.tipoTelefoneED}" var="tipo"
                                                                itemValue="#{tipo}" itemLabel="#{tipo}" />
@@ -89,7 +89,7 @@
 
                                     <div class="p-grid">
                                         <div class="ui-inputgroup p-col-12">
-                                            <p:selectOneMenu id="console2" value="">
+                                            <p:selectOneMenu id="console2" value="#{clienteMB.cliente.telefones}">
                                                 <f:selectItem itemLabel="Selecione" itemValue=""/>
                                                 <f:selectItems value="#{tiposMB.tipoTelefoneED}" var="tipo"
                                                                itemValue="#{tipo}" itemLabel="#{tipo}" />
@@ -104,16 +104,16 @@
                                 </div>
                                 <div class="p-grid" style="margin-top: 2%">
                                     <h3>Nos conte quais são seus interesses:</h3>
-                                    <p:inputTextarea rows="6" cols="33" />
+                                    <p:inputTextarea rows="6" cols="33" value="#{clienteMB.cliente.hobby}" />
                                 </div>
                                 <div class="p-grid" style="margin-top: 5%">
                                     <div class="p-col">
                                         <p:commandButton value="Cadastrar Cliente" styleClass="ui-priority-primary"
-                                                         icon="fa fa-users"/>
+                                                         icon="fa fa-users" actionListener="#{clienteMB.saveCliente}"/>
                                     </div>
                                     <div class="p-col">
                                         <p:commandButton value="Cancelar" styleClass="ui-priority-secondary"
-                                                         icon="fa fa-money"/>
+                                                         icon="fa fa-money" action="#{clienteMB.saveCliente}"/>
                                     </div>
                                 </div>
 
