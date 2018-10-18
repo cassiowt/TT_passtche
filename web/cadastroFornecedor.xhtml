@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<h:head></h:head>
+<h:body>
+    <h:outputStylesheet name="css/style.css"/>
+    <h:outputStylesheet name="css/primeflex.css"/>
+    <ui:composition template="templates/common.xhtml">
+        <ui:define name="content">
+            <h:form prependId="false" id="cadastroCliente">
+                <div class="p-grid">
+                    <div class="p-col-8 p-offset-2">
+                        <div class="box">
+                            <p:growl id="msgs" showDetail="false"/>
+
+                            <p:fieldset legend="Cadastro de fornecedor" style="padding-bottom:10%">
+
+                                <div class="p-grid">
+
+                                    <div class="ui-inputgroup p-col">
+                                        <span class="ui-inputgroup-addon"><i class="fa fa-list-alt"></i></span>
+                                        <p:inputText id="cnpj" label="CNPJ" placeholder="CNPJ"
+                                                     value="#{loginMB.loginED.usuarioED.email}"
+                                                     required="true"
+                                                     requiredMessage="Digite seu CNPJ para efetuar o cadastro"/>
+                                    </div>
+
+                                    <div class="ui-inputgroup p-col">
+                                        <span class="ui-inputgroup-addon"><i class="fa fa-building"></i></span>
+                                        <p:inputText id="razaosocial" label="Razão Social" placeholder="Razão Social"
+                                                     value="#{loginMB.loginED.usuarioED.email}"
+                                                     required="true"
+                                                     requiredMessage="Digite sua razão social para efetuar o cadastro"/>
+                                    </div>
+
+                                    <div class="ui-inputgroup p-col">
+                                        <span class="ui-inputgroup-addon"><i class="fa fa-briefcase"></i></span>
+                                        <p:inputText id="nomefantasia" label="Nome Fantasia" placeholder="Nome Fantasia"
+                                                     value="#{loginMB.loginED.usuarioED.email}"
+                                                     required="true"
+                                                     requiredMessage="Digite nome fantasia para efetuar o cadastro"/>
+                                    </div>
+
+                                    <div class="p-grid">
+                                        <div class="ui-inputgroup p-col">
+                                            <span class="ui-inputgroup-addon"><i class="fa fa-envelope"></i></span>
+                                            <p:inputText id="Email" label="E-mail" placeholder="E-email"
+                                                         value="#{loginMB.loginED.usuarioED.email}"
+                                                         required="true"
+                                                         requiredMessage="Digite seu E-mail para efetuar o cadastro"/>
+                                        </div>
+
+                                        <div class="ui-inputgroup p-col">
+                                            <span class="ui-inputgroup-addon"><i class="fa fa-eye-slash"></i></span>
+                                            <p:inputText id="Senha" label="Senha" placeholder="Senha"
+                                                         value="#{loginMB.loginED.usuarioED.email}"
+                                                         required="true"
+                                                         requiredMessage="Digite sua senha para efetuar o cadastro"/>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="box-telefone">
+                                    <div class="p-grid">
+                                        <div class="ui-inputgroup p-col-12">
+                                            <p:selectOneMenu id="tipo1" value="">
+                                                <f:selectItem itemLabel="Selecione" itemValue=""/>
+                                                <f:selectItems value="#{tiposMB.tipoTelefoneED}" var="tipo"
+                                                               itemValue="#{tipo}" itemLabel="#{tipo}"/>
+                                            </p:selectOneMenu>
+                                            <span class="ui-inputgroup-addon"><i class="fa fa-phone"></i></span>
+                                            <p:inputText id="telefone1" label="Telefone 1" placeholder="Telefone"
+                                                         value="#{loginMB.loginED.usuarioED.email}"
+                                                         required="true"
+                                                         requiredMessage="Digite seu E-mail para efetuar o cadastro"/>
+                                        </div>
+                                    </div>
+
+                                    <div class="p-grid">
+                                        <div class="ui-inputgroup p-col-12">
+                                            <p:selectOneMenu id="tipo2" value="">
+                                                <f:selectItem itemLabel="Selecione" itemValue=""/>
+                                                <f:selectItems value="#{tiposMB.tipoTelefoneED}" var="tipo"
+                                                               itemValue="#{tipo}" itemLabel="#{tipo}"/>
+                                            </p:selectOneMenu>
+                                            <span class="ui-inputgroup-addon"><i class="fa fa-phone"></i></span>
+                                            <p:inputText id="telefone2" label="Telefone 1" placeholder="Telefone"
+                                                         value="#{loginMB.loginED.usuarioED.email}"
+                                                         required="true"
+                                                         requiredMessage="Digite seu E-mail para efetuar o cadastro"/>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+                                <div class="ui-inputgroup p-col">
+                                    <span class="ui-inputgroup-addon"><i class="fa fa-user-circle-o"></i></span>
+                                    <p:inputText id="nome" label="Nome" placeholder="Nome do responsável"
+                                                 value="#{loginMB.loginED.usuarioED.email}"
+                                                 required="true"
+                                                 requiredMessage="Digite o nome do responsável para efetuar o cadastro"/>
+                                </div>
+
+                                <div class="ui-inputgroup p-col">
+                                    <span class="ui-inputgroup-addon"><i class="fa fa-list-alt"></i></span>
+                                    <p:inputText id="Cpf" label="CPF" placeholder="CPF do responsável"
+                                                 value="#{loginMB.loginED.usuarioED.email}"
+                                                 required="true"
+                                                 requiredMessage="Digite seu CPF do responsável para efetuar o cadastro"/>
+                                </div>
+
+                                <div class="p-grid">
+                                    <div class="ui-inputgroup p-col-12">
+                                        <p:selectOneMenu id="tipo3" value="">
+                                            <f:selectItem itemLabel="Selecione" itemValue=""/>
+                                            <f:selectItems value="#{tiposMB.tipoTelefoneED}" var="tipo"
+                                                           itemValue="#{tipo}" itemLabel="#{tipo}"/>
+                                        </p:selectOneMenu>
+                                        <span class="ui-inputgroup-addon"><i class="fa fa-phone"></i></span>
+                                        <p:inputText id="telefoneresponsavel" label="Telefone 1" placeholder="Telefone do responsável"
+                                                     value="#{loginMB.loginED.usuarioED.email}"
+                                                     required="true"
+                                                     requiredMessage="Digite o telefone do responsável para efetuar o cadastro"/>
+                                    </div>
+                                </div>
+
+                                <div class="p-grid" style="margin-top: 1%">
+                                    <div class="p-col">
+                                        <p:commandButton value="Cadastrar Fornecedor" styleClass="ui-priority-primary"
+                                                         icon="fa fa-users"/>
+                                    </div>
+                                    <div class="p-col">
+                                        <p:commandButton value="Cancelar" styleClass="ui-priority-secondary"
+                                                         icon="fa fa-money"/>
+                                    </div>
+                                </div>
+
+                            </p:fieldset>
+                        </div>
+
+                    </div>
+                </div>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+</h:body>
+</html>
