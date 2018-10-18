@@ -58,4 +58,13 @@ public class ClienteED extends PessoaED {
 	public void setCartao(String cartao) {
 		this.cartao = cartao;
 	}
+
+	@Override
+	public String toString() {
+		return "ClienteED{" +
+				"cpf='" + cpf + '\'' +
+				", hobby='" + hobby + '\'' +
+				", cartao='" + cartao + '\'' +
+				"} " + super.toString();
+	}
 }

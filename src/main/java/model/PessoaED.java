@@ -104,5 +104,19 @@ public abstract class PessoaED {
 	public void setTelefones(Collection<TelefoneED> telefones) {
 		this.telefones = telefones;
 	}
+
+	@Override
+	public String toString() {
+		return "PessoaED{" +
+				"id=" + id +
+				", nome='" + nome + '\'' +
+				", dataNascimento=" + dataNascimento +
+				", email='" + email + '\'' +
+				", tipo_PessoaED=" + tipo_PessoaED +
+				", enderecoED=" + enderecoED +
+				", telefones=" + telefones +
+				'}';
+	}
 }
+
 

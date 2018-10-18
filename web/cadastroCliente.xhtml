@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html"
+<html xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core"
       xmlns:p="http://primefaces.org/ui">
@@ -16,7 +15,7 @@
                 <div class="p-grid">
                     <div class="p-col-8 p-offset-2">
                         <div class="box">
-                            <p:growl id="msgs" showDetail="false"/>
+                            <p:growl id="msgs"/>
 
                             <p:fieldset legend="Cadastro de cliente" style="padding-bottom:10%">
 
@@ -37,7 +36,7 @@
                                                      required="true"
                                                      requiredMessage="Digite seu CPF para efetuar o cadastro"/>
                                     </div>
-
+                                </div>
                                     <div class="p-grid">
                                         <div class="ui-inputgroup p-col">
                                             <span class="ui-inputgroup-addon"><i class="fa fa-at"></i></span>
@@ -56,12 +55,12 @@
                                         </div>
 
                                     </div>
-                                </div>
+
 
                                 <div class="box-telefone">
                                     <div class="p-grid">
                                         <div class="ui-inputgroup p-col-12">
-                                            <p:selectOneMenu id="tipo1" value="#{clienteMB.cliente.telefones}">
+                                            <p:selectOneMenu id="tipo1" value="#{clienteMB.cliente.hobby}">
                                                 <f:selectItem itemLabel="Selecione" itemValue=""/>
                                                 <f:selectItems value="#{tiposMB.tipoTelefoneED}" var="tipo"
                                                                itemValue="#{tipo}" itemLabel="#{tipo}"/>
@@ -76,7 +75,7 @@
 
                                     <div class="p-grid">
                                         <div class="ui-inputgroup p-col-12">
-                                            <p:selectOneMenu id="tipo2" value="#{clienteMB.cliente.telefones}">
+                                            <p:selectOneMenu id="tipo2" value="#{clienteMB.cliente.hobby}">
                                                 <f:selectItem itemLabel="Selecione" itemValue=""/>
                                                 <f:selectItems value="#{tiposMB.tipoTelefoneED}" var="tipo"
                                                                itemValue="#{tipo}" itemLabel="#{tipo}"/>
@@ -92,7 +91,7 @@
                                     <div class="p-grid">
                                         <div class="ui-inputgroup p-col-12">
 
-                                            <p:selectOneMenu id="tipo3" value="#{clienteMB.cliente.telefones}">
+                                            <p:selectOneMenu id="tipo3" value="#{clienteMB.cliente.hobby}">
 
                                                 <f:selectItem itemLabel="Selecione" itemValue=""/>
                                                 <f:selectItems value="#{tiposMB.tipoTelefoneED}" var="tipo"
@@ -112,7 +111,7 @@
                                 </div>
                                 <div class="p-grid" style="margin-top: 1%">
                                     <div class="p-col">
-                                        <p:commandButton value="Cadastrar Cliente" styleClass="ui-priority-primary"
+                                        <p:commandButton update="msgs" value="Cadastrar Cliente" styleClass="ui-priority-primary"
                                                          icon="fa fa-users" actionListener="#{clienteMB.saveCliente}"/>
                                     </div>
                                     <div class="p-col">
