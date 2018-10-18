@@ -22,7 +22,7 @@
 
                                 <div class="p-grid">
 
-                                    <div class="ui-inputgroup p-col-4 nome-inpunt">
+                                    <div class="ui-inputgroup p-col">
                                         <span class="ui-inputgroup-addon"><i class="fa fa-user-circle-o"></i></span>
                                         <p:inputText id="nome" label="Nome" placeholder="Nome completo"
                                                      value="#{loginMB.loginED.usuarioED.email}"
@@ -30,7 +30,7 @@
                                                      requiredMessage="Digite seu nome para efetuar o cadastro"/>
                                     </div>
 
-                                    <div class="ui-inputgroup p-col-4">
+                                    <div class="ui-inputgroup p-col">
                                         <span class="ui-inputgroup-addon"><i class="fa fa-user-circle-o"></i></span>
                                         <p:inputText id="Cpf" label="CPF" placeholder="CPF"
                                                      value="#{loginMB.loginED.usuarioED.email}"
@@ -38,31 +38,32 @@
                                                      requiredMessage="Digite seu CPF para efetuar o cadastro"/>
                                     </div>
 
-                                    <div class="ui-inputgroup p-col-4">
-                                        <span class="ui-inputgroup-addon"><i class="fa fa-at"></i></span>
-                                        <p:inputText id="Email" label="E-mail" placeholder="E-email"
-                                                     value="#{loginMB.loginED.usuarioED.email}"
-                                                     required="true"
-                                                     requiredMessage="Digite seu E-mail para efetuar o cadastro"/>
-                                    </div>
+                                    <div class="p-grid">
+                                        <div class="ui-inputgroup p-col">
+                                            <span class="ui-inputgroup-addon"><i class="fa fa-at"></i></span>
+                                            <p:inputText id="Email" label="E-mail" placeholder="E-email"
+                                                         value="#{loginMB.loginED.usuarioED.email}"
+                                                         required="true"
+                                                         requiredMessage="Digite seu E-mail para efetuar o cadastro"/>
+                                        </div>
 
-                                    <div class="ui-inputgroup p-col-4">
-                                        <span class="ui-inputgroup-addon"><i class="fa fa-eye-slash"></i></span>
-                                        <p:inputText id="Senha" label="Senha" placeholder="Senha"
-                                                     value="#{loginMB.loginED.usuarioED.email}"
-                                                     required="true"
-                                                     requiredMessage="Digite sua senha para efetuar o cadastro"/>
+                                        <div class="ui-inputgroup p-col">
+                                            <span class="ui-inputgroup-addon"><i class="fa fa-eye-slash"></i></span>
+                                            <p:inputText id="Senha" label="Senha" placeholder="Senha"
+                                                         value="#{loginMB.loginED.usuarioED.email}"
+                                                         required="true"
+                                                         requiredMessage="Digite sua senha para efetuar o cadastro"/>
+                                        </div>
                                     </div>
-
                                 </div>
 
                                 <div class="box-telefone">
                                     <div class="p-grid">
                                         <div class="ui-inputgroup p-col-12">
-                                            <p:selectOneMenu id="console0" value="">
+                                            <p:selectOneMenu id="tipo1" value="">
                                                 <f:selectItem itemLabel="Selecione" itemValue=""/>
                                                 <f:selectItems value="#{tiposMB.tipoTelefoneED}" var="tipo"
-                                                        itemValue="#{tipo}" itemLabel="#{tipo}" />
+                                                               itemValue="#{tipo}" itemLabel="#{tipo}"/>
                                             </p:selectOneMenu>
                                             <span class="ui-inputgroup-addon"><i class="fa fa-phone"></i></span>
                                             <p:inputText id="Telefone0" label="Telefone 1" placeholder="Telefone"
@@ -74,10 +75,10 @@
 
                                     <div class="p-grid">
                                         <div class="ui-inputgroup p-col-12">
-                                            <p:selectOneMenu id="console1" value="">
+                                            <p:selectOneMenu id="tipo2" value="">
                                                 <f:selectItem itemLabel="Selecione" itemValue=""/>
                                                 <f:selectItems value="#{tiposMB.tipoTelefoneED}" var="tipo"
-                                                               itemValue="#{tipo}" itemLabel="#{tipo}" />
+                                                               itemValue="#{tipo}" itemLabel="#{tipo}"/>
                                             </p:selectOneMenu>
                                             <span class="ui-inputgroup-addon"><i class="fa fa-phone"></i></span>
                                             <p:inputText id="Telefone1" label="Telefone 1" placeholder="Telefone"
@@ -89,10 +90,10 @@
 
                                     <div class="p-grid">
                                         <div class="ui-inputgroup p-col-12">
-                                            <p:selectOneMenu id="console2" value="">
+                                            <p:selectOneMenu id="tipo3" value="">
                                                 <f:selectItem itemLabel="Selecione" itemValue=""/>
                                                 <f:selectItems value="#{tiposMB.tipoTelefoneED}" var="tipo"
-                                                               itemValue="#{tipo}" itemLabel="#{tipo}" />
+                                                               itemValue="#{tipo}" itemLabel="#{tipo}"/>
                                             </p:selectOneMenu>
                                             <span class="ui-inputgroup-addon"><i class="fa fa-phone"></i></span>
                                             <p:inputText id="Telefone2" label="Telefone 1" placeholder="Telefone"
@@ -102,11 +103,11 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="p-grid" style="margin-top: 2%">
+                                <div class="p-grid">
                                     <h3>Nos conte quais são seus interesses:</h3>
-                                    <p:inputTextarea rows="6" cols="33" />
+                                    <p:inputTextarea rows="6" cols="33"/>
                                 </div>
-                                <div class="p-grid" style="margin-top: 5%">
+                                <div class="p-grid" style="margin-top: 1%">
                                     <div class="p-col">
                                         <p:commandButton value="Cadastrar Cliente" styleClass="ui-priority-primary"
                                                          icon="fa fa-users"/>
