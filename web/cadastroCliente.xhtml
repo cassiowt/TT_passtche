@@ -65,6 +65,21 @@
                                                         itemValue="#{tipo}" itemLabel="#{tipo}" />
                                             </p:selectOneMenu>
                                             <span class="ui-inputgroup-addon"><i class="fa fa-phone"></i></span>
+                                            <p:inputText id="Telefone0" label="Telefone 1" placeholder="Telefone"
+                                                         value="#{loginMB.loginED.usuarioED.email}"
+                                                         required="true"
+                                                         requiredMessage="Digite seu E-mail para efetuar o cadastro"/>
+                                        </div>
+                                    </div>
+
+                                    <div class="p-grid">
+                                        <div class="ui-inputgroup p-col-12">
+                                            <p:selectOneMenu id="console1" value="">
+                                                <f:selectItem itemLabel="Selecione" itemValue=""/>
+                                                <f:selectItems value="#{tiposMB.tipoTelefoneED}" var="tipo"
+                                                               itemValue="#{tipo}" itemLabel="#{tipo}" />
+                                            </p:selectOneMenu>
+                                            <span class="ui-inputgroup-addon"><i class="fa fa-phone"></i></span>
                                             <p:inputText id="Telefone1" label="Telefone 1" placeholder="Telefone"
                                                          value="#{loginMB.loginED.usuarioED.email}"
                                                          required="true"
@@ -73,31 +88,14 @@
                                     </div>
 
                                     <div class="p-grid">
-                                        <div class="ui-inputgroup  p-col-12">
-                                            <p:selectOneMenu id="console2" value="#{selectOneMenuView.console}">
+                                        <div class="ui-inputgroup p-col-12">
+                                            <p:selectOneMenu id="console2" value="">
                                                 <f:selectItem itemLabel="Selecione" itemValue=""/>
-                                                <f:selectItem itemLabel="Fixo" itemValue="FIXO"/>
-                                                <f:selectItem itemLabel="Celular" itemValue="CELULAR"/>
-                                                <f:selectItem itemLabel="Recado" itemValue="RECADO"/>
+                                                <f:selectItems value="#{tiposMB.tipoTelefoneED}" var="tipo"
+                                                               itemValue="#{tipo}" itemLabel="#{tipo}" />
                                             </p:selectOneMenu>
-                                            <span class="ui-inputgroup-addon"><i class="fa fa fa-phone"></i></span>
+                                            <span class="ui-inputgroup-addon"><i class="fa fa-phone"></i></span>
                                             <p:inputText id="Telefone2" label="Telefone 1" placeholder="Telefone"
-                                                         value="#{loginMB.loginED.usuarioED.email}"
-                                                         required="true"
-                                                         requiredMessage="Digite seu E-mail para efetuar o cadastro"/>
-                                        </div>
-                                    </div>
-
-                                    <div class="p-grid">
-                                        <div class="ui-inputgroup  p-col-12">
-                                            <p:selectOneMenu id="console3" value="#{selectOneMenuView.console}">
-                                                <f:selectItem itemLabel="Selecione" itemValue=""/>
-                                                <f:selectItem itemLabel="Fixo" itemValue="FIXO"/>
-                                                <f:selectItem itemLabel="Celular" itemValue="CELULAR"/>
-                                                <f:selectItem itemLabel="Recado" itemValue="RECADO"/>
-                                            </p:selectOneMenu>
-                                            <span class="ui-inputgroup-addon"><i class="fa fa fa-phone"></i></span>
-                                            <p:inputText id="Telefone3" label="Telefone 1" placeholder="Telefone"
                                                          value="#{loginMB.loginED.usuarioED.email}"
                                                          required="true"
                                                          requiredMessage="Digite seu E-mail para efetuar o cadastro"/>
