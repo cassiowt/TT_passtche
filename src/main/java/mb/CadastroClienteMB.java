@@ -17,9 +17,5 @@ public class CadastroClienteMB {
 
     public CadastroClienteMB() {
         clienteED = new ClienteED();
-
     }
-
-
-
 }

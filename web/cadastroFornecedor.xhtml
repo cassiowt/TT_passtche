@@ -95,7 +95,20 @@
                                                          requiredMessage="Digite seu E-mail para efetuar o cadastro"/>
                                         </div>
                                     </div>
-
+                                    <div class="ui-inputgroup p-col">
+                                        <span class="ui-inputgroup-addon"><i class="fa fa-list-alt"></i></span>
+                                        <p:inputText id="conta" label="Conta Bancária" placeholder="Conta Bancária"
+                                                     value="#{loginMB.loginED.usuarioED.email}"
+                                                     required="true"
+                                                     requiredMessage="Digite sua conta bancária"/>
+                                    </div>
+                                    <div class="ui-inputgroup p-col">
+                                        <span class="ui-inputgroup-addon"><i class="fa fa-list-alt"></i></span>
+                                        <p:inputText id="perct" label="Percentual de Comissão" placeholder="Percentual de Comissão"
+                                                     value="#{loginMB.loginED.usuarioED.email}"
+                                                     required="true"
+                                                     requiredMessage="Digite seu Percentual de comissão"/>
+                                    </div>
 
                                 </div>
 
@@ -107,13 +120,7 @@
                                                  requiredMessage="Digite o nome do responsável para efetuar o cadastro"/>
                                 </div>
 
-                                <div class="ui-inputgroup p-col">
-                                    <span class="ui-inputgroup-addon"><i class="fa fa-list-alt"></i></span>
-                                    <p:inputText id="Cpf" label="CPF" placeholder="CPF do responsável"
-                                                 value="#{loginMB.loginED.usuarioED.email}"
-                                                 required="true"
-                                                 requiredMessage="Digite seu CPF do responsável para efetuar o cadastro"/>
-                                </div>
+
 
                                 <div class="p-grid">
                                     <div class="ui-inputgroup p-col-12">
