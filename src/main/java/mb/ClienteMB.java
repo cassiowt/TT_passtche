@@ -7,6 +7,7 @@ import rn.ClienteRN;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import java.util.ArrayList;
+import java.util.List;
 
 @ManagedBean
 @SessionScoped
@@ -15,14 +16,14 @@ public class ClienteMB {
     private ClienteED cliente;
     private ClienteRN clienteRN;
     private TelefoneED telefone;
-    private ArrayList<TelefoneED> telefones;
+    private List<TelefoneED> telefones;
 
     public ClienteMB() {
         cliente = new ClienteED();
+        clienteRN = new ClienteRN();
         telefones = new ArrayList<TelefoneED>();
-
-
     }
+
     public ClienteED getCliente() {
         return cliente;
     }
@@ -31,15 +32,16 @@ public class ClienteMB {
         this.cliente = cliente;
     }
 
-
     public String saveCliente() {
         System.out.println(cliente);
         clienteRN.createCliente(cliente);
            return null;
         }
 
-    public ArrayList<ClienteED> getClientes(){
-        return (ArrayList<ClienteED>) clienteRN.findAllCliente();
+    public List<ClienteED> getClientes(){
+        List<ClienteED> cs  = clienteRN.findAllCliente();
+        System.out.println(cs);
+        return cs;
     }
 
     public TelefoneED getTelefone() {
