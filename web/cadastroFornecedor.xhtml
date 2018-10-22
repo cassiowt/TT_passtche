@@ -20,14 +20,14 @@
                                 <div class="ui-inputgroup p-col">
                                     <span class="ui-inputgroup-addon"><i class="fa fa-list-alt"></i></span>
                                     <p:inputText id="cnpj" label="CNPJ" placeholder="CNPJ"
-                                                 value="#{fornecedorMB.fornecedorED.cnpj}"
+                                                 value="#{fornecedorMB.fornecedor.cnpj}"
                                                  required="true"
                                                  requiredMessage="Digite seu CNPJ para efetuar o cadastro"/>
                                 </div>
                                 <div class="ui-inputgroup p-col">
                                     <span class="ui-inputgroup-addon"><i class="fa fa-building"></i></span>
                                     <p:inputText id="razaosocial" label="Razão Social" placeholder="Razão Social"
-                                                 value="#{fornecedorMB.fornecedorED.nomeEmpresa}"
+                                                 value="#{fornecedorMB.fornecedor.nomeEmpresa}"
                                                  required="true"
                                                  requiredMessage="Digite sua razão social para efetuar o cadastro"/>
                                 </div>
@@ -37,7 +37,7 @@
                                 <div class="ui-inputgroup p-col">
                                     <span class="ui-inputgroup-addon"><i class="fa fa-envelope"></i></span>
                                     <p:inputText id="Email" label="E-mail" placeholder="E-email"
-                                                 value="#{FornecedorMB.FornecedorED.usuarioED.email}"
+                                                 value="#{FornecedorMB.Fornecedor.usuarioED.email}"
                                                  required="true"
                                                  requiredMessage="Digite seu E-mail para efetuar o cadastro"/>
                                 </div>
@@ -45,7 +45,7 @@
                                 <div class="ui-inputgroup p-col">
                                     <span class="ui-inputgroup-addon"><i class="fa fa-eye-slash"></i></span>
                                     <p:inputText id="Senha" label="Senha" placeholder="Senha"
-                                                 value="#{FornecedorMB.FornecedorED.usuarioED.senha}"
+                                                 value="#{FornecedorMB.Fornecedor.usuarioED.senha}"
                                                  required="true"
                                                  requiredMessage="Digite sua senha para efetuar o cadastro"/>
                                 </div>
@@ -79,7 +79,7 @@
                                         </p:selectOneMenu>
                                         <span class="ui-inputgroup-addon"><i class="fa fa-phone"></i></span>
                                         <p:inputText id="telefone2" label="Telefone 2" placeholder="Telefone"
-                                                     value="#{FornecedorMB.FornecedorED.usuarioED.telefones}"
+                                                     value="#{FornecedorMB.Fornecedor.usuarioED.telefones}"
                                                      required="true"
                                                      requiredMessage="Digite seu telefone para efetuar o cadastro"/>
                                     </div>
@@ -87,14 +87,14 @@
                                 <div class="ui-inputgroup p-col">
                                     <span class="ui-inputgroup-addon"><i class="fa fa-list-alt"></i></span>
                                     <p:inputText id="conta" label="Conta Bancária" placeholder="Conta Bancária"
-                                                 value="#{FornecedorMB.FornecedorED.usuarioED.contaBancaria}"
+                                                 value="#{FornecedorMB.Fornecedor.usuarioED.contaBancaria}"
                                                  required="true"
                                                  requiredMessage="Digite sua conta bancária"/>
                                 </div>
                                 <div class="ui-inputgroup p-col">
                                     <span class="ui-inputgroup-addon"><i class="fa fa-list-alt"></i></span>
                                     <p:inputText id="perct" label="Percentual de Comissão" placeholder="Percentual de Comissão"
-                                                 value="#{FornecedorMB.FornecedorED.percentualComissao}"
+                                                 value="#{FornecedorMB.Fornecedor.percentualComissao}"
                                                  required="true"
                                                  requiredMessage="Digite seu Percentual de comissão"/>
                                 </div>
@@ -104,7 +104,7 @@
                             <div class="ui-inputgroup p-col">
                                 <span class="ui-inputgroup-addon"><i class="fa fa-user-circle-o"></i></span>
                                 <p:inputText id="nome" label="Nome" placeholder="Nome do responsável"
-                                             value="#{FornecedorMB.FornecedorED.usuarioED.email}"
+                                             value="#{FornecedorMB.Fornecedor.usuarioED.email}"
                                              required="true"
                                              requiredMessage="Digite o nome do responsável para efetuar o cadastro"/>
                             </div>
@@ -119,7 +119,7 @@
                                     </p:selectOneMenu>
                                     <span class="ui-inputgroup-addon"><i class="fa fa-phone"></i></span>
                                     <p:inputText id="telefoneresponsavel" label="Telefone 1" placeholder="Telefone do responsável"
-                                                 value="#{FornecedorMB.FornecedorED.usuarioED.telefones}"
+                                                 value="#{FornecedorMB.Fornecedor.usuarioED.telefones}"
                                                  required="true"
                                                  requiredMessage="Digite o telefone do responsável para efetuar o cadastro"/>
                                 </div>
