@@ -38,7 +38,7 @@ public class UsuarioEDTest {
             telefones.add(tel1);
             cliente.setTelefones(telefones);
 
-        UsuarioED usuario = new UsuarioED("usuario@site.com.br", "1234", TipoUsuarioED.ADMIN, cliente);
+        UsuarioED usuario = new UsuarioED("usuario@site.com.br", "1234", TipoUsuarioED.ADMIN);
 
         try {
             session = HibernateUtil.getSession();

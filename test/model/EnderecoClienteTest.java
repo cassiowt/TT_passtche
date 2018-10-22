@@ -37,7 +37,7 @@ public class EnderecoClienteTest {
         Collection<TelefoneED> telefones = new ArrayList<TelefoneED>();
         telefones.add(tel);
         cliente.setTelefones(telefones);
-        UsuarioED usuario = new UsuarioED("usuario@site.com.br", "1234", TipoUsuarioED.ADMIN, cliente);
+        UsuarioED usuario = new UsuarioED("usuario@site.com.br", "1234", TipoUsuarioED.ADMIN);
         PaisED pais = new PaisED("Brasil");
         EstadoED estado = new EstadoED("Rio Grande do Sul", "RS", pais);
         CidadeED cidade = new CidadeED("Porto Alegre", estado);

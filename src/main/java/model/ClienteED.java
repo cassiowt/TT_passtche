@@ -21,8 +21,8 @@ public class ClienteED extends PessoaED {
 	public ClienteED() {
 	}
 
-	public ClienteED(String nome, Date dataNascimento, String email, TipoPessoaED tipo_PessoaED, EnderecoED enderecoED, Collection<TelefoneED> telefones, String cpf, String hobby, String cartao) {
-		super(nome, dataNascimento, email, tipo_PessoaED, enderecoED, telefones);
+	public ClienteED(String nome, Date dataNascimento, String email, TipoPessoaED tipo_PessoaED, EnderecoED enderecoED, Collection<TelefoneED> telefones, UsuarioED usuarioED, String cpf, String hobby, String cartao) {
+		super(nome, dataNascimento, email, tipo_PessoaED, enderecoED, telefones, usuarioED);
 		this.cpf = cpf;
 		this.hobby = hobby;
 		this.cartao = cartao;

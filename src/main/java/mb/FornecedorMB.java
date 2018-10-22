@@ -21,12 +21,12 @@ public class FornecedorMB {
         return fornecedor;
     }
 
-    public void setFornecedorED(FornecedorED fornecedorED) {
-        this.fornecedor = fornecedorED;
+    public void setFornecedorED(FornecedorED fornecedor){
+        this.fornecedor = fornecedor;
     }
 
-    public FornecedorMB(FornecedorED fornecedorED) {
-        this.fornecedor = fornecedorED;
+    public FornecedorMB(FornecedorED fornecedor){
+        this.fornecedor = fornecedor;
     }
 
     public String saveFornecedor() {

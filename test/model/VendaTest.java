@@ -63,7 +63,7 @@ public class VendaTest {
         Collection<TelefoneED> telefones = new ArrayList<TelefoneED>();
         telefones.add(tel);
         cliente.setTelefones(telefones);
-        UsuarioED usuario = new UsuarioED("usuario@site.com.br", "1234", TipoUsuarioED.ADMIN, cliente);
+        UsuarioED usuario = new UsuarioED("usuario@site.com.br", "1234", TipoUsuarioED.ADMIN);
 
         VendaED venda = new VendaED(new Date(), 30, 300, prod);
         venda.setIngresso(ingresso);
