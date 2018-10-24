@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FornecedorRN {
+
     private FornecedorDAO fornecedorDAO = new FornecedorDAO();
 
     public long createFornecedor(FornecedorED Fornecedor) {

@@ -41,16 +41,23 @@ public abstract class PessoaED {
                 foreignKey = @ForeignKey(name = "FK_PESSOA_ID_PESSOA"))
 	private Collection <TelefoneED> telefones = new ArrayList<TelefoneED>();
 
+	@OneToOne(cascade = CascadeType.PERSIST)
+	@JoinColumn(name = "ID_USUARIO",
+			referencedColumnName = "ID_USUARIO",
+			foreignKey = @ForeignKey(name = "FK_USUARIO_ID_USUARIO"))
+	private UsuarioED usuarioED;
+
 	public PessoaED() {
 	}
 
-	public PessoaED(String nome, Date dataNascimento, String email, TipoPessoaED tipo_PessoaED, EnderecoED enderecoED, Collection <TelefoneED> telefones) {
+	public PessoaED(String nome, Date dataNascimento, String email, TipoPessoaED tipo_PessoaED, EnderecoED enderecoED, Collection <TelefoneED> telefones, UsuarioED usuarioED) {
 		this.nome = nome;
 		this.dataNascimento = dataNascimento;
 		this.email = email;
 		this.tipo_PessoaED = tipo_PessoaED;
 		this.enderecoED = enderecoED;
 		this.telefones = telefones;
+		this.usuarioED = usuarioED;
 	}
 
 	public PessoaED(String nome, Date dataNascimento, String email, TipoPessoaED tipo_PessoaED) {
@@ -105,6 +112,14 @@ public abstract class PessoaED {
 		this.telefones = telefones;
 	}
 
+	public UsuarioED getUsuarioED() {
+		return usuarioED;
+	}
+
+	public void setUsuarioED(UsuarioED usuarioED) {
+		this.usuarioED = usuarioED;
+	}
+
 	@Override
 	public String toString() {
 		return "PessoaED{" +
@@ -115,6 +130,7 @@ public abstract class PessoaED {
 				", tipo_PessoaED=" + tipo_PessoaED +
 				", enderecoED=" + enderecoED +
 				", telefones=" + telefones +
+				", usuarioED=" + usuarioED +
 				'}';
 	}
 }

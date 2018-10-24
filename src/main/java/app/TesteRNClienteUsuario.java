@@ -20,9 +20,9 @@ public class TesteRNClienteUsuario {
     public static void main(String[] args) {
 
         try {
-           // adcionaCliente() ;
+            adcionaCliente() ;
           //  buscarCliente();
-           adicionarUsuario();
+          // adicionarUsuario();
            // buscaEndereco();
            // adicionaEndereco();
 
@@ -38,7 +38,7 @@ public class TesteRNClienteUsuario {
         ClienteED cliente = new ClienteED();
         cliente = clienteRN.findCliente(3l);
         System.out.println(cliente);
-        UsuarioED u = new  UsuarioED(cliente.getEmail(),"123",TipoUsuarioED.ADMIN, cliente);
+        UsuarioED u = new  UsuarioED(cliente.getEmail(),"123",TipoUsuarioED.ADMIN);
         usuarioRN.createUsuario(u);
     }
 
@@ -51,8 +51,10 @@ public class TesteRNClienteUsuario {
 
     private static void adcionaCliente() throws ParseException {
         EnderecoED end = enderecoRN.findEndereco(1l);
-        ClienteED c = new ClienteED("Administrador",sdf.parse("12/12/2000"),"admin@gmail.com",TipoPessoaED.CONSUMIDOR,end,null,
-                "123456789",null,"123456678998");
+        UsuarioED u = new  UsuarioED("admin@gmail.com","123",TipoUsuarioED.ADMIN);
+        usuarioRN.createUsuario(u);
+        ClienteED c = new ClienteED("Administrador",sdf.parse("12/12/2000"),"admin@gmail.com",TipoPessoaED.CONSUMIDOR,end,null, u
+                ,"123456789",null,"123456678998");
 
         clienteRN.createCliente(c);
     }

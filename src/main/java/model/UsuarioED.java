@@ -41,11 +41,10 @@ public class UsuarioED {
 		this.dataCriacao = new Date();
 	}
 
-	public UsuarioED(String email, String senha, TipoUsuarioED tipoUsuarioED, PessoaED pessoaED) {
+	public UsuarioED(String email, String senha, TipoUsuarioED tipoUsuarioED) {
 		this.email = email;
 		this.senha = senha;
 		this.tipoUsuarioED = tipoUsuarioED;
-		this.pessoaED = pessoaED;
 		this.dataAlteracao = new Date();
 		this.dataCriacao = new Date();
 	}
