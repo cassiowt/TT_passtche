@@ -1,14 +1,14 @@
 package mb;
 
-import model.ClienteED;
-import model.TelefoneED;
-import rn.FornecedorRN;
 import model.FornecedorED;
+import model.TelefoneED;
+import model.UsuarioED;
+import rn.FornecedorRN;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
-import java.util.List;
 import java.util.ArrayList;
+import java.util.List;
 
 @ManagedBean
 @SessionScoped
@@ -18,10 +18,13 @@ public class FornecedorMB {
     private FornecedorRN fornecedorRN;
     private TelefoneED telefone;
     private List<TelefoneED> telefones;
+    private UsuarioED usuario;
 
     public FornecedorMB() {
+        usuario = new UsuarioED();
         fornecedor = new FornecedorED();
         fornecedorRN = new FornecedorRN();
+        telefone = new TelefoneED();
         telefones = new ArrayList<TelefoneED>();
     }
 
@@ -33,20 +36,16 @@ public class FornecedorMB {
         this.fornecedor = fornecedor;
     }
 
-    public FornecedorMB(FornecedorED fornecedor){
-        this.fornecedor = fornecedor;
-    }
-
     public String saveFornecedor() {
 
         System.out.println(fornecedor);
         fornecedorRN.createFornecedor(fornecedor);
-        return null;
+        return "listaFornecedor";
     }
     public List<FornecedorED> getFornecedores(){
-        List<FornecedorED> cs  = fornecedorRN.findAllFornecedor();
-        System.out.println(cs);
-        return cs;
+        List<FornecedorED> fs  = fornecedorRN.findAllFornecedor();
+        System.out.println(fs);
+        return fs;
     }
 
     public TelefoneED getTelefone() {
@@ -57,7 +56,16 @@ public class FornecedorMB {
         this.telefone = telefone;
     }
 
-    public void addTelefone(TelefoneED telefone) {
-        telefones.add(telefone);
+    public void addTelefone() {
+        System.out.println(telefone);
+        telefones.add(this.telefone);
+    }
+
+    public UsuarioED getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(UsuarioED usuario) {
+        this.usuario = usuario;
     }
 }
