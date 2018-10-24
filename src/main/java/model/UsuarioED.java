@@ -25,8 +25,6 @@ public class UsuarioED {
 	@JoinColumn(name = "ID_PESSOA",
 				referencedColumnName = "ID_PESSOA",
 				foreignKey = @ForeignKey(name="FK_PESSOA_ID_PESSOA"))
-	@OneToOne
-	private PessoaED pessoaED;
 
 	@Temporal(TemporalType.TIMESTAMP)
 	@Column(name = "DATA_CRIACAO")
@@ -77,14 +75,6 @@ public class UsuarioED {
 		this.tipoUsuarioED = tipoUsuarioED;
 	}
 
-	public PessoaED getPessoaED() {
-		return pessoaED;
-	}
-
-	public void setPessoaED(PessoaED pessoaED) {
-		this.pessoaED = pessoaED;
-	}
-
 	public Date getDataCriacao() {
 		return dataCriacao;
 	}
@@ -108,7 +98,6 @@ public class UsuarioED {
 				", email='" + email + '\'' +
 				", senha='" + senha + '\'' +
 				", tipoUsuarioED=" + tipoUsuarioED +
-				", pessoaED=" + pessoaED +
 				", dataCriacao=" + dataCriacao +
 				", dataAlteracao=" + dataAlteracao +
 				'}';

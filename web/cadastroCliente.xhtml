@@ -46,7 +46,7 @@
                                 <div class="ui-inputgroup p-col">
                                     <span class="ui-inputgroup-addon"><i class="fa fa-eye-slash"></i></span>
                                     <p:password id="Senha" label="Senha" placeholder="Senha"
-                                                 value="#{loginMB.loginED.usuarioED.email}"
+                                                 value="#{clienteMB.cliente.usuarioED.senha}"
                                                  required="true"
                                                  requiredMessage="Digite sua senha para efetuar o cadastro"/>
                                 </div>
@@ -65,7 +65,7 @@
                                                  value="#{clienteMB.cliente.cartao}"/>
                                 </div>
                             </div>
-                            <div class="box">
+                            <div class="box"  id="gridTelefones">
                                 <div class="p-grid">
                                     <div class="ui-inputgroup p-col">
                                         <p:selectOneMenu id="tipo1" value="#{clienteMB.telefone.tipoTelefoneED}" >
@@ -81,9 +81,12 @@
                                     </div>
                                     <div class="p-col">
                                         <p:commandButton id="com" value="Adicionar" styleClass="ui-button-text"
-                                                          update="telefones"
-                                                          icon="fa fa-phone"  action="#{clienteMB.addTelefone}"/>
+                                                         process="@this" update="telefones"
+                                                         icon="fa fa-phone"  action="#{clienteMB.addTelefone}"
+                                                         immediate="false"/>
                                     </div>
+
+
                                 </div>
 
                                 <div  class="p-grid box-telefone">
