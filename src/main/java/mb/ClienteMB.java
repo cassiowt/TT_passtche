@@ -21,6 +21,7 @@ public class ClienteMB {
     public ClienteMB() {
         cliente = new ClienteED();
         clienteRN = new ClienteRN();
+        telefone = new TelefoneED();
         telefones = new ArrayList<TelefoneED>();
     }
 
@@ -35,7 +36,7 @@ public class ClienteMB {
     public String saveCliente() {
         System.out.println(cliente);
         clienteRN.createCliente(cliente);
-           return null;
+           return "listaCliente";
         }
 
     public List<ClienteED> getClientes(){
@@ -52,7 +53,8 @@ public class ClienteMB {
         this.telefone = telefone;
     }
 
-    public void addTelefone(TelefoneED telefone) {
-        telefones.add(telefone);
+    public void addTelefone() {
+        System.out.println(telefone);
+        telefones.add(this.telefone);
     }
 }

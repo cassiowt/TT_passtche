@@ -51,8 +51,8 @@ public class ClienteED extends PessoaED {
 		this.hobby = hobby;
 	}
 
-	public ClienteED(String cartao) {
-		this.cartao = cartao;
+	public String getCartao() {
+		return cartao;
 	}
 
 	public void setCartao(String cartao) {

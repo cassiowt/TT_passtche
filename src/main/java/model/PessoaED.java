@@ -36,7 +36,7 @@ public abstract class PessoaED {
             foreignKey = @ForeignKey(name = "FK_ENDERECO_ID_ENDERECO"))
     private EnderecoED enderecoED;
 
-	@OneToMany
+	@OneToMany(cascade = CascadeType.PERSIST)
 	@JoinColumn(name= "ID_PESSOA",
                 foreignKey = @ForeignKey(name = "FK_PESSOA_ID_PESSOA"))
 	private Collection <TelefoneED> telefones = new ArrayList<TelefoneED>();
