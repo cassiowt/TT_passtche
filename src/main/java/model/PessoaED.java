@@ -48,6 +48,7 @@ public abstract class PessoaED {
 	private UsuarioED usuarioED;
 
 	public PessoaED() {
+		usuarioED = new UsuarioED();
 	}
 
 	public PessoaED(String nome, Date dataNascimento, String email, TipoPessoaED tipo_PessoaED, EnderecoED enderecoED, Collection <TelefoneED> telefones, UsuarioED usuarioED) {

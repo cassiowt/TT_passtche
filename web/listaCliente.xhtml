@@ -17,35 +17,31 @@
 
                     <p:fieldset legend="Lista de Clientes" style="padding-bottom:10%">
 
-                    <p:dataGrid var="cliente" value="#{clienteMB.clientes}" rows="12" paginator="true" rowsPerPageTemplate="6,12,16"
+                    <p:dataGrid var="cliente" value="#{clienteMB.clientes}" rows="6" paginator="true" rowsPerPageTemplate="6,12,16"
                                 paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
                                 gridIcon="fa fa-th-large" listIcon="fa fa-bars">
+                        <div class="p-grid">
+                            <div class="p-col">
+                                <div>
+                                    <p:commandButton value="#{cliente.nome}" outcome="cadastroCliente.xhtml"/>
+                                </div>
 
-                    <div class="p-grid">
-                        <div class="p-col">
-                            <p:panel header="Cliente" style="text-align:center">
-                            <div>
-                                <p:outputLabel id="Cpf" value="#{cliente.cpf}"/>
-                            </div>
-                            <div>
-                                <p:outputLabel id="Nome"  value="#{cliente.nome}"/>
-                            </div>
-                            <div>
-                                <p:outputLabel id="Email"  value="#{cliente.email}"/>
-                            </div>
-                            </p:panel>
 
+                                    <p:outputLabel id="idcode" value="#{cliente.id}" rendered="false"/>
+
+
+                                <div>
+                                    <p:outputLabel id="Cpf" value="#{cliente.cpf}"/>
+                                </div>
+                                <div>
+                                    <p:outputLabel id="Nome"  value="#{cliente.nome}"/>
+                                </div>
+                                <div>
+                                    <p:outputLabel id="Email"  value="#{cliente.email}"/>
+                                </div>
+                            </div>
                         </div>
-
-
-
-
-
-                    </div>
                     </p:dataGrid>
-
-
-
 
                     </p:fieldset>
                 </div>
