@@ -62,11 +62,7 @@ public class TelefoneED {
 
 	@Override
 	public String toString() {
-		return "TelefoneED{" +
-				"id=" + id +
-				", numero='" + numero + '\'' +
-				", ddd='" + ddd + '\'' +
-				", tipoTelefoneED=" + tipoTelefoneED +
-				'}';
+		return
+				"DDD:"+ ddd + " Numero:" + numero + " - " + tipoTelefoneED ;
 	}
 }
