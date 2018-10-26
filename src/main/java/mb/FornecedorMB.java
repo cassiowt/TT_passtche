@@ -37,7 +37,7 @@ public class FornecedorMB {
     }
 
     public String saveFornecedor() {
-
+        this.fornecedor.getUsuarioED().setEmail(fornecedor.getEmail());
         System.out.println(fornecedor);
         fornecedorRN.createFornecedor(fornecedor);
         return "listaFornecedor";

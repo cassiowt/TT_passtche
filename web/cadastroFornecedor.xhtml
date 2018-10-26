@@ -30,7 +30,7 @@
                                     <p:inputText id="razaoSocial" label="Razão Social" placeholder="Razão Social"
                                                  value="#{fornecedorMB.fornecedor.nomeEmpresa}"
                                                  required="true"
-                                                 requiredMessage="Digite sua razãp social para efetuar o cadastro"/>
+                                                 requiredMessage="Digite sua razão social para efetuar o cadastro"/>
                                 </div>
                             </div>
 
@@ -46,7 +46,7 @@
                                 <div class="ui-inputgroup p-col">
                                     <span class="ui-inputgroup-addon"><i class="fa fa-eye-slash"></i></span>
                                     <p:password id="Senha" label="Senha" placeholder="Senha"
-                                                 value="#{fornecedorMB.fornecedor.nome}"
+                                                 value="#{fornecedorMB.fornecedor.usuarioED.senha}"
                                                  required="true"
                                                  requiredMessage="Digite sua senha para efetuar o cadastro"/>
                                 </div>
@@ -89,7 +89,7 @@
                                 <div class="ui-inputgroup p-col">
                                     <span class="ui-inputgroup-addon"><i class="fa fa-list-alt"></i></span>
                                     <p:inputText id="conta" label="Conta Bancária" placeholder="Conta Bancária"
-                                                 value="#{fornecedorMB.fornecedor.contaBsncaria}"
+                                                 value="#{fornecedorMB.fornecedor.contaBancaria}"
                                                  required="true"
                                                  requiredMessage="Digite sua conta bancária"/>
                                 </div>
@@ -106,7 +106,7 @@
                             <div class="ui-inputgroup p-col">
                                 <span class="ui-inputgroup-addon"><i class="fa fa-user-circle-o"></i></span>
                                 <p:inputText id="nome" label="Nome" placeholder="Nome do responsável"
-                                             value="#"
+                                             value="#{fornecedorMB.fornecedor.nome}"
                                              required="true"
                                              requiredMessage="Digite o nome do responsável para efetuar o cadastro"/>
                             </div>

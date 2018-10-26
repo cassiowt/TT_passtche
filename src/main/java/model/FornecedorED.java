@@ -12,12 +12,15 @@ import java.util.Date;
 public class FornecedorED extends PessoaED {
 	@Column(name = "CNPJ", length = 30)
 	private String cnpj;
+
 	@Column(name = "NOME_EMPRESA", length = 100)
 	private String nomeEmpresa;
+
 	@Column(name = "PERCENTUAL_COMISSAO", length = 2)
 	private int percentualComissao;
+
 	@Column(name = "CONTA", length = 11)
-	private String contaBsncaria;
+	private String contaBancaria;
 
 	public FornecedorED() {
 	}
@@ -29,7 +32,7 @@ public class FornecedorED extends PessoaED {
 		this.cnpj = cnpj;
 		this.nomeEmpresa = nomeEmpresa;
 		this.percentualComissao = percentualComissao;
-		this.contaBsncaria = contaBsncaria;
+		this.contaBancaria = contaBsncaria;
 	}
 
 
@@ -39,7 +42,7 @@ public class FornecedorED extends PessoaED {
 		this.cnpj = cnpj;
 		this.nomeEmpresa = nomeEmpresa;
 		this.percentualComissao = percentualComissao;
-		this.contaBsncaria = contaBsncaria;
+		this.contaBancaria = contaBsncaria;
 	}
 	public String getCnpj() {
 		return cnpj;
@@ -65,11 +68,11 @@ public class FornecedorED extends PessoaED {
 		this.percentualComissao = percentualComissao;
 	}
 
-	public String getContaBsncaria() {
-		return contaBsncaria;
+	public String getContaBancaria() {
+		return contaBancaria;
 	}
 
-	public void setContaBsncaria(String contaBsncaria) {
-		this.contaBsncaria = contaBsncaria;
+	public void setContaBancaria(String contaBsncaria) {
+		this.contaBancaria = contaBancaria;
 	}
 }
