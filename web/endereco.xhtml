@@ -18,10 +18,18 @@
                         <p:fieldset legend="Cadastro Endereço" style="padding-bottom:10%">
 
                             <div class="p-grid">
+                                <div>
+                                    <p:selectOneMenu id="tipoLogradouro" value="#{enderecoMB.endereco.tipoLogradouro}" >
+                                        <f:selectItem itemLabel="Selecione" itemValue=""/>
+                                        <f:selectItems value="#{tiposMB.tipoLogradouroED}" var="tipo"
+                                                       itemValue="#{tipo}" itemLabel="#{tipo}"/>
+                                    </p:selectOneMenu>
+                                </div>
+                                <p:separator/>
                                 <div class="ui-inputgroup p-col">
                                     <span class="ui-inputgroup-addon"><i class="fa fa-map-marker"></i></span>
                                     <p:inputText id="Logradouro" label="Logradouro" placeholder="Logradouro"
-                                                 value="#{1}"
+                                                 value="#{enderecoMB.endereco.rua}"
                                                  required="true"
                                                  requiredMessage="Digite seu endereço para efetuar o cadastro"/>
                                 </div>
@@ -29,7 +37,7 @@
                                 <div class="ui-inputgroup p-col">
                                     <span class="ui-inputgroup-addon"><i class="fa fa-map-marker"></i></span>
                                     <p:inputText id="Numero" label="Numero" placeholder="Número"
-                                                 value="#{1}"
+                                                 value="#{enderecoMB.endereco.numero}"
                                                  required="true"
                                                  requiredMessage="Digite seu endereço para efetuar o cadastro"/>
                                 </div>
@@ -39,7 +47,7 @@
                                 <div class="ui-inputgroup p-col">
                                     <span class="ui-inputgroup-addon"><i class="fa fa-map-marker"></i></span>
                                     <p:inputText id="Complemento" label="Complemento" placeholder="Complemento"
-                                                 value="#{1}"
+                                                 value="#{enderecoMB.endereco.complemento}"
                                                  required="true"
                                                  requiredMessage="Digite seu endereço para efetuar o cadastro"/>
                                 </div>
@@ -47,39 +55,25 @@
                                 <div class="ui-inputgroup p-col">
                                     <span class="ui-inputgroup-addon"><i class="fa fa-map-marker"></i></span>
                                     <p:inputText id="Bairro" label="Bairro" placeholder="Bairro"
-                                                value="#{1}"
+                                                value="#{enderecoMB.endereco.bairro}"
                                                 required="true"
                                                 requiredMessage="Digite seu endereço para efetuar o cadastro"/>
                                 </div>
 
                                 <div class="ui-inputgroup p-col">
-                                    <span class="ui-inputgroup-addon"><i class="fa fa-map-marker"></i></span>
-                                    <p:inputText id="Cidade" label="Cidade" placeholder="Cidade"
-                                                value="#{1}"
-                                                required="true"
-                                               requiredMessage="Digite seu endereço para efetuar o cadastro"/>
+                                    <p:selectOneMenu id="bairros" value="#{enderecoMB.endereco.bairro}" >
+                                        <f:selectItem itemLabel="Selecione" itemValue=""/>
+                                        <f:selectItems value="#{enderecoMB.cidades}" var="tipo"
+                                                       itemValue="#{nome}" itemLabel="#{nome}"/>
+                                    </p:selectOneMenu>
                                 </div>
 
-                                <div class="ui-inputgroup p-col">
-                                    <span class="ui-inputgroup-addon"><i class="fa fa-map-marker"></i></span>
-                                    <p:inputText id="Estado" label="Estado" placeholder="Estado"
-                                                 value="#{1}"
-                                                 required="true"
-                                                 requiredMessage="Digite seu endereço para efetuar o cadastro"/>
-                                </div>
 
-                                <div class="ui-inputgroup p-col">
-                                    <span class="ui-inputgroup-addon"><i class="fa fa-map-marker"></i></span>
-                                    <p:inputText id="Pais" label="Pais" placeholder="País"
-                                                 value="#{1}"
-                                                 required="true"
-                                                 requiredMessage="Digite seu endereço para efetuar o cadastro"/>
-                                </div>
 
                                 <div class="ui-inputgroup p-col">
                                     <span class="ui-inputgroup-addon"><i class="fa fa-map-marker"></i></span>
                                     <p:inputText id="Cep" label="Cep" placeholder="CEP"
-                                                 value="#{1}"
+                                                 value="#{enderecoMB.endereco.cep}"
                                                  required="true"
                                                  requiredMessage="Digite seu endereço para efetuar o cadastro"/>
                                 </div>
@@ -106,6 +100,17 @@
 
 
                         </p:fieldset>
+                    </div>
+
+                    <div class="p-grid" style="margin-top: 1%">
+                        <div class="p-col">
+                            <p:commandButton update="msgs" value="Cadastrar Cliente" styleClass="ui-priority-primary"
+                                             icon="fa fa-users" actionListener="#{clienteMB.saveCliente}"/>
+                        </div>
+                        <div class="p-col">
+                            <p:commandButton type="reset" value="Cancelar" styleClass="ui-priority-secondary"
+                                             icon="fa fa-remove" />
+                        </div>
                     </div>
                 </h:form>
             </div>

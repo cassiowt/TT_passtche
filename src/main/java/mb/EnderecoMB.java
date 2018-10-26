@@ -1,28 +1,26 @@
 package mb;
 
-import model.*;
-import rn.ClienteRN;
+import model.CidadeED;
+import model.EnderecoED;
 import rn.EnderecoRN;
-import rn.FornecedorRN;
 
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
 import java.util.ArrayList;
 
+@ManagedBean
+@SessionScoped
 public class EnderecoMB {
     private EnderecoED endereco;
-    private ClienteED cliente;
-    private ClienteRN clienteRN;
-    private FornecedorED fornecedor;
-    private FornecedorRN fornecedorRN;
+    private EnderecoRN enderecoRN;
+    private ArrayList<CidadeED> cidades;
+
 
     public EnderecoMB() {
+        enderecoRN = new EnderecoRN();
         endereco = new EnderecoED();
-        cliente = new ClienteED();
-        clienteRN = new ClienteRN();
-        fornecedor = new FornecedorED();
-        fornecedorRN = new FornecedorRN();
-    }
+        cidades = new ArrayList<>();
 
-    public EnderecoED. { return endereco;
     }
 
     public void setEndereco(EnderecoED endereco) {
@@ -32,12 +30,18 @@ public class EnderecoMB {
     public String saveEndereco() {
 
         System.out.println(endereco);
-        EnderecoRN.saveEndereco(EnderecoED);
+        enderecoRN.saveEndereco(endereco);
         return "listaCliente";
     }
 
+    public EnderecoED getEndereco() {
+        return endereco;
+    }
 
 
+    public ArrayList<CidadeED> getCidades() {
 
+      return   enderecoRN.findAllCidades();
 
+    }
 }
