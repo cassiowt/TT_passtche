@@ -55,7 +55,9 @@
                             <div class="p-grid">
                                 <div class="ui-inputgroup p-col">
                                     <span class="ui-inputgroup-addon"><i class="fa fa-clock-o"></i></span>
-                                    <p:calendar id="button" value="#{clienteMB.cliente.dataNascimento}" mask="99/99/9999"  />
+                                    <p:calendar id="button" value="#{clienteMB.cliente.dataNascimento}"  mask="99/99/9999" >
+                                        <f:convertDateTime pattern="dd/MM/yyyy" />
+                                    </p:calendar>
                                 </div>
 
                                 <div class="ui-inputgroup p-col">
@@ -65,7 +67,8 @@
                                                  value="#{clienteMB.cliente.cartao}"/>
                                 </div>
                             </div>
-                            <div class="box"  id="gridTelefones">
+
+                            <p:panel  id="gridTelefones">
                                 <div class="p-grid">
                                     <div class="ui-inputgroup p-col">
                                         <p:selectOneMenu id="tipo1" value="#{clienteMB.telefone.tipoTelefoneED}" >
@@ -80,22 +83,18 @@
                                                      value="#{clienteMB.telefone.numero}"/>
                                     </div>
                                     <div class="p-col">
-                                        <p:commandButton id="com" value="Adicionar" styleClass="ui-button-text"
-                                                         process="@this" update="telefones"
-                                                         icon="fa fa-phone"  action="#{clienteMB.addTelefone}"
-                                                         immediate="false"/>
+                                        <p:commandButton id="addTelefone" value="Adicionar" styleClass="ui-button-text"
+                                                         update="telefones"
+                                                         icon="fa fa-phone"  actionListener="#{clienteMB.addTelefone}"
+                                                         />
                                     </div>
-
-
                                 </div>
-
                                 <div  class="p-grid box-telefone">
                                     <p:outputLabel value="Telefones:"/>
                                     <p:outputLabel id="telefones" value="#{clienteMB.cliente.telefones}"/>
-
                                 </div>
+                            </p:panel>
 
-                            </div>
                             <div class="p-grid box">
                                 <div class="p-col">
                                     <h3>Seus interesses:</h3>

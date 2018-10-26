@@ -17,6 +17,7 @@ public class ClienteRN {
                 id = clienteDAO.save(Cliente);
             else throw new Exception("Cliente invalido");
         } catch (Exception e) {
+            e.printStackTrace();
             e.getMessage();
         }
         return id;

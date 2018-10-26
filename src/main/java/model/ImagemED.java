@@ -7,7 +7,7 @@ import javax.persistence.*;
 public class ImagemED {
 
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column (name = "ID_IMAGEM")
 	private long id;
 

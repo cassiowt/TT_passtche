@@ -10,7 +10,6 @@ import java.util.Date;
 @Inheritance(strategy = InheritanceType.JOINED)
 public abstract class PessoaED {
 
-
 	@Id
 	@Column(name = "ID_PESSOA")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -49,6 +48,7 @@ public abstract class PessoaED {
 
 	public PessoaED() {
 		usuarioED = new UsuarioED();
+		telefones = new ArrayList<TelefoneED>();
 	}
 
 	public PessoaED(String nome, Date dataNascimento, String email, TipoPessoaED tipo_PessoaED, EnderecoED enderecoED, Collection <TelefoneED> telefones, UsuarioED usuarioED) {

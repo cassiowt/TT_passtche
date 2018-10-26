@@ -1,8 +1,6 @@
 package mb;
 
-import model.ClienteED;
-import model.TelefoneED;
-import model.UsuarioED;
+import model.*;
 import rn.ClienteRN;
 
 import javax.faces.bean.ManagedBean;
@@ -38,9 +36,13 @@ public class ClienteMB {
 
     public String saveCliente() {
 
+        this.cliente.getUsuarioED().setTipoUsuarioED(TipoUsuarioED.CLIENTE);
+        this.cliente.getUsuarioED().setEmail(cliente.getEmail());
+        this.cliente.setTipo_PessoaED(TipoPessoaED.CONSUMIDOR);
+
         System.out.println(cliente);
         clienteRN.createCliente(cliente);
-           return "listaCliente";
+        return "listaCliente";
     }
 
     public ClienteED buscaCliente(Long id) {
@@ -67,6 +69,6 @@ public class ClienteMB {
 
     public void addTelefone() {
         System.out.println(telefone);
-        telefones.add(this.telefone);
+        cliente.getTelefones().add(this.telefone);
     }
 }
