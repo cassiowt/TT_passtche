@@ -58,7 +58,7 @@ public class FornecedorMB {
 
     public void addTelefone() {
         System.out.println(telefone);
-        telefones.add(this.telefone);
+        fornecedor.getTelefones().add(this.telefone);
     }
 
     public UsuarioED getUsuario() {
