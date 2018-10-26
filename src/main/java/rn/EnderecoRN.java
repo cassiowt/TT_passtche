@@ -11,7 +11,7 @@ public class EnderecoRN {
     EnderecoDAO enderecoDAO = new EnderecoDAO();
     EnderecoED enderecoED = new EnderecoED();
 
-    public long saveEndereco(EnderecoED endereco){
+    public static long saveEndereco(EnderecoED endereco){
         long id = 0;
         try {
 

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<h:head></h:head>
+<h:body>
+    <ui:composition template="templates/common.xhtml">
+        <ui:define name="content">
+            <div class="p-grid">
+                <h:form prependId="false" id="cadastroEndereco">
+                    <div class="box">
+                        <p:growl id="msgs"/>
+
+                        <p:fieldset legend="Cadastro Endereço" style="padding-bottom:10%">
+
+                            <div class="p-grid">
+                                <div class="ui-inputgroup p-col">
+                                    <span class="ui-inputgroup-addon"><i class="fa fa-map-marker"></i></span>
+                                    <p:inputText id="Logradouro" label="Logradouro" placeholder="Logradouro"
+                                                 value="#{1}"
+                                                 required="true"
+                                                 requiredMessage="Digite seu endereço para efetuar o cadastro"/>
+                                </div>
+
+                                <div class="ui-inputgroup p-col">
+                                    <span class="ui-inputgroup-addon"><i class="fa fa-map-marker"></i></span>
+                                    <p:inputText id="Numero" label="Numero" placeholder="Número"
+                                                 value="#{1}"
+                                                 required="true"
+                                                 requiredMessage="Digite seu endereço para efetuar o cadastro"/>
+                                </div>
+
+
+
+                                <div class="ui-inputgroup p-col">
+                                    <span class="ui-inputgroup-addon"><i class="fa fa-map-marker"></i></span>
+                                    <p:inputText id="Complemento" label="Complemento" placeholder="Complemento"
+                                                 value="#{1}"
+                                                 required="true"
+                                                 requiredMessage="Digite seu endereço para efetuar o cadastro"/>
+                                </div>
+
+                                <div class="ui-inputgroup p-col">
+                                    <span class="ui-inputgroup-addon"><i class="fa fa-map-marker"></i></span>
+                                    <p:inputText id="Bairro" label="Bairro" placeholder="Bairro"
+                                                value="#{1}"
+                                                required="true"
+                                                requiredMessage="Digite seu endereço para efetuar o cadastro"/>
+                                </div>
+
+                                <div class="ui-inputgroup p-col">
+                                    <span class="ui-inputgroup-addon"><i class="fa fa-map-marker"></i></span>
+                                    <p:inputText id="Cidade" label="Cidade" placeholder="Cidade"
+                                                value="#{1}"
+                                                required="true"
+                                               requiredMessage="Digite seu endereço para efetuar o cadastro"/>
+                                </div>
+
+                                <div class="ui-inputgroup p-col">
+                                    <span class="ui-inputgroup-addon"><i class="fa fa-map-marker"></i></span>
+                                    <p:inputText id="Estado" label="Estado" placeholder="Estado"
+                                                 value="#{1}"
+                                                 required="true"
+                                                 requiredMessage="Digite seu endereço para efetuar o cadastro"/>
+                                </div>
+
+                                <div class="ui-inputgroup p-col">
+                                    <span class="ui-inputgroup-addon"><i class="fa fa-map-marker"></i></span>
+                                    <p:inputText id="Pais" label="Pais" placeholder="País"
+                                                 value="#{1}"
+                                                 required="true"
+                                                 requiredMessage="Digite seu endereço para efetuar o cadastro"/>
+                                </div>
+
+                                <div class="ui-inputgroup p-col">
+                                    <span class="ui-inputgroup-addon"><i class="fa fa-map-marker"></i></span>
+                                    <p:inputText id="Cep" label="Cep" placeholder="CEP"
+                                                 value="#{1}"
+                                                 required="true"
+                                                 requiredMessage="Digite seu endereço para efetuar o cadastro"/>
+                                </div>
+                            </div>
+
+
+
+
+
+
+
+
+
+                            <div class="p-grid" style="margin-top: 1%">
+                                <div class="p-col">
+                                    <p:commandButton update="msgs" value="Cadastrar Endereço" styleClass="ui-priority-primary"
+                                                     icon="fa fa-users" actionListener="#{clienteMB.saveCliente}"/>
+                                </div>
+                                <div class="p-col">
+                                    <p:commandButton type="reset" value="Cancelar" styleClass="ui-priority-secondary"
+                                                     icon="fa fa-remove" />
+                                </div>
+                            </div>
+
+
+                        </p:fieldset>
+                    </div>
+                </h:form>
+            </div>
+        </ui:define>
+    </ui:composition>
+</h:body>
+</html>
+
