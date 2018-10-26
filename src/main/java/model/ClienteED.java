@@ -10,11 +10,11 @@ import java.util.Date;
 @Table(name="CLIENTES")
 public class ClienteED extends PessoaED {
 
-	@Column (name = "CPF", length = 11)
+	@Column (name = "CPF", length = 14)
 	private String cpf;
 	@Column (name = "HOBBY", length = 300)
 	private String hobby;
-	@Column (name = "CARTAO", length = 16)
+	@Column (name = "CARTAO", length = 20)
 	private String cartao;
 
 

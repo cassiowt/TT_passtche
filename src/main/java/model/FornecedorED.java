@@ -23,6 +23,7 @@ public class FornecedorED extends PessoaED {
 	private String contaBancaria;
 
 	public FornecedorED() {
+
 	}
 
 	public FornecedorED(String nome, Date dataNascimento, String email, TipoPessoaED tipo_PessoaED, EnderecoED enderecoED, Collection<TelefoneED> telefones, UsuarioED usuarioED,

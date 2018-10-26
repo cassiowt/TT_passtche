@@ -121,7 +121,15 @@ public abstract class PessoaED {
 		this.usuarioED = usuarioED;
 	}
 
-	@Override
+    public EnderecoED getEnderecoED() {
+        return enderecoED;
+    }
+
+    public void setEnderecoED(EnderecoED enderecoED) {
+        this.enderecoED = enderecoED;
+    }
+
+    @Override
 	public String toString() {
 		return "PessoaED{" +
 				"id=" + id +

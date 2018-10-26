@@ -17,6 +17,7 @@ public class ClienteMB {
     private TelefoneED telefone;
     private List<TelefoneED> telefones;
     private UsuarioED usuario;
+    private EnderecoED endereco;
 
     public ClienteMB() {
         cliente = new ClienteED();
@@ -24,6 +25,7 @@ public class ClienteMB {
         telefone = new TelefoneED();
         telefones = new ArrayList<TelefoneED>();
         usuario = new UsuarioED();
+        endereco = new EnderecoED();
     }
 
     public ClienteED getCliente() {
@@ -39,6 +41,7 @@ public class ClienteMB {
         this.cliente.getUsuarioED().setTipoUsuarioED(TipoUsuarioED.CLIENTE);
         this.cliente.getUsuarioED().setEmail(cliente.getEmail());
         this.cliente.setTipo_PessoaED(TipoPessoaED.CONSUMIDOR);
+        this.cliente.setEnderecoED(null);
 
         System.out.println(cliente);
         clienteRN.createCliente(cliente);
