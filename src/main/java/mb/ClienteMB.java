@@ -67,8 +67,17 @@ public class ClienteMB {
         this.telefone = telefone;
     }
 
+    public UsuarioED getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(UsuarioED usuario) {
+        this.usuario = usuario;
+    }
+
     public void addTelefone() {
         System.out.println(telefone);
         cliente.getTelefones().add(this.telefone);
+
     }
 }

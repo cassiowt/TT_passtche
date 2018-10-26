@@ -17,13 +17,13 @@
 
                         <p:fieldset legend="Lista de Fornecedores" style="padding-bottom:10%">
 
-                            <p:dataGrid var="fornecedor" value="#{clienteMB.clientes}" rows="6" paginator="true" rowsPerPageTemplate="6,12,16"
+                            <p:dataGrid var="fornecedor" value="#{fornecedorMB.fornecedores}" rows="6" paginator="true" rowsPerPageTemplate="6,12,16"
                                         paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
                                         gridIcon="fa fa-th-large" listIcon="fa fa-bars">
                                 <div class="p-grid">
                                     <div class="p-col">
                                         <div>
-                                            <p:commandButton value="#{fornecedorMB.fornecedor.nomeEmpresa}" outcome="cadastroFornecedor.xhtml"/>
+                                            <p:commandButton value="#{fornecedor.nomeEmpresa}" outcome="cadastroFornecedor.xhtml"/>
                                         </div>
 
 
