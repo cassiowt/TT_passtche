@@ -16,6 +16,8 @@ public class EnderecoMB {
     private EnderecoRN enderecoRN;
     private ArrayList<CidadeED> cidades;
     private ArrayList<BairroED> bairros;
+    private Long idCidade;
+    private boolean selectBairros = false;
 
 
     public EnderecoMB() {
@@ -46,9 +48,26 @@ public class EnderecoMB {
       return   enderecoRN.findAllCidades();
 
     }
+
     public ArrayList<BairroED> getBairros() {
 
-      return   enderecoRN.findAllBairros();
+        return   enderecoRN.findBairroByCidade(this.idCidade);
 
+    }
+
+    public Long getIdCidade() {
+        return idCidade;
+    }
+
+    public void setIdCidade(Long idCidade) {
+        this.idCidade = idCidade;
+    }
+
+    public boolean isSelectBairros() {
+        return selectBairros;
+    }
+
+    public void alterSelectBairros() {
+        this.selectBairros = true;
     }
 }
