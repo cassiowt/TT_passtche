@@ -56,15 +56,15 @@
                                                  requiredMessage="Faltou o CEP"/>
                                 </div>
                                 <div class="ui-inputgroup p-col">
-                                    <p:selectOneMenu id="cidades" value="#{enderecoMB.endereco.bairro}">
+                                    <p:selectOneMenu id="cidades" value="#{enderecoMB.idCidade}"  >
                                         <f:selectItem itemLabel="Selecione" itemValue=""/>
                                         <f:selectItems value="#{enderecoMB.cidades}" var="cidade"
-                                                       itemValue="#{cidade.nome}" itemLabel="#{cidade.nome}"/>
+                                                       itemValue="#{cidade.id}" itemLabel="#{cidade.nome}"/>
+                                        <p:ajax event="change" listener="#{enderecoMB.alterSelectBairros}" update="cadastroEndereco:bairros"/>
                                     </p:selectOneMenu>
                                 </div>
-
                                 <div class="ui-inputgroup p-col">
-                                    <p:selectOneMenu id="bairros" value="#{enderecoMB.endereco.bairro}">
+                                    <p:selectOneMenu id="bairros" value="#{enderecoMB.endereco.bairro}" rendered="#{enderecoMB.selectBairros}">
                                         <f:selectItem itemLabel="Selecione" itemValue=""/>
                                         <f:selectItems value="#{enderecoMB.bairros}" var="bairro"
                                                        itemValue="#{bairro.nome}" itemLabel="#{bairro.nome}"/>

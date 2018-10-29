@@ -67,4 +67,17 @@ public class EnderecoRN {
         return bairros;
     }
 
+    public ArrayList<BairroED> findBairroByCidade(long idCidade){
+        try {
+            bairros = (ArrayList<BairroED>) enderecoDAO.findBairroByCidade(idCidade);
+        } catch (Exception e){
+            e.getMessage();
+            e.printStackTrace();
+        }
+        return bairros;
+    }
+
+
+
+
 }
