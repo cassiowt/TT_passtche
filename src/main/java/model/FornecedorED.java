@@ -1,9 +1,7 @@
 package model;
 
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Collection;
 import java.util.Date;
 
@@ -22,7 +20,10 @@ public class FornecedorED extends PessoaED {
 	@Column(name = "CONTA", length = 11)
 	private String contaBancaria;
 
-	@Column(name = "TELEFONE_CONTATO", length = 11)
+	@OneToOne(cascade = CascadeType.PERSIST)
+	@JoinColumn(name = "ID_TELEFONE",
+			referencedColumnName = "ID_TELEFONE",
+			foreignKey = @ForeignKey(name = "FK_TELEFONE_ID_TELEFONE_CONTATO"))
 	private TelefoneED telefoneContato;
 
 	public TelefoneED getTelefoneContato() {

@@ -17,6 +17,7 @@ public class FornecedorMB {
     private FornecedorED fornecedor;
     private FornecedorRN fornecedorRN;
     private TelefoneED telefone;
+    private TelefoneED telefoneContato;
     private List<TelefoneED> telefones;
     private UsuarioED usuario;
 
@@ -25,6 +26,7 @@ public class FornecedorMB {
         fornecedor = new FornecedorED();
         fornecedorRN = new FornecedorRN();
         telefone = new TelefoneED();
+        telefoneContato = new TelefoneED();
         telefones = new ArrayList<TelefoneED>();
     }
 
@@ -38,6 +40,7 @@ public class FornecedorMB {
 
     public String saveFornecedor() {
         this.fornecedor.getUsuarioED().setEmail(fornecedor.getEmail());
+        this.fornecedor.setTelefoneContato(telefoneContato);
         System.out.println(fornecedor);
         fornecedorRN.createFornecedor(fornecedor);
         return "listaFornecedor";
@@ -67,5 +70,13 @@ public class FornecedorMB {
 
     public void setUsuario(UsuarioED usuario) {
         this.usuario = usuario;
+    }
+
+    public TelefoneED getTelefoneContato() {
+        return telefoneContato;
+    }
+
+    public void setTelefoneContato(TelefoneED telefoneContato) {
+        this.telefoneContato = telefoneContato;
     }
 }

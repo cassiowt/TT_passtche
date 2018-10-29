@@ -18,6 +18,7 @@ public class FornecedorRN {
             else throw new Exception("Fornecedor invalido");
         } catch (Exception e) {
             e.getMessage();
+            e.printStackTrace();
         }
         return id;
     }

@@ -113,11 +113,20 @@
 
                             <div class="ui-inputgroup p-col">
                                 <span class="ui-inputgroup-addon"><i class="fa fa-user-circle-o"></i></span>
+                                <p:selectOneMenu id="telefoneContatoTipo" value="#{fornecedorMB.telefoneContato.tipoTelefoneED}" >
+                                    <f:selectItem itemLabel="Selecione" itemValue=""/>
+                                    <f:selectItems value="#{tiposMB.tipoTelefoneED}" var="tipo"
+                                                   itemValue="#{tipo}" itemLabel="#{tipo}"/>
+                                </p:selectOneMenu>
+                                <p:inputText id="telefoneContatoDDD" label="Contato" placeholder="DDD"
+                                             value="#{fornecedorMB.telefoneContato.ddd}" size="2"
+                                             required="true"
+                                             requiredMessage="Digite o DDD do responsável para efetuar o cadastr"/>
                                 <p:inputText id="telefoneContato" label="Contato" placeholder="Telefone do Responsável"
-                                             value="#{fornecedorMB.fornecedor.telefoneContato}"
+                                             value="#{fornecedorMB.telefoneContato.numero}" size="9"
                                              required="true"
                                              requiredMessage="Digite o telefone do responsável para efetuar o cadastro"
-                                             mask="99.99999-9999"/>
+                                             mask="99999-9999"/>
                             </div>
 
                             <div class="p-grid" style="margin-top: 1%">
