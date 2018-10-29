@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<h:head></h:head>
+<h:body>
+    <ui:composition template="templates/common.xhtml">
+        <ui:define name="content">
+            <div class="p-grid">
+                <h:form prependId="false" id="cadastroCliente">
+                    <div class="box">
+                        <p:growl id="msgs"/>
+
+                        <p:fieldset legend="Cadastro de cliente" style="padding-bottom:10%">
+                            <div class="p-grid">
+                                <div class="ui-inputgroup p-col">
+                                    <span class="ui-inputgroup-addon"><i class="fa fa-user-circle-o"></i></span>
+                                    <p:inputText id="nome" label="Nome" placeholder="Nome completo"
+                                                 value="#{clienteMB.cliente.nome}"
+                                                 required="true"
+                                                 requiredMessage="Digite seu nome para efetuar o cadastro"/>
+                                </div>
+
+                                <div class="ui-inputgroup p-col">
+                                    <span class="ui-inputgroup-addon"><i class="fa fa-user-circle-o"></i></span>
+                                    <p:inputText id="Cpf" label="CPF" placeholder="CPF"
+                                                 value="#{clienteMB.cliente.cpf}"
+                                                 required="true"
+                                                 requiredMessage="Digite seu CPF para efetuar o cadastro"/>
+                                </div>
+                            </div>
+
+                            <div class="p-grid">
+                                <div class="ui-inputgroup p-col">
+                                    <span class="ui-inputgroup-addon"><i class="fa fa-at"></i></span>
+                                    <p:inputText id="Email" label="E-mail" placeholder="E-email"
+                                                 value="#{clienteMB.cliente.email}"
+                                                 required="true"
+                                                 requiredMessage="Digite seu E-mail para efetuar o cadastro"/>
+                                </div>
+
+                                <div class="ui-inputgroup p-col">
+                                    <span class="ui-inputgroup-addon"><i class="fa fa-eye-slash"></i></span>
+                                    <p:password id="Senha" label="Senha" placeholder="Senha"
+                                                 value="#{clienteMB.cliente.usuarioED.senha}"
+                                                 required="true"
+                                                 requiredMessage="Digite sua senha para efetuar o cadastro"/>
+                                </div>
+                            </div>
+
+                            <div class="p-grid">
+                                <div class="ui-inputgroup p-col">
+                                    <span class="ui-inputgroup-addon"><i class="fa fa-clock-o"></i></span>
+                                    <p:calendar id="button" value="#{clienteMB.cliente.dataNascimento}"  mask="99/99/9999" >
+                                        <f:convertDateTime pattern="dd/MM/yyyy" />
+                                    </p:calendar>
+                                </div>
+
+                                <div class="ui-inputgroup p-col">
+                                    <span class="ui-inputgroup-addon"><i class="fa fa-credit-card"></i></span>
+                                    <p:outputLabel for="cartao" />
+                                    <p:inputMask id="cartao" mask="9999-9999-9999-9999" placeholder="Cartão de crédito"
+                                                 value="#{clienteMB.cliente.cartao}"/>
+                                </div>
+                            </div>
+
+                            <p:panel  id="gridTelefones">
+                                <div class="p-grid">
+                                    <div class="ui-inputgroup p-col">
+                                        <p:selectOneMenu id="tipoTelefone" value="#{clienteMB.telefone.tipoTelefoneED}" >
+                                            <f:selectItem itemLabel="Selecione" itemValue=""/>
+                                            <f:selectItems value="#{tiposMB.tipoTelefoneED}" var="tipo"
+                                                           itemValue="#{tipo}" itemLabel="#{tipo}"/>
+                                        </p:selectOneMenu>
+                                        <span class="ui-inputgroup-addon"><i class="fa fa-phone"></i></span>
+                                        <p:inputText id="ddd" label="DDD" placeholder="DDD"
+                                                     value="#{clienteMB.telefone.ddd}" size="2"/>
+                                        <p:inputText id="tel" label="Telefone" placeholder="Telefone"
+                                                     value="#{clienteMB.telefone.numero}"/>
+                                    </div>
+                                    <div class="p-col">
+                                        <p:commandButton id="addTelefone" value="Adicionar" styleClass="ui-button-text"
+                                                         update="telefones"
+                                                         icon="fa fa-phone"  actionListener="#{clienteMB.addTelefone}"
+                                                         />
+                                    </div>
+                                </div>
+                                <div  class="p-grid box-telefone">
+                                    <p:outputLabel value="Telefones:"/>
+                                    <p:outputLabel id="telefones" value="#{clienteMB.cliente.telefones}"/>
+                                </div>
+                            </p:panel>
+
+                            <div class="p-grid box">
+                                <div class="p-col">
+                                    <h3>Seus interesses:</h3>
+                                </div>
+                                <div class="p-col">
+                                    <p:inputTextarea rows="6" cols="40" value="#{clienteMB.cliente.hobby}"/>
+                                </div>
+                            </div>
+
+                            <div class="p-grid" style="margin-top: 1%">
+                                <div class="p-col">
+                                    <p:commandButton update="msgs" value="Cadastrar Cliente" styleClass="ui-priority-primary"
+                                                     icon="fa fa-users" actionListener="#{clienteMB.saveCliente}"/>
+                                </div>
+                                <div class="p-col">
+                                    <p:commandButton type="reset" value="Cancelar" styleClass="ui-priority-secondary"
+                                                     icon="fa fa-remove" />
+                                </div>
+                            </div>
+
+
+                        </p:fieldset>
+                    </div>
+                </h:form>
+            </div>
+        </ui:define>
+    </ui:composition>
+</h:body>
+</html>

@@ -38,13 +38,13 @@ public class FornecedorED extends PessoaED {
 	}
 
 	public FornecedorED(String nome, Date dataNascimento, String email, TipoPessoaED tipo_PessoaED, EnderecoED enderecoED, Collection<TelefoneED> telefones, UsuarioED usuarioED,
-						String cnpj, String nomeEmpresa, int percentualComissao, String contaBsncaria) {
+						String cnpj, String nomeEmpresa, int percentualComissao, String contaBancaria) {
 		super(nome, dataNascimento, email, tipo_PessoaED, enderecoED, telefones, usuarioED);
 
 		this.cnpj = cnpj;
 		this.nomeEmpresa = nomeEmpresa;
 		this.percentualComissao = percentualComissao;
-		this.contaBancaria = contaBsncaria;
+		this.contaBancaria = contaBancaria;
 	}
 
 
@@ -54,7 +54,7 @@ public class FornecedorED extends PessoaED {
 		this.cnpj = cnpj;
 		this.nomeEmpresa = nomeEmpresa;
 		this.percentualComissao = percentualComissao;
-		this.contaBancaria = contaBsncaria;
+		this.contaBancaria = contaBancaria;
 	}
 	public String getCnpj() {
 		return cnpj;
@@ -84,7 +84,7 @@ public class FornecedorED extends PessoaED {
 		return contaBancaria;
 	}
 
-	public void setContaBancaria(String contaBsncaria) {
+	public void setContaBancaria(String contaBancaria) {
 		this.contaBancaria = contaBancaria;
 	}
 }

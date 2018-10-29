@@ -1,0 +1,19 @@
+<!DOCTYPE	html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+<body>
+	<ui:composition>
+		<h:outputStylesheet name="css/style.css"/>
+		<h:outputStylesheet name="css/primeflex.css"/>
+		<h:panelGrid columns="2">
+			<p:link outcome="login"><p:graphicImage name="images/passtche-logo.png" style="width: 35%;height: 35%"/></p:link>
+			<h1>PassTche!</h1>
+		</h:panelGrid>
+		<ui:insert name="header">
+			<ui:include src="/templates/menu.xhtml" />
+		</ui:insert>
+	</ui:composition>
+</body>
+</html>

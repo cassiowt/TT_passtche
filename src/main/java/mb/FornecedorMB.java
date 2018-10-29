@@ -42,6 +42,7 @@ public class FornecedorMB {
         this.fornecedor.getUsuarioED().setEmail(fornecedor.getEmail());
         this.fornecedor.setTelefoneContato(telefoneContato);
         System.out.println(fornecedor);
+        System.out.println(usuario);
         fornecedorRN.createFornecedor(fornecedor);
         return "listaFornecedor";
     }

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<h:head></h:head>
+<h:body>
+<ui:composition template="templates/common.xhtml">
+    <ui:define name="content">
+        <div class="p-grid-6">
+            <h:form prependId="false" id="listaCliente">
+                <div class="box">
+                    <p:growl id="msgs"/>
+
+                    <p:fieldset legend="Lista de Clientes" style="padding-bottom:10%">
+
+                    <p:dataGrid var="cliente" value="#{clienteMB.clientes}" rows="6" paginator="true" rowsPerPageTemplate="6,12,16"
+                                paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+                                gridIcon="fa fa-th-large" listIcon="fa fa-bars">
+                        <div class="p-grid">
+                            <div class="p-col">
+                                <div>
+                                    <p:commandButton value="#{cliente.nome}" outcome="cadastroCliente.xhtml"/>
+                                </div>
+
+
+                                    <p:outputLabel id="idcode" value="#{cliente.id}" rendered="false"/>
+
+
+                                <div>
+                                    <p:outputLabel id="Cpf" value="#{cliente.cpf}"/>
+                                </div>
+                                <div>
+                                    <p:outputLabel id="Nome"  value="#{cliente.nome}"/>
+                                </div>
+                                <div>
+                                    <p:outputLabel id="Email"  value="#{cliente.email}"/>
+                                </div>
+                            </div>
+                        </div>
+                    </p:dataGrid>
+
+                    </p:fieldset>
+                </div>
+            </h:form>
+        </div>
+    </ui:define>
+</ui:composition>
+</h:body>
+
+</html>

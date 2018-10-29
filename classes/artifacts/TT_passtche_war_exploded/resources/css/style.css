@@ -1,0 +1,56 @@
+body{
+    background-color: #fef891;
+}
+
+.novo {
+    color: #f51e29;
+    font-size: large;
+    padding-top: 10%;
+}
+
+.ui-inputgroup {
+    color: #4c3000;
+
+}
+
+.ui-button {
+    width: 95%;
+    height: 100%;
+}
+
+.box,
+.sample-layout > div {
+    padding-top: 3%;
+    padding-bottom: 2%;
+    border-radius: 4px;
+}
+
+.box-telefone {
+    border: 1px solid #ff6b18;
+    padding-top: 3%;
+    padding-bottom: 2%;
+    margin-top: 3%;
+    margin-bottom: 2%;
+    border-radius: 4px;
+}
+
+.sample-layout {
+    margin: 0;
+}
+
+.sample-layout > div {
+    border: 1px solid #ffffff;
+}
+
+#loginEmail {
+    width: 100%;
+}
+
+#password {
+    width: 100%;
+}
+#console1 {
+    padding-left: 30%;
+
+}
+
