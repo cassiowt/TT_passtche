@@ -1,6 +1,5 @@
-package exemploDAO;
+package exemplo.exemploDAO;
 
-import model.PaisED;
 import model.TelefoneED;
 import model.TipoTelefoneED;
 

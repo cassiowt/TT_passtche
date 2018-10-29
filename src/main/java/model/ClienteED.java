@@ -14,7 +14,7 @@ public class ClienteED extends PessoaED {
 	private String cpf;
 	@Column (name = "HOBBY", length = 300)
 	private String hobby;
-	@Column (name = "CARTAO", length = 20)
+	@Column (name = "CARTAO", length = 30)
 	private String cartao;
 
 

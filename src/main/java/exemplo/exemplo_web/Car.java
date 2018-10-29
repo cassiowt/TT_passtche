@@ -1,4 +1,4 @@
-package exemplo_web;
+package exemplo.exemplo_web;
 
 
 import java.io.Serializable;

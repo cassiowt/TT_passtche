@@ -1,8 +1,10 @@
 package mb;
 
 
+import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
+import javax.faces.context.FacesContext;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -33,5 +35,12 @@ public class UtilMB {
 
     public void setVersaoSistema(String versaoSistema) {
         this.versaoSistema = versaoSistema;
+    }
+
+    public void mensagges(String titulo, String conteudo) {
+        FacesContext context = FacesContext.getCurrentInstance();
+
+        context.addMessage(null, new FacesMessage("Successful",  titulo) );
+        context.addMessage(null, new FacesMessage("Second Message", conteudo));
     }
 }

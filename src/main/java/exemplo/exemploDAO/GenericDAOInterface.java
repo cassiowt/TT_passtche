@@ -1,4 +1,4 @@
-package exemploDAO;
+package exemplo.exemploDAO;
 
 import java.util.ArrayList;
 

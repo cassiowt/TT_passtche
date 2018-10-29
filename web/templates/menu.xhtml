@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-      xmlns:f="http://xmlns.jcp.org/jsf/core"
+<html xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:p="http://primefaces.org/ui">
 <h:head></h:head>
 <h:form>
@@ -13,17 +10,16 @@
     <p:menubar>
         <p:submenu label="Cadastros" icon="ui-icon-document">
             <p:menuitem value="Listagem Clientes" url="listaCliente.xhtml"/>
-            <p:menuitem value="Listagem Fornecedores" url="#"/>
+            <p:menuitem value="Listagem Fornecedores" url="listaFornecedor.xhtml"/>
 
             <p:separator/>
             <p:menuitem value="Listagem Eventos" url="#"/>
             <p:menuitem value="Listagem Local de Eeventos" url="#"/>
         </p:submenu>
 
-
-        <p:submenu label="Admministração" icon="ui-icon-pencil">
-            <p:menuitem value="Conteudos" url="#"/>
-            <p:menuitem value="Listagem Usuaários" url="#"/>
+        <p:submenu label="Administração" icon="ui-icon-pencil">
+            <p:menuitem value="Conteúdos" url="#"/>
+            <p:menuitem value="Listagem Usuários" url="#"/>
         </p:submenu>
 
         <p:menuitem value="Logout" url="http://www.primefaces.org" icon="ui-icon-close"/>

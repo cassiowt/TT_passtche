@@ -1,8 +1,6 @@
-package exemploDAO;
+package exemplo.exemploDAO;
 
 import model.ProdutoED;
-import model.TelefoneED;
-import model.TipoTelefoneED;
 
 import java.util.ArrayList;
 

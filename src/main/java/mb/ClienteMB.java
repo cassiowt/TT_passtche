@@ -1,5 +1,6 @@
 package mb;
 
+import controller.Util;
 import model.*;
 import rn.ClienteRN;
 
@@ -44,8 +45,13 @@ public class ClienteMB {
         this.cliente.setEnderecoED(null);
 
         System.out.println(cliente);
-        clienteRN.createCliente(cliente);
-        return "listaCliente";
+        long  id = clienteRN.createCliente(cliente);
+        if (id > 0 ) {
+            Util.mensages("Usuário", "Salvo com Sucesso");
+            return "listaCliente.xhtml";
+        }
+        Util.mensages("Usuário", "Erro ao Salvar");
+        return "";
     }
 
     public ClienteED buscaCliente(Long id) {
