@@ -10,39 +10,38 @@
 <h:body>
     <ui:composition template="templates/common.xhtml">
         <ui:define name="content">
-            <div class="p-grid-12">
+            <div class="p-grid-6">
                 <h:form prependId="false" id="listaFornecedor">
                     <div class="box">
                         <p:growl id="msgs"/>
 
-                        <p:fieldset legend="Lista de Clientes" style="padding-bottom:10%">
+                        <p:fieldset legend="Lista de Fornecedores" style="padding-bottom:10%">
 
-                            <p:dataGrid var="fornecedor" value="#{fornecedorMB.fornecedorED}" rows="12" paginator="true" rowsPerPageTemplate="6,12,16"
+                            <p:dataGrid var="fornecedor" value="#{fornecedorMB.fornecedores}" rows="6" paginator="true" rowsPerPageTemplate="6,12,16"
                                         paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
                                         gridIcon="fa fa-th-large" listIcon="fa fa-bars">
-
                                 <div class="p-grid">
-                                    <div class="p-col-3">
-                                        <p:panel header="CNPJ" style="text-align:center">
-                                            <p:outputLabel id="Cpf" value="#{fornecedorMB.fornecedorED.cnpj}"/>
-                                        </p:panel>
-                                    </div>
-                                    <div class=" p-col-3">
-                                        <p:panel header="Empresa" style="text-align:center">
-                                            <p:outputLabel id="Nome"  value="#{fornecedorMB.fornecedorED.nome}"/>
-                                        </p:panel>
-                                    </div>
-                                    <div class=" p-col-3">
-                                        <p:panel header="Percentual" style="text-align:center">
-                                            <p:outputLabel id="Email"  value="#{fornecedorMB.fornecedorED.percentualComissao}"/>
-                                        </p:panel>
-                                    </div>
+                                    <div class="p-col">
+                                        <div>
+                                            <p:commandButton value="#{fornecedorMB.fornecedor.nomeEmpresa}" outcome="cadastroFornecedor.xhtml"/>
+                                        </div>
 
 
+                                        <p:outputLabel id="idcode" value="#{fornecedor.id}" rendered="false"/>
+
+
+                                        <div>
+                                            <p:outputLabel id="cnpj" value="#{fornecedorMB.fornecedor.cnpj}"/>
+                                        </div>
+                                        <div>
+                                            <p:outputLabel id="nomeEmpresa"  value="#{fornecedorMB.fornecedor.nomeEmpresa}"/>
+                                        </div>
+                                        <div>
+                                            <p:outputLabel id="email"  value="#{fornecedor.email}"/>
+                                        </div>
+                                    </div>
                                 </div>
                             </p:dataGrid>
-
-
 
                         </p:fieldset>
                     </div>

@@ -22,8 +22,18 @@ public class FornecedorED extends PessoaED {
 	@Column(name = "CONTA", length = 11)
 	private String contaBancaria;
 
-	public FornecedorED() {
+	@Column(name = "TELEFONE_CONTATO", length = 11)
+	private TelefoneED telefoneContato;
 
+	public TelefoneED getTelefoneContato() {
+		return telefoneContato;
+	}
+
+	public void setTelefoneContato(TelefoneED telefoneContato) {
+		this.telefoneContato = telefoneContato;
+	}
+
+	public FornecedorED() {
 	}
 
 	public FornecedorED(String nome, Date dataNascimento, String email, TipoPessoaED tipo_PessoaED, EnderecoED enderecoED, Collection<TelefoneED> telefones, UsuarioED usuarioED,

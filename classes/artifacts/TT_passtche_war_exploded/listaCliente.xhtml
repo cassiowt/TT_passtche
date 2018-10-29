@@ -10,39 +10,38 @@
 <h:body>
 <ui:composition template="templates/common.xhtml">
     <ui:define name="content">
-        <div class="p-grid-12">
+        <div class="p-grid-6">
             <h:form prependId="false" id="listaCliente">
                 <div class="box">
                     <p:growl id="msgs"/>
 
                     <p:fieldset legend="Lista de Clientes" style="padding-bottom:10%">
 
-                    <p:dataGrid var="cliente" value="#{clienteMB.clientes}" rows="12" paginator="true" rowsPerPageTemplate="6,12,16"
+                    <p:dataGrid var="cliente" value="#{clienteMB.clientes}" rows="6" paginator="true" rowsPerPageTemplate="6,12,16"
                                 paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
                                 gridIcon="fa fa-th-large" listIcon="fa fa-bars">
-
-                    <div class="p-grid">
-                        <div class="p-col-3">
-                            <p:panel header="CPF" style="text-align:center">
-                            <p:outputLabel id="Cpf" value="#{cliente.cpf}"/>
-                            </p:panel>
-                        </div>
-                        <div class=" p-col-3">
-                            <p:panel header="Nome" style="text-align:center">
-                            <p:outputLabel id="Nome"  value="#{cliente.nome}"/>
-                            </p:panel>
-                        </div>
-                        <div class=" p-col-3">
-                            <p:panel header="Email" style="text-align:center">
-                            <p:outputLabel id="Email"  value="#{cliente.email}"/>
-                            </p:panel>
-                        </div>
+                        <div class="p-grid">
+                            <div class="p-col">
+                                <div>
+                                    <p:commandButton value="#{cliente.nome}" outcome="cadastroCliente.xhtml"/>
+                                </div>
 
 
-                    </div>
+                                    <p:outputLabel id="idcode" value="#{cliente.id}" rendered="false"/>
+
+
+                                <div>
+                                    <p:outputLabel id="Cpf" value="#{cliente.cpf}"/>
+                                </div>
+                                <div>
+                                    <p:outputLabel id="Nome"  value="#{cliente.nome}"/>
+                                </div>
+                                <div>
+                                    <p:outputLabel id="Email"  value="#{cliente.email}"/>
+                                </div>
+                            </div>
+                        </div>
                     </p:dataGrid>
-
-
 
                     </p:fieldset>
                 </div>

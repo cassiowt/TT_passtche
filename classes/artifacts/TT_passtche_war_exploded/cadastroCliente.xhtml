@@ -15,7 +15,6 @@
                         <p:growl id="msgs"/>
 
                         <p:fieldset legend="Cadastro de cliente" style="padding-bottom:10%">
-
                             <div class="p-grid">
                                 <div class="ui-inputgroup p-col">
                                     <span class="ui-inputgroup-addon"><i class="fa fa-user-circle-o"></i></span>
@@ -38,7 +37,7 @@
                                 <div class="ui-inputgroup p-col">
                                     <span class="ui-inputgroup-addon"><i class="fa fa-at"></i></span>
                                     <p:inputText id="Email" label="E-mail" placeholder="E-email"
-                                                 value="#{loginMB.loginED.usuarioED.email}"
+                                                 value="#{clienteMB.cliente.email}"
                                                  required="true"
                                                  requiredMessage="Digite seu E-mail para efetuar o cadastro"/>
                                 </div>
@@ -46,7 +45,7 @@
                                 <div class="ui-inputgroup p-col">
                                     <span class="ui-inputgroup-addon"><i class="fa fa-eye-slash"></i></span>
                                     <p:password id="Senha" label="Senha" placeholder="Senha"
-                                                 value="#{loginMB.loginED.usuarioED.email}"
+                                                 value="#{clienteMB.cliente.usuarioED.senha}"
                                                  required="true"
                                                  requiredMessage="Digite sua senha para efetuar o cadastro"/>
                                 </div>
@@ -55,43 +54,46 @@
                             <div class="p-grid">
                                 <div class="ui-inputgroup p-col">
                                     <span class="ui-inputgroup-addon"><i class="fa fa-clock-o"></i></span>
-                                    <p:outputLabel for="dataNascimento" value=""/>
-                                    <p:inputMask id="dataNascimento" mask="99/99/9999" placeholder="Data de nascimento"/>
+                                    <p:calendar id="button" value="#{clienteMB.cliente.dataNascimento}"  mask="99/99/9999" >
+                                        <f:convertDateTime pattern="dd/MM/yyyy" />
+                                    </p:calendar>
                                 </div>
 
                                 <div class="ui-inputgroup p-col">
                                     <span class="ui-inputgroup-addon"><i class="fa fa-credit-card"></i></span>
-                                    <p:outputLabel for="cartao" value=""/>
-                                    <p:inputMask id="cartao" mask="9999-9999-9999-9999" placeholder="Cartão de crédito"/>
+                                    <p:outputLabel for="cartao" />
+                                    <p:inputMask id="cartao" mask="9999-9999-9999-9999" placeholder="Cartão de crédito"
+                                                 value="#{clienteMB.cliente.cartao}"/>
                                 </div>
                             </div>
-                            <div class="box">
+
+                            <p:panel  id="gridTelefones">
                                 <div class="p-grid">
                                     <div class="ui-inputgroup p-col">
-                                        <p:selectOneMenu id="tipo1" value="#{clienteMB.telefone.tipoTelefoneED}" >
+                                        <p:selectOneMenu id="tipoTelefone" value="#{clienteMB.telefone.tipoTelefoneED}" >
                                             <f:selectItem itemLabel="Selecione" itemValue=""/>
                                             <f:selectItems value="#{tiposMB.tipoTelefoneED}" var="tipo"
                                                            itemValue="#{tipo}" itemLabel="#{tipo}"/>
                                         </p:selectOneMenu>
                                         <span class="ui-inputgroup-addon"><i class="fa fa-phone"></i></span>
-                                        <p:inputText id="ddd" label="DDD" placeholder="Telefone"
-                                                     value="#{clienteMB.telefone.ddd}"/>
+                                        <p:inputText id="ddd" label="DDD" placeholder="DDD"
+                                                     value="#{clienteMB.telefone.ddd}" size="2"/>
                                         <p:inputText id="tel" label="Telefone" placeholder="Telefone"
                                                      value="#{clienteMB.telefone.numero}"/>
                                     </div>
                                     <div class="p-col">
-                                        <p:commandButton  value="Adicionar" styleClass="ui-button-text"
-                                                          update="telefones"
-                                                          icon="fa fa-phone"  action="#{clienteMB.addTelefone(telefone)}"/>
+                                        <p:commandButton id="addTelefone" value="Adicionar" styleClass="ui-button-text"
+                                                         update="telefones"
+                                                         icon="fa fa-phone"  actionListener="#{clienteMB.addTelefone}"
+                                                         />
                                     </div>
                                 </div>
-
-                                <div id="telefones" class="p-grid box-telefone">
+                                <div  class="p-grid box-telefone">
                                     <p:outputLabel value="Telefones:"/>
-                                    <p:outputLabel value="#{clienteMB.cliente.telefones}"/>
+                                    <p:outputLabel id="telefones" value="#{clienteMB.cliente.telefones}"/>
                                 </div>
+                            </p:panel>
 
-                            </div>
                             <div class="p-grid box">
                                 <div class="p-col">
                                     <h3>Seus interesses:</h3>
