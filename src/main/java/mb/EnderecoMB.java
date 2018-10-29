@@ -1,5 +1,6 @@
 package mb;
 
+import model.BairroED;
 import model.CidadeED;
 import model.EnderecoED;
 import rn.EnderecoRN;
@@ -14,13 +15,14 @@ public class EnderecoMB {
     private EnderecoED endereco;
     private EnderecoRN enderecoRN;
     private ArrayList<CidadeED> cidades;
+    private ArrayList<BairroED> bairros;
 
 
     public EnderecoMB() {
         enderecoRN = new EnderecoRN();
         endereco = new EnderecoED();
         cidades = new ArrayList<>();
-
+        bairros = new ArrayList<>();
     }
 
     public void setEndereco(EnderecoED endereco) {
@@ -42,6 +44,11 @@ public class EnderecoMB {
     public ArrayList<CidadeED> getCidades() {
 
       return   enderecoRN.findAllCidades();
+
+    }
+    public ArrayList<BairroED> getBairros() {
+
+      return   enderecoRN.findAllBairros();
 
     }
 }

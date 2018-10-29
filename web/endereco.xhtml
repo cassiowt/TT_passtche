@@ -56,17 +56,18 @@
                                                  requiredMessage="Faltou o CEP"/>
                                 </div>
                                 <div class="ui-inputgroup p-col">
-                                    <span class="ui-inputgroup-addon"><i class="fa fa-map-marker"></i></span>
-                                    <p:inputText id="Bairro" label="Bairro" placeholder="Bairro"
-                                                 value="#{enderecoMB.endereco.bairro}"
-                                                 required="true"
-                                                 requiredMessage="Faltou o Bairro"/>
-                                </div>
-                                <div class="ui-inputgroup p-col">
-                                    <p:selectOneMenu id="bairros" value="#{enderecoMB.endereco.bairro}">
+                                    <p:selectOneMenu id="cidades" value="#{enderecoMB.endereco.bairro}">
                                         <f:selectItem itemLabel="Selecione" itemValue=""/>
                                         <f:selectItems value="#{enderecoMB.cidades}" var="cidade"
                                                        itemValue="#{cidade.nome}" itemLabel="#{cidade.nome}"/>
+                                    </p:selectOneMenu>
+                                </div>
+
+                                <div class="ui-inputgroup p-col">
+                                    <p:selectOneMenu id="bairros" value="#{enderecoMB.endereco.bairro}">
+                                        <f:selectItem itemLabel="Selecione" itemValue=""/>
+                                        <f:selectItems value="#{enderecoMB.bairros}" var="bairro"
+                                                       itemValue="#{bairro.nome}" itemLabel="#{bairro.nome}"/>
                                     </p:selectOneMenu>
                                 </div>
                            </div>
