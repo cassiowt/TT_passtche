@@ -12,6 +12,16 @@
 		<property name="hibernate.show_sql">true</property>
 		<!--       <property name="hibernate.format_sql">true</property>-->
 		<property name="hbm2ddl.auto">update</property>
-	</session-factory>
+		<mapping class="model.EnderecoED"/>
+		<mapping class="model.BairroED"/>
+		<mapping class="model.CidadeED"/>
+		<mapping class="model.EstadoED"/>
+		<mapping class="model.PaisED"/>
+		<mapping class="model.FornecedorED"/>
+		<mapping class="model.ClienteED"/>
+		<mapping class="model.TelefoneED"/>
+		<mapping class="model.LoginED"/>
+		<mapping class="model.UsuarioED"/>
 
+	</session-factory>
 </hibernate-configuration>

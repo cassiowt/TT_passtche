@@ -60,7 +60,7 @@
                                         <f:selectItem itemLabel="Selecione" itemValue=""/>
                                         <f:selectItems value="#{enderecoMB.cidades}" var="cidade"
                                                        itemValue="#{cidade.id}" itemLabel="#{cidade.nome}"/>
-                                        <p:ajax event="change" listener="#{enderecoMB.alterSelectBairros}" update="cadastroEndereco:bairros"/>
+                                        <p:ajax event="change" listener="#{enderecoMB.alterSelectBairros}" process="@this" update="cadastroEndereco:bairros"/>
                                     </p:selectOneMenu>
                                 </div>
                                 <div class="ui-inputgroup p-col">

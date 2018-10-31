@@ -45,7 +45,7 @@
                                 <div class="ui-inputgroup p-col">
                                     <span class="ui-inputgroup-addon"><i class="fa fa-eye-slash"></i></span>
                                     <p:password id="Senha" label="Senha" placeholder="Senha"
-                                                 value="#{clienteMB.cliente.usuarioED.senha}"
+                                                 value="#{clienteMB.usuario.senha}"
                                                  required="true"
                                                  requiredMessage="Digite sua senha para efetuar o cadastro"/>
                                 </div>
@@ -102,6 +102,7 @@
                                     <p:inputTextarea rows="6" cols="40" value="#{clienteMB.cliente.hobby}"/>
                                 </div>
                             </div>
+                            <p:link value="endereço" href="endereco.xhtml"/>
 
                             <div class="p-grid" style="margin-top: 1%">
                                 <div class="p-col">
