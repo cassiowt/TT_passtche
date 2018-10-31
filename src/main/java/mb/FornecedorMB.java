@@ -2,8 +2,11 @@ package mb;
 
 import model.FornecedorED;
 import model.TelefoneED;
+import model.TipoUsuarioED;
 import model.UsuarioED;
 import rn.FornecedorRN;
+import rn.TelefoneRN;
+import rn.UsuarioRN;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
@@ -16,6 +19,8 @@ public class FornecedorMB {
 
     private FornecedorED fornecedor;
     private FornecedorRN fornecedorRN;
+    private UsuarioRN usuarioRN;
+    private TelefoneRN telefoneRN;
     private TelefoneED telefone;
     private TelefoneED telefoneContato;
     private List<TelefoneED> telefones;
@@ -24,6 +29,8 @@ public class FornecedorMB {
     public FornecedorMB() {
         usuario = new UsuarioED();
         fornecedor = new FornecedorED();
+        usuarioRN = new UsuarioRN();
+        telefoneRN = new TelefoneRN();
         fornecedorRN = new FornecedorRN();
         telefone = new TelefoneED();
         telefoneContato = new TelefoneED();
@@ -39,10 +46,17 @@ public class FornecedorMB {
     }
 
     public String saveFornecedor() {
-        this.fornecedor.getUsuarioED().setEmail(fornecedor.getEmail());
-        this.fornecedor.setTelefoneContato(telefoneContato);
+        this.usuario.setEmail(fornecedor.getEmail());
+        this.usuario.setTipoUsuarioED(TipoUsuarioED.FORNECEDOR);
+
+        this.fornecedor.setTelefoneContato(this.telefoneContato);
+        this.fornecedor.setUsuarioED(this.usuario);
+
         System.out.println(fornecedor);
-        System.out.println(usuario);
+
+
+        usuarioRN.createUsuario(this.usuario);
+        telefoneRN.createTelefone(this.telefoneContato);
         fornecedorRN.createFornecedor(fornecedor);
         return "listaFornecedor";
     }

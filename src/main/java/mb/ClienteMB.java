@@ -69,9 +69,9 @@ public class ClienteMB {
         return cs;
     }
 
-    public void addTelefone() {
+    public void addTelefone(){
         System.out.println(telefone);
-        this.cliente.getTelefones().add(this.telefone);
+        cliente.getTelefones().add(this.telefone);
     }
 
     public TelefoneED getTelefone() {
@@ -90,6 +90,7 @@ public class ClienteMB {
         this.cliente = cliente;
     }
 
+
     public UsuarioED getUsuario() {
         return usuario;
     }
@@ -97,4 +98,5 @@ public class ClienteMB {
     public void setUsuario(UsuarioED usuario) {
         this.usuario = usuario;
     }
+
 }
