@@ -17,7 +17,6 @@ public class ClienteMB {
     private ClienteRN clienteRN;
     private TelefoneED telefone;
     private List<TelefoneED> telefones;
-    private UsuarioED usuario;
     private EnderecoED endereco;
 
     public ClienteMB() {
@@ -25,7 +24,6 @@ public class ClienteMB {
         clienteRN = new ClienteRN();
         telefone = new TelefoneED();
         telefones = new ArrayList<TelefoneED>();
-        usuario = new UsuarioED();
         endereco = new EnderecoED();
     }
 
@@ -38,19 +36,15 @@ public class ClienteMB {
     }
 
     public String saveCliente() {
-
-        this.cliente.getUsuarioED().setTipoUsuarioED(TipoUsuarioED.CLIENTE);
-        this.cliente.getUsuarioED().setEmail(cliente.getEmail());
-        this.cliente.setTipo_PessoaED(TipoPessoaED.CONSUMIDOR);
         this.cliente.setEnderecoED(null);
 
         System.out.println(cliente);
         long  id = clienteRN.createCliente(cliente);
         if (id > 0 ) {
-            Util.mensages("Usu√°rio", "Salvo com Sucesso");
+            Util.mensages("Usu·rio", "Salvo com Sucesso");
             return "listaCliente.xhtml";
         }
-        Util.mensages("Usu√°rio", "Erro ao Salvar");
+        Util.mensages("Usu·rio", "Erro ao Salvar");
         return "";
     }
 
@@ -76,17 +70,8 @@ public class ClienteMB {
         this.telefone = telefone;
     }
 
-    public UsuarioED getUsuario() {
-        return usuario;
-    }
-
-    public void setUsuario(UsuarioED usuario) {
-        this.usuario = usuario;
-    }
-
     public void addTelefone() {
         System.out.println(telefone);
         cliente.getTelefones().add(this.telefone);
-
     }
 }

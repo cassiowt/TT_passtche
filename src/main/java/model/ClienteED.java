@@ -3,8 +3,6 @@ package model;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
-import java.util.Collection;
-import java.util.Date;
 
 @Entity
 @Table(name="CLIENTES")
@@ -12,29 +10,28 @@ public class ClienteED extends PessoaED {
 
 	@Column (name = "CPF", length = 14)
 	private String cpf;
-	@Column (name = "HOBBY", length = 300)
-	private String hobby;
-	@Column (name = "CARTAO", length = 30)
-	private String cartao;
+        
+        @Column (name = "RG", length = 12)
+	private String rg;
+                
+        @Column (name = "STATUS")
+	private boolean status;
 
+        public String getRg() {
+            return rg;
+        }
 
-	public ClienteED() {
+        public void setRg(String rg) {
+            this.rg = rg;
+        }
 
-	}
+        public boolean isStatus() {
+            return status;
+        }
 
-	public ClienteED(String nome, Date dataNascimento, String email, TipoPessoaED tipo_PessoaED, EnderecoED enderecoED, Collection<TelefoneED> telefones, UsuarioED usuarioED, String cpf, String hobby, String cartao) {
-		super(nome, dataNascimento, email, tipo_PessoaED, enderecoED, telefones, usuarioED);
-		this.cpf = cpf;
-		this.hobby = hobby;
-		this.cartao = cartao;
-	}
-
-	public ClienteED(String nome, Date dataNascimento, String email, TipoPessoaED tipo_PessoaED, String cpf, String hobby, String cartao) {
-		super(nome, dataNascimento, email, tipo_PessoaED);
-		this.cpf = cpf;
-		this.hobby = hobby;
-		this.cartao = cartao;
-	}
+        public void setStatus(boolean status) {
+            this.status = status;
+        }
 
 	public String getCpf() {
 		return cpf;
@@ -44,28 +41,12 @@ public class ClienteED extends PessoaED {
 		this.cpf = cpf;
 	}
 
-	public String getHobby() {
-		return hobby;
-	}
-
-	public void setHobby(String hobby) {
-		this.hobby = hobby;
-	}
-
-	public String getCartao() {
-		return cartao;
-	}
-
-	public void setCartao(String cartao) {
-		this.cartao = cartao;
-	}
-
 	@Override
 	public String toString() {
 		return "ClienteED{" +
 				"cpf='" + cpf + '\'' +
-				", hobby='" + hobby + '\'' +
-				", cartao='" + cartao + '\'' +
+                                ", rg='" + rg + '\'' +
+                                ", status='" + status + '\'' +
 				"} " + super.toString();
 	}
 }

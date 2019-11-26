@@ -1,5 +1,6 @@
 package model;
 
+import java.io.Serializable;
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -8,7 +9,7 @@ import java.util.Date;
 @Entity
 @Table(name = "PESSOAS")
 @Inheritance(strategy = InheritanceType.JOINED)
-public abstract class PessoaED {
+public abstract class PessoaED implements Serializable {
 
 	@Id
 	@Column(name = "ID_PESSOA")
@@ -24,10 +25,9 @@ public abstract class PessoaED {
 
 	@Column (name = "EMAIL")
 	private String email;
-
-	@Column (name = "TIPO_PESSOA")
-	@Enumerated(EnumType.STRING)
-	private TipoPessoaED tipo_PessoaED;
+       
+        @Column (name = "SENHA")
+	private String senha;
 
 	@OneToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "ID_ENDERECO",
@@ -40,34 +40,27 @@ public abstract class PessoaED {
                 foreignKey = @ForeignKey(name = "FK_PESSOA_ID_PESSOA"))
 	private Collection <TelefoneED> telefones = new ArrayList<TelefoneED>();
 
-	@OneToOne(cascade = CascadeType.PERSIST)
-	@JoinColumn(name = "ID_USUARIO",
-			referencedColumnName = "ID_USUARIO",
-			foreignKey = @ForeignKey(name = "FK_USUARIO_ID_USUARIO"))
-	private UsuarioED usuarioED;
-
 	public PessoaED() {
-		usuarioED = new UsuarioED();
 		telefones = new ArrayList<TelefoneED>();
 	}
 
-	public PessoaED(String nome, Date dataNascimento, String email, TipoPessoaED tipo_PessoaED, EnderecoED enderecoED, Collection <TelefoneED> telefones, UsuarioED usuarioED) {
-		this.nome = nome;
-		this.dataNascimento = dataNascimento;
-		this.email = email;
-		this.tipo_PessoaED = tipo_PessoaED;
-		this.enderecoED = enderecoED;
-		this.telefones = telefones;
-		this.usuarioED = usuarioED;
-	}
+    public PessoaED(long id, String nome, Date dataNascimento, String email, String senha, boolean status, EnderecoED enderecoED) {
+        this.id = id;
+        this.nome = nome;
+        this.dataNascimento = dataNascimento;
+        this.email = email;
+        this.senha = senha;
+        this.enderecoED = enderecoED;
+    }    
+        
 
-	public PessoaED(String nome, Date dataNascimento, String email, TipoPessoaED tipo_PessoaED) {
-		this.nome = nome;
-		this.dataNascimento = dataNascimento;
-		this.email = email;
-		this.tipo_PessoaED = tipo_PessoaED;
+        public String getSenha() {
+            return senha;
+        }
 
-	}
+        public void setSenha(String senha) {
+            this.senha = senha;
+        }
 
 	public String getNome() {
 		return nome;
@@ -97,28 +90,12 @@ public abstract class PessoaED {
 		this.email = email;
 	}
 
-	public TipoPessoaED getTipo_PessoaED() {
-		return tipo_PessoaED;
-	}
-
-	public void setTipo_PessoaED(TipoPessoaED tipo_PessoaED) {
-		this.tipo_PessoaED = tipo_PessoaED;
-	}
-
 	public Collection<TelefoneED> getTelefones() {
 		return telefones;
 	}
 
 	public void setTelefones(Collection<TelefoneED> telefones) {
 		this.telefones = telefones;
-	}
-
-	public UsuarioED getUsuarioED() {
-		return usuarioED;
-	}
-
-	public void setUsuarioED(UsuarioED usuarioED) {
-		this.usuarioED = usuarioED;
 	}
 
     public EnderecoED getEnderecoED() {
@@ -136,10 +113,9 @@ public abstract class PessoaED {
 				", nome='" + nome + '\'' +
 				", dataNascimento=" + dataNascimento +
 				", email='" + email + '\'' +
-				", tipo_PessoaED=" + tipo_PessoaED +
+                                ", senha='" + "*****" + '\'' +
 				", enderecoED=" + enderecoED +
 				", telefones=" + telefones +
-				", usuarioED=" + usuarioED +
 				'}';
 	}
 }
